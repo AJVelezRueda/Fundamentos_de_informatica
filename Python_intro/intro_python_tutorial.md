@@ -5,7 +5,6 @@ En este recorrido aprenderemos los conceptos básicos de programación y la sint
 ¡Agradecemos a al Proyecto de Extensión [La Bioinformática Va a La Escuela](http://ufq.unq.edu.ar/sbg/education.html) por prestarnos su material, que tomaremos como base para las presentes guías! 🤗
 
 
-
 # Guias de Trabajo
   * [1. Pensamiento computacional](#1-PC)
   * [2. Anatomia de la Computadora](#2-computadora)
