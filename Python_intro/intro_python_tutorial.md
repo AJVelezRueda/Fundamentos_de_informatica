@@ -23,6 +23,7 @@ En este recorrido aprenderemos los conceptos básicos de programación y la sint
   * [15. Comentario aparte ](#15-comentarios)
   * [16. ¡Atender, atender! Comienza la función](#16-funciones) 🤡
   * [17. Salir de la caja](#17-scripts)
+  * [18. Quedándote o yéndote](#18-if)
 
 
 [1. Pensamiento computacional](#1-PC) 🧠
@@ -417,4 +418,25 @@ Bueno..no tan simplemente. Esta forma de correr un script puede variar de un sis
 ```
 
 Ahoraa que sabemos cómo definir funciones y podemos reciclar código y automatizar cálculos 
-¡¡El cielo es el límite!!
+¡¡El cielo es el límite!! 
+
+[18. Quedándote o yéndote](#18-if)
+
+Como en todo, a la hora de escribir un programa debemos tomar decisiones y las decisiones que
+tomamos siempre dependen de los condicionantes que se presentan. 
+En Python (como en otros los lenguajes de programación) existe una sentencia llamada if (del inglés: si condicional) que le permite al programa hacer una cosa u otra, dependiendo de las condiciones que fijemos. Si cierta condición se cumple, entonces el programa hace algo. En el caso de que la condición no sea cierta podemos pedirle que haga algo más usando la sentencia else.
+
+La estructura de esta sentencia es la siguiente:
+
+```python
+if condición:
+aquí van las órdenes que se ejecutan si la condición es cierta
+else:
+aquí van las órdenes que se ejecutan si la condición es falsa
+```
+
+Como verás una sentencia if se compone de un `if`, que significa “si”, seguido de una ’condición’ y terminando con dos puntos (:). Una condición es un cálculo de programación cuyo resultado es verdadero (True) o falso (False), y se crea utilizando los operadores relacionales que ya conocés (==, >, <, !=). 
+
+La línea siguiente son las órdenes a ejecutar si la condición es cierta, y siempre comienza con un tab. La sentencia else consiste de un ‘else’, que significa “de lo contrario”, y dos puntos (:). En la línea de abajo se escriben las órdenes a ejecutar en caso de que la condición if no sea cierta, también comenzando con un tab. 
+
+Es muy importante dejar esta tabulación o sangría (un espacio en blanco, insertado con la tecla tab; o cuatro espacios con el ingresados espaciador) en el comienzo de la línea de abajo; ya que le permite al intérprete de Python saber en qué orden debe ejecutar cada cosa. De olvidar esta sangría Python te hará saber que no le gustó, con el cartel: `IndentationError:expected an indented block`.
