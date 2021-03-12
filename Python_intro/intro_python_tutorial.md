@@ -378,19 +378,39 @@ def funcion(argumento):
     return aquí va el resultado quiero devolver
 ```
 
+Así por ejemplo si quisiéramos escribir una función que nos permita obtener el doble de un número,
+podemos escribirla del siguiente modo:
+
+```python
+def doble(numero):
+    resultado = numero * 2
+    return resultado
+```
+
+Cómo ves definir funciones en Python resulta relativamente sencillo, estas nos permiten recibir
+múltiples parámetros, hacer algo con ellos y devolver un resultado procesado ¡Unas verdaderas
+maquinitas!
+
+
+>
+> 🧗‍♀️ Desafío IV: 
+>
+
 
 [17. Salir de la caja](#17-scripts)
 
-Un script es una secuencia de comandos, o en criollo un programa muy simple. Eso que fuimos ejecutando linea a linea, perfectamente podría escribirse en un archivo para ejecutarse una sola vez.
+Un script es una secuencia de comandos, o en criollo un programa muy simple. Eso que fuimos ejecutando linea a linea, perfectamente podría escribirse en un archivo para ejecutarse una sola vez, más comodamente.
 
 Por convención, los archivos de los scripts de python tienen extensión ‘.py’. Para ejecutar un script de python en la consola simplemente debemos escribir:
 
 ```bash
 python3 <nombre_del_archivo.py> <argumentos>
 ```
-
-Si el script requiere de argumentos para ser ejecutado, estos deben ser especificados luego del nombre del script. Sin embargo, no todos los scripts de python requieren argumentos. En Linux puede no ser necesario escribir ‘python’ antes del nombre del script. Esto es posible cuando la primera línea del archivo *.py es #!/usr/bin/env python3, indicando que se trata de un archivo a correr con Python. Luego de hacer el archivo ejecutable (corriendo en consola de Linux la orden chmod +x nombre_del_archivo.py) podemos llamar al programa así:
+Bueno..no tan simplemente. Esta forma de correr un script puede variar de un sistema operativo a otro. Si estas en Windows, tenés que abrir el cmd de windows en la carpeta donde tengas el script y correr el comando:
 
 ```bash
-./<nombre_del_archivo.py> <argumentos>
+ "python script.py"
 ```
+
+Ahoraa que sabemos cómo definir funciones y podemos reciclar código y automatizar cálculos 
+¡¡El cielo es el límite!!
