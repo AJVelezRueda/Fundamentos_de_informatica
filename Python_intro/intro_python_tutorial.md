@@ -201,8 +201,8 @@ El primer carácter es la posición cero (¡sí, cero!) y las posiciones aumenta
 En la cadena `saludo = "hola"` , la 'h' tiene asignada la posición cero, la 'o' la posición uno, la 'l' la dos y la 'a' la tres. 
 
 
-| H | O | L |A ||
-|-------------	|----------	|---	| ---|	---	|		
+| H | O | L |A |
+|-------------	|----------	|---	| ---|	
 | 0 | 1 | 2 | 3 |
 
 
