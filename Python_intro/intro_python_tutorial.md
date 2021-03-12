@@ -348,6 +348,7 @@ Y a todos sus valore:
 ```python
 >>> diccionario.values()
 ```
+
 [15. Comentario aparte ](#15-comentarios)
 
 En Python tenemos la posibilidad de incluir texto que, aunque esté escrito en el programa, no deba
@@ -393,9 +394,9 @@ maquinitas!
 
 
 >
-> 🧗‍♀️ Desafío IV: 
+> 🧗‍♀️ Desafío VI: Después de tanto programar necesitamos unos matecitos. Hoy aprendiste a prepararlos. Lo que no estoy segura es de que el agua alcance para toda la ronda. Suponiendo que cada cebada de mate consume del 30 ml de agua. Cosntruí una función que nos permita calcular cuántos termos de 1000 ml llenos consumiremos para un ronda dada (es decir una cantidad de personas dada).
 >
-
+>
 
 [17. Salir de la caja](#17-scripts)
 
