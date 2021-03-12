@@ -397,6 +397,9 @@ maquinitas!
 > 🧗‍♀️ Desafío VI: Después de tanto programar necesitamos unos matecitos. Hoy aprendiste a prepararlos. Lo que no estoy segura es de que el agua alcance para toda la ronda. Suponiendo que cada cebada de mate consume del 30 ml de agua. Cosntruí una función que nos permita calcular cuántos termos de 1000 ml llenos consumiremos para un ronda dada (es decir una cantidad de personas dada).
 >
 >
+> 🧗‍♀️ Desafío VII: Siempre con los mates, vienen bien unas facturitas. Vamos a hacer una función que nos permita dividir los costos de una docena de facturas entre cierta cantidad de comensales.
+>
+>
 
 [17. Salir de la caja](#17-scripts)
 
