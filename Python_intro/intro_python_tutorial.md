@@ -16,6 +16,8 @@ En este recorrido aprenderemos los conceptos básicos de programación y la sint
   * [8. Una palabra no dice nada y al mismo tiempo dice todo](#8-strings)
   * [9.En fetas de texto](#9-slicing)
   * [10. Chamuyo: del lunfardo el arte de manipular palabras/cadenas](#10-metodos-strings)
+  * [11. El todo y la nada](#11-in)
+  * [12. Síndrome de Diógenes](#11-listas)
 
 [1. Pensamiento computacional](#1-PC) 🧠
 
@@ -260,4 +262,26 @@ Existen muchas maneras útiles para manipular cadenas en Python.
 >
 >📚 Para investigar: ¿Qué es la inmutabilidad en Python?
 
+[11. El todo y la nada](#11-in)
 
+
+Cuando trabajamos con strings también puede resultarnos útil saber si uno contiene a otro, para ello utilizamos el operador `in`:
+
+```python
+>>> "mar" in "marinero"
+```
+
+[12. Síndrome de Diógenes](#11-listas)
+
+Python nos permite pensar en grande y acumular datos en lo que se conoce como un tipo de datos  `lista`. Esta nos permiten manipular un gran número de datos en forma sencilla. Y sus elementos pueden ser cadenas, números, ¡incluso otras listas! 
+
+Las listas se escriben separando a sus elementos con comas, y agrupando a todos entre corchetes:
+
+```python
+lista = []
+```
+
+Al igual que se puede acceder a los distintos caracteres de una cadena, podemos acceder a los
+elementos de una lista indicando entre corchetes el número de elemento que queremos obtener.
+Recordá que Python comienza a contar desde cero. Para obtener el segundo elemento, podemos
+escribi
