@@ -1,6 +1,6 @@
 # *Introducción a Python*
 
-En este recorrido aprenderemos los conceptos básicos de programación y la sintáxis de [Python](https://www.python.org.ar/). Para ello vas a necesitar instalarte [Python](http://ufq.unq.edu.ar/sbg/archivos/guias_talleres/Guia_Instalacion_Python_2020.pdf) y algún [editor de código](https://code.visualstudio.com/)(IDE) que te sea útil para programar. 
+En este recorrido aprenderemos los conceptos básicos de programación y la sintáxis de [Python](https://www.python.org.ar/). Para ello vas a necesitar instalarte [Python](http://ufq.unq.edu.ar/sbg/archivos/guias_talleres/Guia_Instalacion_Python_2020.pdf) y algún [editor de código](https://code.visualstudio.com/) (IDE) que te sea útil para programar. 
 
 ¡Para este recorrido tomaremos como base las presentes guías del Proyecto de Extensión [La Bioinformática Va a La Escuela](http://ufq.unq.edu.ar/sbg/education.html) del cual soy creadora! 🤗
 
@@ -15,9 +15,15 @@ En este recorrido aprenderemos los conceptos básicos de programación y la sint
   * [7. Nada es mejor, nada es igual…](#7-operadores-relacionales)
   * [8. Una palabra no dice nada y al mismo tiempo dice todo](#8-strings)
   * [9.En fetas de texto](#9-slicing)
-  * [10. Chamuyo: del lunfardo el arte de manipular palabras/cadenas](#10-metodos-strings)
+  * [10. Chamuyo: del lunfardo el arte de manipular palabras](#10-metodos-strings)
   * [11. El todo y la nada](#11-in)
-  * [12. Síndrome de Diógenes](#11-listas)
+  * [12. Síndrome de Diógenes](#12-listas)
+  * [13. Piano piano se va lontano](#13-listas-metodos)
+  * [14. Matryoshka de datos ](#14-diccionarios)
+  * [15. Comentario aparte ](#15-comentarios)
+  * [16. ¡Atender, atender! Comienza la función](#16-funciones) 🤡
+  * [17. Salir de la caja](#17-scripts)
+
 
 [1. Pensamiento computacional](#1-PC) 🧠
 
@@ -278,10 +284,113 @@ Python nos permite pensar en grande y acumular datos en lo que se conoce como un
 Las listas se escriben separando a sus elementos con comas, y agrupando a todos entre corchetes:
 
 ```python
-lista = []
+>>> lista = [2,5,4]
 ```
 
 Al igual que se puede acceder a los distintos caracteres de una cadena, podemos acceder a los
 elementos de una lista indicando entre corchetes el número de elemento que queremos obtener.
 Recordá que Python comienza a contar desde cero. Para obtener el segundo elemento, podemos
-escribi
+escribir:
+
+```python
+>>> lista[0]
+```
+
+> Para pensar 🤔: ¿Cómo podrías conocer la longitud de la lista?
+
+
+[13. Piano piano se va lontano](#13-listas-metodos)
+
+Podemos agregar (append) elementos a nuestra lista o quitarlos (remove) del siguiente modo:
+
+```python
+>>> lista.append('25')
+>>> lista.remove('2')
+```
+
+> Para pensar 🤔: Probá la sentencia `lista.index('25')` ¿Qué resultado obtenes? ¿Para qué sirve _index()_
+
+[14. Matryoshka de datos ](#14-diccionarios)
+
+Los diccionarios, al igual que las listas, nos permiten almacenar datos. Los diccionario son mutables, es decir que podemos agregar o quitar elementos de él y los valores almacenados en él  pueden ser modificados.
+
+A diferencias de las listas los valores que se almacenen en el diccionario no poseen un orden. Es decir, que no accesdemos a los valores por su posición (index), sino por su llave (_key_).
+
+Podemos declarar un  diccionario vacío haciendo:
+
+```python
+>>> diccionario = {}
+>>> diccionario = dict()
+```
+
+O dando un cierto valor a una llave dada:
+
+```python
+>>> diccionario = {"llave": "valor"}
+```
+
+Vale la pena aclara que una llave podrá ser cualquier objeto inmutable y el valor puede ser cualquier tipo de dato ¡Hasta un diccionario!
+
+Podeemos acceder, entonces al valor de una llave en particular por medio de su llave:
+
+```python
+>>> diccionario["llave"]
+```
+
+¿Y si no recordamos las llaves del diccionario? Podemos acceder a todas las llaves mediante:
+
+```python
+>>> diccionario.keys()
+```
+
+Y a todos sus valore:
+
+```python
+>>> diccionario.values()
+```
+[15. Comentario aparte ](#15-comentarios)
+
+En Python tenemos la posibilidad de incluir texto que, aunque esté escrito en el programa, no deba
+ejecutarse. Esto se logra empezando la línea con el símbolo # (el hash o numeral). Estas líneas se
+llaman “comentarios” y se utilizan para incluir en el programa algunas aclaraciones acerca del código:
+
+```python
+>>> # definir la variable ‘nombre’ e imprimirla
+>>> nombre = “Ana”
+>>> nombre
+```
+
+[16. ¡Atender, atender! Comienza la función](#16-funciones) 🤡
+
+¿Vos también flashaste obra de teatro? 🧐 Bueno, en realidad hablamos de otro tipo de funciones… Nos referimos a esos bloques de código a los que les ponemos un nombre (¿Cuca? 🐁), que ejecuta las operaciones deseadas y devuelve un valor o realiza una tarea.
+
+Hasta ahora hemos venido ejecutando código línea a línea para lograr nuestro cometido. Pero, si bien no es estrictamente necesario que tu código tenga funciones para hacer lo que querés que haga, sí es muy recomendable. ¿Por qué? Bueno, las funciones nos permiten separar las tareas y reutilizarlas en otros programas.
+
+¿Cómo se usan estas funciones? ¿Cómo hago para obtener resultados? ¿Cómo puedo indicarles ciertos
+parámetros que modifiquen los resultados obtenidos? 
+Basta con poner el nombre de la función y, entre paréntesis, sus argumentos. Veamos entonces cómo
+es que se define una función:
+
+
+```python
+def funcion(argumento):
+    Operación sobre el argumento
+    return aquí va el resultado quiero devolver
+```
+
+
+[17. Salir de la caja](#17-scripts)
+
+Un script es una secuencia de comandos, o en criollo un programa muy simple. Eso que fuimos ejecutando linea a linea, perfectamente podría escribirse en un archivo para ejecutarse una sola vez.
+
+Por convención, los archivos de los scripts de python tienen extensión ‘.py’. Para ejecutar un script de python en la consola simplemente debemos escribir:
+
+```bash
+python3 <nombre_del_archivo.py> <argumentos>
+```
+
+Si el script requiere de argumentos para ser ejecutado, estos deben ser especificados luego del nombre del script. Sin embargo, no todos los scripts de python requieren argumentos. En Linux puede no ser necesario escribir ‘python’ antes del nombre del script. Esto es posible cuando la primera línea del archivo *.py es #!/usr/bin/env python3, indicando que se trata de un archivo a correr con Python. Luego de hacer el archivo ejecutable (corriendo en consola de Linux la orden chmod +x nombre_del_archivo.py) podemos llamar al programa así:
+
+```bash
+./<nombre_del_archivo.py> <argumentos>
+```
