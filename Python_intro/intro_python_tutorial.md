@@ -22,8 +22,11 @@ En este recorrido aprenderemos los conceptos básicos de programación y la sint
   * [14. Matryoshka de datos ](#14-diccionarios)
   * [15. Comentario aparte ](#15-comentarios)
   * [16. ¡Atender, atender! Comienza la función](#16-funciones) 🤡
-  * [17. Salir de la caja](#17-scripts)
-  * [18. Quedándote o yéndote](#18-if)
+  * [17. Quedándote o yéndote](#17-if)
+  * [18. Vueltas y mas vueltas](#18-for)
+
+
+  * [19. Salir de la caja](#19-scripts)
 
 
 [1. Pensamiento computacional](#1-PC) 🧠
@@ -344,11 +347,8 @@ Podeemos acceder, entonces al valor de una llave en particular por medio de su l
 >>> diccionario.keys()
 ```
 
-Y a todos sus valore:
+> Para pensar 🤔: ¿Cómo harías para obtener todos los valores de un diccionario?
 
-```python
->>> diccionario.values()
-```
 
 [15. Comentario aparte ](#15-comentarios)
 
@@ -398,9 +398,49 @@ maquinitas!
 > 🧗‍♀️ Desafío VI: Después de tanto programar necesitamos unos matecitos. Hoy aprendiste a prepararlos. Lo que no estoy segura es de que el agua alcance para toda la ronda. Suponiendo que cada cebada de mate consume del 30 ml de agua. Cosntruí una función que nos permita calcular cuántos termos de 1000 ml llenos consumiremos para un ronda dada (es decir una cantidad de personas dada).
 >
 >
-> 🧗‍♀️ Desafío VII: Siempre con los mates, vienen bien unas facturitas. Vamos a hacer una función que nos permita dividir los costos de una docena de facturas entre cierta cantidad de comensales.
+> 🧗‍♀️ Desafío VII: Siempre con los mates, vienen bien unas facturitas 🥐🥐
+>
+>¿Si hacemos una `vaquita` ? _Vaquita_ se le dice en Argentina a hacer una colecta de plata para un fin común. Creá función que nos permita dividir los costos de una docena de facturas entre cierta cantidad de comensales.
 >
 >
+
+Ahoraa que sabemos cómo definir funciones y podemos reciclar código y automatizar cálculos 
+¡¡El cielo es el límite!! 
+
+
+
+[17. Quedándote o yéndote](#17-if) 🎶🎵
+
+Como en todo, a la hora de escribir un programa debemos tomar decisiones y las decisiones que
+tomamos siempre dependen de los condicionantes que se presentan. 
+En Python (como en otros los lenguajes de programación) existe una sentencia llamada if (del inglés: si condicional) que le permite al programa hacer una cosa u otra, dependiendo de las condiciones que fijemos. Si cierta condición se cumple, entonces el programa hace algo. En el caso de que la condición no sea cierta podemos pedirle que haga algo más usando la sentencia else.
+
+La estructura de esta sentencia es la siguiente:
+
+```python
+if condición:
+aquí van las órdenes que se ejecutan si la condición es cierta
+else:
+aquí van las órdenes que se ejecutan si la condición es falsa
+```
+
+Como verás una sentencia if se compone de un `if`, que significa “si”, seguido de una ’condición’ y terminando con dos puntos (:). Una condición es un cálculo de programación cuyo resultado es verdadero (`True`) o falso (`False`), y se crea utilizando los operadores relacionales que ya conocés (==, >, <, !=). 
+
+La línea siguiente son las órdenes a ejecutar si la condición es cierta, y siempre comienza con un `tab`. La sentencia else consiste de un `else`, que significa “de lo contrario”, y dos puntos (:). En la línea de abajo se escriben las órdenes a ejecutar en caso de que la condición if no sea cierta, también comenzando con un `tab`. 
+
+Es muy importante dejar esta tabulación o sangría (un espacio en blanco, insertado con la tecla tab; o cuatro espacios con el ingresados espaciador) en el comienzo de la línea de abajo; ya que le permite al intérprete de Python saber en qué orden debe ejecutar cada cosa. De olvidar esta sangría Python te hará saber que no le gustó, con el cartel: `IndentationError:expected an indented block`.
+
+
+
+>
+> 🧗‍♀️ Desafío VIII: En una ronda pequña de mate 🧉 no hace falta llenar tooooodo el termo, con un poco de agua quizás alcanza. Definí una función _calcular_cantidad_de_agua_ que espere una cantidad de personas como argumento y devuelva la cantidad de mililitros con los que tenemos que cargar el termo. 
+>
+>👀  ¡OJO!  Si llega a 1000 debería retornar la advertencia `"vas a necesitar más de un térmo"` 
+>
+
+
+[18. Vueltas y mas vueltas](#18-for)
+
 
 [17. Salir de la caja](#17-scripts)
 
@@ -416,27 +456,3 @@ Bueno..no tan simplemente. Esta forma de correr un script puede variar de un sis
 ```bash
  "python script.py"
 ```
-
-Ahoraa que sabemos cómo definir funciones y podemos reciclar código y automatizar cálculos 
-¡¡El cielo es el límite!! 
-
-[18. Quedándote o yéndote](#18-if)
-
-Como en todo, a la hora de escribir un programa debemos tomar decisiones y las decisiones que
-tomamos siempre dependen de los condicionantes que se presentan. 
-En Python (como en otros los lenguajes de programación) existe una sentencia llamada if (del inglés: si condicional) que le permite al programa hacer una cosa u otra, dependiendo de las condiciones que fijemos. Si cierta condición se cumple, entonces el programa hace algo. En el caso de que la condición no sea cierta podemos pedirle que haga algo más usando la sentencia else.
-
-La estructura de esta sentencia es la siguiente:
-
-```python
-if condición:
-aquí van las órdenes que se ejecutan si la condición es cierta
-else:
-aquí van las órdenes que se ejecutan si la condición es falsa
-```
-
-Como verás una sentencia if se compone de un `if`, que significa “si”, seguido de una ’condición’ y terminando con dos puntos (:). Una condición es un cálculo de programación cuyo resultado es verdadero (True) o falso (False), y se crea utilizando los operadores relacionales que ya conocés (==, >, <, !=). 
-
-La línea siguiente son las órdenes a ejecutar si la condición es cierta, y siempre comienza con un tab. La sentencia else consiste de un ‘else’, que significa “de lo contrario”, y dos puntos (:). En la línea de abajo se escriben las órdenes a ejecutar en caso de que la condición if no sea cierta, también comenzando con un tab. 
-
-Es muy importante dejar esta tabulación o sangría (un espacio en blanco, insertado con la tecla tab; o cuatro espacios con el ingresados espaciador) en el comienzo de la línea de abajo; ya que le permite al intérprete de Python saber en qué orden debe ejecutar cada cosa. De olvidar esta sangría Python te hará saber que no le gustó, con el cartel: `IndentationError:expected an indented block`.
