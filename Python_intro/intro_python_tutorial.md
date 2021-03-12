@@ -232,8 +232,11 @@ qué carácter, separado por dos puntos:
 Existen muchas maneras útiles para manipular cadenas en Python.
 
 > len(string) 
+>
 > string.upper()
+>
 > string.lower()
+>
 > string.count('caracter')
 
 
@@ -246,6 +249,7 @@ Existen muchas maneras útiles para manipular cadenas en Python.
 >>> saludo.replace('o','a')
 ```
 
+
 > 🧗‍♀️ Desafío III: Probá las lineas anteriores y anotate para qué sirve cada uno de los métodos y funciones.  
 >
 > Para pensar 🤔: ¿Se podrán combinar los métodos? Probá hacer `saludo.upper().lower()` ¿Qué dá? ¿Por qué?
@@ -255,3 +259,5 @@ Existen muchas maneras útiles para manipular cadenas en Python.
 > Para pensar 🤔: ¿Si imprimís `saludo` luego de ejecutar la linea anterior qué obtenés? ¿Cambió el valor de la variable?
 >
 >📚 Para investigar: ¿Qué es la inmutabilidad en Python?
+
+
