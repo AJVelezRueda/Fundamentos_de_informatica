@@ -433,9 +433,9 @@ La estructura de esta sentencia es la siguiente:
 
 ```python
 if condición:
-aquí van las órdenes que se ejecutan si la condición es cierta
+    aquí van las órdenes que se ejecutan si la condición es cierta
 else:
-aquí van las órdenes que se ejecutan si la condición es falsa
+    aquí van las órdenes que se ejecutan si la condición es falsa
 ```
 
 Como verás una sentencia if se compone de un `if`, que significa “si”, seguido de una ’condición’ y terminando con dos puntos (:). Una condición es un cálculo de programación cuyo resultado es verdadero (`True`) o falso (`False`), y se crea utilizando los operadores relacionales que ya conocés (==, >, <, !=). 
@@ -455,19 +455,49 @@ Es muy importante dejar esta tabulación o sangría (un espacio en blanco, inser
 
 [19. Vueltas y mas vueltas](#19-for)
 
-Hay gente que es reiterativa hay circunstancias que son reiterativas y hay tareas que son reiterativas. Por suerte existen lo que se conocen como bucles-for, que nos permiten eecutar un código reiteradas veces.
+Hay gente que es reiterativa hay circunstancias que son reiterativas y hay tareas que son reiterativas. Por suerte existen lo que se conocen como bucles-for.
 
-Seguro a esta altura del curso te haya dado un poco de hambre, ¡al fin y al cabo solo tomamos mate y una sola medialuna! Vamos hacer un pedido de empanadas 🥟 y para simplificarnos las cosas cuando hagamos el pedido, dividiremos entre veganas y no veggie.
+Pero antes de desglosar los bucles, vamos a hacer otro recreo culinario. Seguro a esta altura del curso te haya dado un poco de hambre, ¡al fin y al cabo solo tomamos mate y una sola medialuna! Vamos hacer un pedido de empanadas 🥟 y para simplificarnos las cosas cuando hagamos el pedido, dividiremos entre veganas y no veggie.
 
 ```python
  pedido = { "Ana" : "no veggie", "Paul": "veganas", "Luz": "veganas"}
 ```
 
+En lugar de contar a mano, ahora que sabemos programar, podremos hacer una función (_empanadas_por_gusto_) que nos calcule la cantidad de empanadas de cada gusto, para poder hacer el pedido. Para ello deberíamos recorrer la lista de comensales del diccionario pedidos y verificar de que gusto quieren y sumarla 1 a la lista de cada gusto. Vamos por partes, comencemos por acceder a los gustos que cada persona quiere. 
 
-> 🧗‍♀️ Desafío IX:
+Si recuerdan de lo que vimos de diccionarios podemos a acceder al gusto que elige una persona haciendo:
+
+```python
+>>> pedido["Ana"]
+```
+
+
+Y podemos extraer la lista de comensales que se suman al pedido haciendo:
+```python
+>>> pedido.keys()
+```
+
+Ahora, simplemente debemos recorrer esa lista para acceder en cada caso al gusto que eligió cada persona:
+
+```python
+#Obtenemos la lista de comensales
+>>> lista_comensales = pedidos.keys()
+
+>>> def empanadas_por_gusto():
+...    for i in lista_comensales:
+...        print(pedido[i])
+```
+
+> Para pensar 🤔: ¿Qué nos imprime el procedimiento de anterior? ¿Qué significa _i_?
+
+Como ya te habrás dado cuenta, el procedimiento que acabamos de crear tiene un bucle ‘for’, que consiste en un `for`, una variable cambiante (en nuestro caso `i`), un `in` y una lista de cosas que van a ser los valores que tomará nuestra variable `i`. Entonces, nuestro bucle puede ser leído como: para la variable i, tomando valores de la lista `lista_comensales` imprimí en la pantalla cada valor del diccionario `pedidos` que se corresponda a dicha llave.
+
+Ahora solo nos faltaría sumar +1 a la lista _veggies_ si el valor es `"veganas"` o sumar +1 a la lista _no_veggies_ si el valor se corresponde con `"no veggie"`... ¡Pero eso te toca vos!
+
+>
+> 🧗‍♀️ Desafío IX: Modificá la función _empanadas_por_gusto()_ para que devuelva la cantidad de empenadas de cada gusto que deben pedirse a la casa de comidas
 >
 >
-
 
 [20. Salir de la caja](#20-scripts)
 
