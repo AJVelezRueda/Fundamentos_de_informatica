@@ -10,23 +10,22 @@ En este recorrido aprenderemos los conceptos básicos de programación y la sint
   * [2. Anatomia de la Computadora](#2-computadora)
   * [3. Hablando como Pythonistas](#3-pythonistas)
   * [4. La caja negra](#4-terminal)
-  * [5. Una calculadora super-archi-genial](#5-operadores)
-  * [6. Apto Doris](#6-variables)
-  * [7. Nada es mejor, nada es igual…](#7-operadores-relacionales)
-  * [8. Una palabra no dice nada y al mismo tiempo dice todo](#8-strings)
-  * [9.En fetas de texto](#9-slicing)
-  * [10. Chamuyo: del lunfardo el arte de manipular palabras](#10-metodos-strings)
-  * [11. El todo y la nada](#11-in)
-  * [12. Síndrome de Diógenes](#12-listas)
-  * [13. Piano piano se va lontano](#13-listas-metodos)
-  * [14. Matryoshka de datos ](#14-diccionarios)
-  * [15. Comentario aparte ](#15-comentarios)
-  * [16. ¡Atender, atender! Comienza la función](#16-funciones) 🤡
-  * [17. Quedándote o yéndote](#17-if)
-  * [18. Vueltas y mas vueltas](#18-for)
-
-
-  * [19. Salir de la caja](#19-scripts)
+  * [5. Hola Python](#5-print)
+  * [6. Una calculadora super-archi-genial](#6-operadores)
+  * [7. Apto Doris](#7-variables)
+  * [8. Nada es mejor, nada es igual…](#8-operadores-relacionales)
+  * [9. Una palabra no dice nada y al mismo tiempo dice todo](#9-strings)
+  * [10.En fetas de texto](#10-slicing)
+  * [11. Chamuyo: del lunfardo el arte de manipular palabras](#11-metodos-strings)
+  * [12. El todo y la nada](#12-in)
+  * [13. Síndrome de Diógenes](#13-listas)
+  * [14. Piano piano se va lontano](#14-listas-metodos)
+  * [15. Matryoshka de datos ](#15-diccionarios)
+  * [16. Comentario aparte ](#16-comentarios)
+  * [17. ¡Atender, atender! Comienza la función](#17-funciones)
+  * [18. Quedándote o yéndote](#18-if)
+  * [19. Vueltas y mas vueltas](#19-for)
+  * [20. Salir de la caja](#20-scripts)
 
 
 [1. Pensamiento computacional](#1-PC) 🧠
@@ -111,7 +110,22 @@ Seguramente si abriste la terminal, habrás notado que hay un “chirimbolito”
 
 > 🧗‍♀️ Desafío II: Abrí la terminal de _Python_ que tengas instalada en tu computadora y luego abrí _Visual Code_ y luego presioná las teclas `Ctrl + J`. Se abrirá una terminal en el editor de código. ¿Cómo es el _prompt_ en cada caso? ¿Qué lenguaje "entiende" la terminal de _Visual Code_?
 
-[5. Una calculadora super-archi-genial](#5-operadores)
+
+[5. ¡Hola Python!](#5-print) 👋🏾 🐍
+
+Una forma no muy original de a aprender escribir un primer programa en Python es simplemente abrir la consola, escribir lo siguiente y darle Enter:
+
+
+```python
+>>> print('¡Hola terricolas!')
+```
+
+¿Qué pasó? print es una función que te permite imprimir o mostrar en la consola todo lo que se encuentre dentro de los paréntesis y entre comillas, como en nuestro ejemplo. Entre otras cosas, esta función nos permite interactuar con nuestro programa o con el futuro usuario de nuestro programa.
+Felicitaciones, ¡ese fue tu primer programa en Python!
+
+
+
+[6. Una calculadora super-archi-genial](#6-operadores)
 
 Con Python podemos hacer todo tipo de cálculos matemáticos. Aunque suene medio embole, aprender a hacer estos cálculos nos va a ayudar después a trabajar sobre otros tipos de datos. 
 Vamos a probar algunos cálculos. Para ello tenés que abrir la terminal de tu máquina y escribir _Python_, una vez que des enter y aparezca el _prompt_ podras comunicarte Pytonicamente con la computadora.
@@ -143,7 +157,7 @@ Estos chirimbolos se conocen como operadores matemáticos y nos sirven para oper
 
 </details>
 
-[6. Apto Doris](#6-variables) 🐠
+[7. Apto Doris](#7-variables) 🐠
 
 Como habrán notado hasta aquí que venimos introduciendo órdenes línea a linea para que la computadora ejecute, lo que desde el púnto de vista práctico no resulta la mejor opción. Desde ya que sería ideal dejar la máquina haciendo cosas y poder irnos a por café. Por suerte existe una herramienta que va a simplificar nuestra tarea de ahora en adelante: las variables. Las variables nos permiten nombrar y reutilizar valores. 
 
@@ -153,7 +167,7 @@ Es decir, le damos un nombre a un conjunto de “cosas” o a una "cosa" y una v
 >>> variable = valor de la variable
 ```
 
-[7. Nada es mejor, nada es igual…](#7-operadores-relacionales) 🎶🎵
+[8. Nada es mejor, nada es igual…](#8-operadores-relacionales) 🎶🎵
 
 Existen también formas de comparar dos variables, lo que se conoce como operadores relacionales.
 Podemos saber si dos variables son iguales (==), o si son distintas (!=), o si una es mayor que la otra (>). Por ejemplo:
@@ -180,7 +194,7 @@ Los operadores relacionales que se pueden usar en Python son:
 
 </details>
 
-[8. Una palabra no dice nada y al mismo tiempo dice todo](#8-strings) 🎶🎵
+[9. Una palabra no dice nada y al mismo tiempo dice todo](#9-strings) 🎶🎵
 
 Estuvimos operando hasta aquí con números (_Int_) y recientemente aprendimos que existe otro tipo de datos lógicos (_boooleanos_), pero aún nos quedan muchos tipos de datos que podemos manipular en Python.
 
@@ -204,7 +218,7 @@ saber entonces si son o no son distintas:
 
 > Para pensar 🤔:¿Qué resultado nos da? ¿Por qué?
 
-[9.En fetas de texto](#9-slicing)
+[10.En fetas de texto](#10-slicing)
 
 En Python podemos saber qué caracteres o subpartes conforman una cadena o string. Python le asigna
 a cada caracter de una cadena un número de posición. 
@@ -239,7 +253,7 @@ qué carácter, separado por dos puntos:
 > Para pensar 🤔:¿Qué resultado nos dá el código anterior? ¿Por qué? ¿Qué pasa si removemos el último número (hacemos `saludo[0:]`)? 
 
 
-[10. Chamuyo: del lunfardo el arte de manipular palabras/cadenas](#10-metodos-strings)
+[11. Chamuyo: del lunfardo el arte de manipular palabras/cadenas](#11-metodos-strings)
 
 Existen muchas maneras útiles para manipular cadenas en Python.
 
@@ -272,7 +286,7 @@ Existen muchas maneras útiles para manipular cadenas en Python.
 >
 >📚 Para investigar: ¿Qué es la inmutabilidad en Python?
 
-[11. El todo y la nada](#11-in)
+[12. El todo y la nada](#12-in)
 
 
 Cuando trabajamos con strings también puede resultarnos útil saber si uno contiene a otro, para ello utilizamos el operador `in`:
@@ -281,7 +295,7 @@ Cuando trabajamos con strings también puede resultarnos útil saber si uno cont
 >>> "mar" in "marinero"
 ```
 
-[12. Síndrome de Diógenes](#11-listas)
+[13. Síndrome de Diógenes](#13-listas)
 
 Python nos permite pensar en grande y acumular datos en lo que se conoce como un tipo de datos  `lista`. Esta nos permiten manipular un gran número de datos en forma sencilla. Y sus elementos pueden ser cadenas, números, ¡incluso otras listas! 
 
@@ -303,7 +317,7 @@ escribir:
 > Para pensar 🤔: ¿Cómo podrías conocer la longitud de la lista?
 
 
-[13. Piano piano se va lontano](#13-listas-metodos)
+[14. Piano piano se va lontano](#14-listas-metodos)
 
 Podemos agregar (append) elementos a nuestra lista o quitarlos (remove) del siguiente modo:
 
@@ -314,7 +328,7 @@ Podemos agregar (append) elementos a nuestra lista o quitarlos (remove) del sigu
 
 > Para pensar 🤔: Probá la sentencia `lista.index('25')` ¿Qué resultado obtenes? ¿Para qué sirve _index()_
 
-[14. Matryoshka de datos ](#14-diccionarios)
+[15. Matryoshka de datos ](#15-diccionarios)
 
 Los diccionarios, al igual que las listas, nos permiten almacenar datos. Los diccionario son mutables, es decir que podemos agregar o quitar elementos de él y los valores almacenados en él  pueden ser modificados.
 
@@ -350,7 +364,7 @@ Podeemos acceder, entonces al valor de una llave en particular por medio de su l
 > Para pensar 🤔: ¿Cómo harías para obtener todos los valores de un diccionario?
 
 
-[15. Comentario aparte ](#15-comentarios)
+[16. Comentario aparte ](#16-comentarios)
 
 En Python tenemos la posibilidad de incluir texto que, aunque esté escrito en el programa, no deba
 ejecutarse. Esto se logra empezando la línea con el símbolo # (el hash o numeral). Estas líneas se
@@ -362,7 +376,7 @@ llaman “comentarios” y se utilizan para incluir en el programa algunas aclar
 >>> nombre
 ```
 
-[16. ¡Atender, atender! Comienza la función](#16-funciones) 🤡
+[17. ¡Atender, atender! Comienza la función](#17-funciones) 🤡
 
 ¿Vos también flashaste obra de teatro? 🧐 Bueno, en realidad hablamos de otro tipo de funciones… Nos referimos a esos bloques de código a los que les ponemos un nombre (¿Cuca? 🐁), que ejecuta las operaciones deseadas y devuelve un valor o realiza una tarea.
 
@@ -409,7 +423,7 @@ Ahoraa que sabemos cómo definir funciones y podemos reciclar código y automati
 
 
 
-[17. Quedándote o yéndote](#17-if) 🎶🎵
+[18. Quedándote o yéndote](#18-if) 🎶🎵
 
 Como en todo, a la hora de escribir un programa debemos tomar decisiones y las decisiones que
 tomamos siempre dependen de los condicionantes que se presentan. 
@@ -439,10 +453,23 @@ Es muy importante dejar esta tabulación o sangría (un espacio en blanco, inser
 >
 
 
-[18. Vueltas y mas vueltas](#18-for)
+[19. Vueltas y mas vueltas](#19-for)
+
+Hay gente que es reiterativa hay circunstancias que son reiterativas y hay tareas que son reiterativas. Por suerte existen lo que se conocen como bucles-for, que nos permiten eecutar un código reiteradas veces.
+
+Seguro a esta altura del curso te haya dado un poco de hambre, ¡al fin y al cabo solo tomamos mate y una sola medialuna! Vamos hacer un pedido de empanadas 🥟 y para simplificarnos las cosas cuando hagamos el pedido, dividiremos entre veganas y no veggie.
+
+```python
+ pedido = { "Ana" : "no veggie", "Paul": "veganas", "Luz": "veganas"}
+```
 
 
-[17. Salir de la caja](#17-scripts)
+> 🧗‍♀️ Desafío IX:
+>
+>
+
+
+[20. Salir de la caja](#20-scripts)
 
 Un script es una secuencia de comandos, o en criollo un programa muy simple. Eso que fuimos ejecutando linea a linea, perfectamente podría escribirse en un archivo para ejecutarse una sola vez, más comodamente.
 
