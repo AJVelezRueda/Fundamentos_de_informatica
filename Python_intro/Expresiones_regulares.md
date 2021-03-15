@@ -5,6 +5,8 @@ En este recorrido aprenderemos los conceptos básicos de expresiones regulares e
 # Guias de Trabajo
 * [1. Lo esencial es invisible a los ojos](#1-Escape-characters)
 * [2. ¿Qué son las expresiones regulares?](#2-ER)
+* [3. Metacaracteres y expresiones Simples](#3-Metacaracteres)
+* [4. Expresiones Simples](#4-expresiones-simples)
 
 [1. Lo esencial es invisible a los ojos](#1-Escape-characters)
 
@@ -16,8 +18,7 @@ Estas combinaciones constan tipicamente de una barra invertida (`\`) seguida de 
 
 Vamos a ver algunas de las secuencias de escape más frecuentes:
 
-
-| Secuencia de escape| represntación | 
+| Secuencia de escape| representación | 
 |-------------	|----------	|
 | \n | salto de línea | 
 | \t | Tab o cambio de pestaña |
@@ -27,6 +28,32 @@ Vamos a ver algunas de las secuencias de escape más frecuentes:
 
 
 [2. ¿Qué son las expresiones regulares?](#2-ER)
+
 Las expresiones regulares son cadenas de caracteres basadas en reglas sintácticas, que permiten describir secuencias de caracteres. Es decir es un criterio para buscar, capturar o reemplazar texto utilizando patrones. Estas son una herramienta poderosa a la hora de hacer búsquedas sofisticadas en Strings de forma simple.
 
 
+Las expresiones regulares se pueden concatenar para formar nuevas expresiones regulares; si, por ejemplo, A y B son expresiones regulares, AB también es una expresión regular.
+
+[3. Metacaracteres](#3-Metacaracteres)
+
+Los `metacaracteres` son caracteres especiales que, dependiendo del contexto, tienen un significado especial para las expresiones regulares. 
+
+Existen lo que se conoce como `metacaracteres delimitadores`, que nos permitirán delimitar dónde queremos buscar los patrones de búsqueda. Entre ellos tenemos:
+
+
+| Metacaracter| Significado | 
+|-------------	|----------	|
+| ^	| Inicio de línea | 
+| $ | Fin de linea |
+| \A | Inicio de texto |
+| \Z | Fin de texto |
+| . | 	Cualquier caracter en una línea dada | 
+
+
+
+
+
+[4. Expresiones Simples](#4-expresiones-simples)
+Comenzaremos por aprender sobre las expresiones regulares más simples posibles. Dado que las expresiones regulares se utilizan para operar en strings, vamos a empezas con la tarea más común: los caracteres coincidentes. 
+
+Si un String se corresponde con el criterio que define una expresión regular, se dice que el String hace match con la expresión, y equivalentemente, se dice que la expresión acepta al String.
