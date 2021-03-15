@@ -52,19 +52,46 @@ Existen lo que se conoce como `metacaracteres delimitadores`, que nos permitirá
 | $ | Fin de linea |
 | \A | Inicio de texto |
 | \Z | Fin de texto |
-| . | 	Cualquier caracter en una línea dada | 
+| . | Coincide con cualquier caracter en una línea dada | 
 
 
-Ya vimos que en programación suele ser útil repetir la ejecución de porciones de código. Las expresiones regulares nos permiten no solo delimitar la porción de texto donde deseamos buscar, sino que también permite repitir cierta cantidad de veces una busqueda dada. Para ello se utilizan los `metacaracteres de iteración`:
+Ya vimos que en programación suele ser útil repetir la ejecución de porciones de código. Las expresiones regulares nos permiten no solo delimitar la porción de texto donde deseamos buscar, sino que también permite repitir cierta cantidad de veces una busqueda dada. Para ello se utilizan los `metacaracteres cuantificadores`:
 
 
 | Metacaracter| Significado | 
 |-------------	|----------	|
-|  *	| Cero o más: todas las apariciones de un dado substring |	
-|  +	| Una o más |	
+|  *	| Cero o más: todas las ocurrencias de un dado substring |	
+|  +	| Una o más ocurrencias del patrón|	
 |? | Cero o una|
 |{n} | Exactamente n veces|
 |{n,m} | Por lo menos n pero no más de m veces.|
+
+
+>
+> Para pensar 🤔: ¿Qué significará la expresión regular `"X(.*)Y"`? Ennumera algunas de las posibles strings que cumplen con dicha condición.
+>
+>
+> 🧗‍♀️ Desafío I: ¿Construí la expresión regular que obtenga al menos 4 dígitos?
+>
+> 🧗‍♀️ Desafío II: ¿Construí la expresión regular que obtenga al entre 3 y 6 letras minúsculas?
+>
+> 🧗‍♀️ Desafío III: ¿Construí la expresión regular que obtenga todas las apariciones del patrón `ab` en un string?
+>
+
+<details>
+  <summary>Respuestas</summary>
+
+```bash
+Desafio I: \d{4,}
+
+Desafio II: [a-z]{3,6}
+
+Desafio III: ab*
+
+```
+</details>
+
+> Para pensar 🤔: ¿Existe una única respuesta para los ejercicios? ¿Qué otras alternativas se te ocurren?
 
 Los dígitos entre llaves de la forma {n,m}, especifican el mínimo número de ocurrencias en n y el máximo en m.
 
@@ -82,10 +109,30 @@ Existen tambien metacaracteres predefinidos, que nos facilitan el uso de las exp
 
 Como ya hemos visto, estos metacaracteres puden combinarse para lograr expresiones regulares complejas. 
 
-> Para pensar 🤔: ¿Qué significará la expresión regulra `"X(.*)Y"`?
 >
-> 🧗‍♀️ Desafío I: ¿Construí la expresión regular que obtenga todas las apariciones del patrón `ab` en un string?
+> 🧗‍♀️Desafio IV: ¿Qué expresión regular usarías para extraer el número de estudiantes que hay en una clase según el siguiente texto:
 >
+```python
+texto = 'En la clase de Introducción a la programación hay 30 estudiantes' 
+```
+>
+
+<details>
+  <summary>Respuestas</summary>
+
+```bash
+Desafío IV: /d+
+```
+</details>
+
+*Rangos*
+
+Un rango es una clase de caracteres abreviada que se crea escribiendo el primer caracter del rango, un guión y el último caracter del rango. Sirve para listar un conjunto de caracteres de interés. Por ejemplo:
+
+    - El rango [a-d] equivale al [abcd]
+    - El rango [1-10] equivale al substring [12345678910]
+
+Así como podemos listar los caracteres posibles en cierta posición de la cadena, también podemos listar caracteres que no deben aparecer utilizando el `^`. Así, por ejemplo rango [^a-d] coincide con cualquier caracter que no sea `abcd`.
 
 
 [4. Coincidencias o Matches](#4-matches)
