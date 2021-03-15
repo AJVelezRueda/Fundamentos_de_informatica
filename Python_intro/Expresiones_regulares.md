@@ -50,6 +50,30 @@ Existen lo que se conoce como `metacaracteres delimitadores`, que nos permitirá
 | . | 	Cualquier caracter en una línea dada | 
 
 
+Ya vimos que en programación suele ser útil repetir la ejecución de porciones de código. Las expresiones regulares nos permiten no solo delimitar la porción de texto donde deseamos buscar, sino que también permite repitir cierta cantidad de veces una busqueda dada. Para ello se utilizan los `metacaracteres de iteración`:
+
+
+| Metacaracter| Significado | 
+|-------------	|----------	|
+|  *	| Cero o más: todas las apariciones de un dado substring |	
+|  +	| Una o más |	
+|? | Cero o una|
+|{n} | Exactamente n veces|
+|{n,m} | Por lo menos n pero no más de m veces.|
+
+Los dígitos entre llaves de la forma {n,m}, especifican el mínimo número de ocurrencias en n y el máximo en m.
+
+Existen tambien metacaracteres predefinidos, que nos facilitan el uso de las expresiones regulares:
+
+| Metacaracter| Significado | 
+|-------------	|----------	|
+|  \w	| Caracter alfanumércio|
+|  \W	| Caracter NO alfanumércio|	
+|  \d	| Caracter numércio|	
+|  \D	| Caracter NO numércio|	
+|  \s	| Un espacio, de cualquier tipo (\t\n\r\f)|	
+|  \S	| Cualquier caracter que no sea un espacio|	
+
 
 
 
