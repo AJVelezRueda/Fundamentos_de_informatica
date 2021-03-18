@@ -1,9 +1,12 @@
-# *Lectura & Escritura de archivos co Python*
+# *Lectura & Escritura de archivos con Python*
 
 # Guias de Trabajo
-* [1. Lectura de archivos](#1-open)
+* [1. Archivos](#1-archs)
+* [2. Lectura de archivos](#2-open)
+* [3. Rutas absolutas y relativas](#3-paths)
 
-[1. Lectura de archivos](#1-open)
+[1. Archivos](#1-archs)
+
 
 Python tiene la capacidad de acceder y realizar operaciones de lectura/escritura sobre los documentos localizados en un sistema de archivos
 
@@ -14,6 +17,8 @@ LPara Python existen dos tipos de archivos: de texto o binarios. Estos se manipu
 Un **archivo binario** es cualquier tipo de archivo que no es un archivo de texto. Estos solo pueden ser interpretados o leídos por aplicaciones.
 
 
+[2. Lectura de archivos](#2-open)
+
 Para abrir un archivo de texto, ya sea para usarlo o escribir en el, podemos usar la función nativa de Python `open()`:
 
 ```python
@@ -22,7 +27,7 @@ open(path_al_archivo, modo)
 
 Donde:
 
-    - "path_al_archivo" es un objeto de tipo str que indica la ruta en la que se encuentra el archivo.
+    - "path_al_archivo" es un objeto de tipo str que indica la ruta en la que se encuentra el archivo. 
     
     - "modo" es un objeto de tipo str que indica la forma en la que Python accederá al archivo en cuestión.
 
@@ -31,5 +36,21 @@ Donde:
 | Modo de apertura| Significado | 
 |-------------	|----------	|
 |  r	| abre un archivo solo para lectura|
+|  r+	| abre un archivo para lectura y escritura|
 |  a	| Abre un archivo para agregar información. Si el archivo no existe, crea un nuevo archivo para escritura|	
 |  w	| Abre un archivo solo para escritura. Sobreescribe el archivo si este ya existe. Si el archivo no existe, crea un nuevo archivo para escritura|	
+
+* [3. Rutas absolutas y relativas](#3-paths)
+
+
+En todos los sistemas operativos modernos la estructura de archivos es jerárquica y depende de los directorios. Semejante a una estructua arbórea en la que existe un nodo (un directorio o carpeta), que contiene los restantes directorios o archivos.
+
+El path o ruta a un archivo, será entonces, el recorrido de directorios o carpetas que debemos recorrer para llegar a nuestro archivo. Esta se escribe separando los nombres de los respectivos directorios separados por `/`. Esto es lo que se conoce como la ruta absoluta al archivo:
+
+
+```bash
+windows  "C:\home\Ana\UCEMA\Fundamentos\mi_arch.txt"
+Linux  "/home/Ana/UCEMA/Fundamentos/mi_arch.txt"
+```
+
+Las rutas tambien pueden ser escritas de un modo más compacto o acortado. Se suelen escribir de forma relativa a un determinado directorio.
