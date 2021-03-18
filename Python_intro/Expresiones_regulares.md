@@ -6,7 +6,8 @@ En este recorrido aprenderemos los conceptos básicos de expresiones regulares e
 * [1. Lo esencial es invisible a los ojos](#1-Escape-characters)
 * [2. ¿Qué son las expresiones regulares?](#2-ER)
 * [3. Metacaracteres y expresiones Simples](#3-Metacaracteres)
-* [4. Coincidencias o Matches](#4-matches)
+* [4. Expresiones regulares en Python ](#4-RE) 
+* [5. Coincidencias o Matches](#5-matches)
 
 [1. Lo esencial es invisible a los ojos](#1-Escape-characters)
 
@@ -135,9 +136,31 @@ Un rango es una clase de caracteres abreviada que se crea escribiendo el primer 
 Así como podemos listar los caracteres posibles en cierta posición de la cadena, también podemos listar caracteres que no deben aparecer utilizando el `^`. Así, por ejemplo rango [^a-d] coincide con cualquier caracter que no sea `abcd`.
 
 
-[4. Coincidencias o Matches](#4-matches)
 
 
+Para trabajar con expresiones regulares en Python, es necesaria la librería [RE](https://docs.python.org/3/library/re.html), que puede ser instalada usando el instalador de Python (PIP):
+
+```bash
+pip install re
+```
+De todos modos, antes de instalar una librería siempre es importante comprobar si esta está o no instalada. Para ello, desde una terminal de Python debemos escribir:
+
+```python
+import re
+```
+Si la librería está instalada no nos aparecerá ningún error. 
+
+
+[5. Coincidencias o Matches](#5-matches)
 Comenzaremos por aprender sobre las expresiones regulares más simples posibles. Dado que las expresiones regulares se utilizan para operar en strings, vamos a empezas con la tarea más común: los caracteres coincidentes. 
 
 Si un String se corresponde con el criterio que define una expresión regular, se dice que el String hace match con la expresión, y equivalentemente, se dice que la expresión acepta al String.
+
+Podemos encontrar patrones en un texto con el método _search_:
+
+```python
+>>> import re
+>>> texto = "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+>>> patron = "Lorem"
+>>> búsqueda = re.search(patron, texto) #Busca el patron dentro del texto
+```
