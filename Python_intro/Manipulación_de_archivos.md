@@ -2,8 +2,11 @@
 
 # Guias de Trabajo
 * [1. Archivos](#1-archs)
-* [2. Lectura de archivos](#2-open)
-* [3. Rutas absolutas y relativas](#3-paths)
+* [2. Apertura de archivos](#2-open)
+* [3. Cierre de archivos](#3-cierre)
+* [4. Rutas absolutas y relativas](#4-paths)
+* [5. Lectura y escritura de archivos](#5-read)
+
 
 [1. Archivos](#1-archs)
 
@@ -17,7 +20,7 @@ LPara Python existen dos tipos de archivos: de texto o binarios. Estos se manipu
 Un **archivo binario** es cualquier tipo de archivo que no es un archivo de texto. Estos solo pueden ser interpretados o leídos por aplicaciones.
 
 
-[2. Lectura de archivos](#2-open)
+[2. Apertura de archivos](#2-open)
 
 Para abrir un archivo de texto, ya sea para usarlo o escribir en el, podemos usar la función nativa de Python `open()`:
 
@@ -31,7 +34,7 @@ Donde:
     
     - "modo" es un objeto de tipo str que indica la forma en la que Python accederá al archivo en cuestión.
 
-
+Podés encontrar en la siguiente tabla algunos de los modos de lectura más frecuentes y sus difrerencias: 
 
 | Modo de apertura| Significado | 
 |-------------	|----------	|
@@ -40,8 +43,43 @@ Donde:
 |  a	| Abre un archivo para agregar información. Si el archivo no existe, crea un nuevo archivo para escritura|	
 |  w	| Abre un archivo solo para escritura. Sobreescribe el archivo si este ya existe. Si el archivo no existe, crea un nuevo archivo para escritura|	
 
-* [3. Rutas absolutas y relativas](#3-paths)
 
+Ahora que sabemos cómo abrir un archivo, el paso siguiente es aprender a cerrarlos. 
+
+[3. Cierre de archivos](#3-cierre)
+
+⚠️ ¡Es muy importante cerrar los archivos una vez abiertos! ¡Como los signos de admiración!
+
+🤔 Pero ¿Por qué? Bueno, aquí van algunas razones:
+
+
+- Dejar los archivos abiertos, pone al archivo/script en manos de los recolectores de basura.  Aunque el archivo en teoría se cerrará automáticamente, puede que no sea posible.
+
+- De no cerrar los archivos, se puede ralentizar la máquina. Con demasiadas cosas abiertas, pse utiliza más RAM, lo que afectará el rendimiento de la máquina y del programa que estemos creando.
+
+- Muchos cambios en los archivos en Python no entran en vigencia hasta que se cierra el archivo, por lo que si su secuencia de comandos edita, deja abierto y lee un archivo, no se verán las ediciones.
+
+
+Ahora bien, ¿cómo podemos entonces cerrar un archivo luego de abrirlo? Existe un método `close()`:
+
+```python
+archivo = open(path_al_archivo, modo) 
+archivo.close()
+```
+
+Sin embargo, existe otra forma de apertura de archivos que nos ahorra este paso y siempre nos asegura el cierre de adecuado:
+
+
+```python
+with open(path_al_archivo, modo) as miarch:
+    #Aquí van las líneas de procesamiento del archivo
+```
+Este modo de apertura nos asegura el cierre del archivo al salir del bloque `with`, aún cuando aparezcan errores. Es por eso que esta es la forma más recomendada para la apertura de archivos.
+
+> 🧗‍♀️ Desafío I: Creá un archivo de prueba (`prueba.txt`) en la carpeta destinada a los prácticos de la materia.
+
+
+* [4. Rutas absolutas y relativas](#4-paths)
 
 En todos los sistemas operativos modernos la estructura de archivos es jerárquica y depende de los directorios. Semejante a una estructua arbórea en la que existe un nodo (un directorio o carpeta), que contiene los restantes directorios o archivos.
 
@@ -60,7 +98,7 @@ Las rutas tambien pueden ser escritas de un modo más compacto o acortado. Se su
 /
 └── home/  ← carpeta de referencia
     │
-    ├── Facultad/ ← Direcotiorio de trabajo
+    ├── Facultad/ ← Directorio de trabajo
     |   └── Estadística 
     │   └── Fundamentos/  
     │       └── Manipulación_de_archivos.md
@@ -81,3 +119,11 @@ Ahora si quisieramos acceder a las _Fotos_, podemos hacer:
 "ls ../Fotos"
 ```
 
+* [5. Lectura y escritura de archivos](#5-read)
+
+Ya a esta altura se estarán preguntando qué tipo de procesamientos o manipulaciones podemos hacer de un archivo. Bueno, la respuesta más obvia dado el título de esta sección es "leerlos y escribir" ¡Si, exactamente eso es lo que aprenderemos ahora mismo! 
+
+Los archivos, sin embargo, pueden ser leídos de múltiples formas. Como vimos anteriormente, los *archivos de texto* están formados por una secuencia de lineas, sepradas por un caracter especial de fin de línea. De esto se desprende que existen por lo menos dos maneras de leer un archivo:
+
+- Línea a linea
+- Archivo completo
