@@ -28,7 +28,7 @@ Donde:
 
 
 
-| Modo de apertura de archivos| Significado | 
+| Modo de apertura| Significado | 
 |-------------	|----------	|
 |  r	| abre un archivo solo para lectura|
 |  a	| Abre un archivo para agregar información. Si el archivo no existe, crea un nuevo archivo para escritura|	
