@@ -57,6 +57,7 @@ Las rutas tambien pueden ser escritas de un modo más compacto o acortado. Se su
 
 
 ```
+/
 └── home/  ← carpeta de referencia
     │
     ├── Facultad/ ← Direcotiorio de trabajo
@@ -71,6 +72,12 @@ Imaginemos que esta es la estructura de archivos de nuestra computadora, donde e
 Desde el directorio _Facultad_ podemos escribir la ruta relativa a nuestro archivo del siguiente modo:
 
 ```bash
-windows  "C:\home\Facultad\Fundamentos\Manipulación_de_archivos.md"
-Linux  "Fundamentos/Manipulación_de_archivos.md"
+"ls ./Fundamentos/Manipulación_de_archivos.md"
+"ls /Fundamentos/Manipulación_de_archivos.md"
 ```
+Ahora si quisieramos acceder a las _Fotos_, podemos hacer:
+
+```bash
+"ls ../Fotos"
+```
+
