@@ -136,8 +136,6 @@ Un rango es una clase de caracteres abreviada que se crea escribiendo el primer 
 Así como podemos listar los caracteres posibles en cierta posición de la cadena, también podemos listar caracteres que no deben aparecer utilizando el `^`. Así, por ejemplo rango [^a-d] coincide con cualquier caracter que no sea `abcd`.
 
 
-
-
 Para trabajar con expresiones regulares en Python, es necesaria la librería [RE](https://docs.python.org/3/library/re.html), que puede ser instalada usando el instalador de Python (PIP):
 
 ```bash
@@ -160,7 +158,26 @@ Podemos encontrar patrones en un texto con el método _search_:
 
 ```python
 >>> import re
->>> texto = "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
->>> patron = "Lorem"
->>> búsqueda = re.search(patron, texto) #Busca el patron dentro del texto
+>>> texto = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet et amet."
+>>> patron = "amet"
+>>> re.search(patron, texto)
+```
+
+> Para pensar 🤔: ¿Qué resultado obtenemos al ejecutar en la última linea?
+>
+> 🧗‍♀️Desafio V: imprimí el fragmento del texto entre la posición 22 y 26 ¿Qué resultado obtenés? ¿Qué quiere decir el mensaje _span_?
+>
+>Para pensar 🤔: ¿Qué resultado obtenemos con _search_? ¿Por qué no obtuvimos más valores de _span_?
+
+
+<details>
+  <sumary> Comentarios </sumary>
+
+  El método **match()** de re busca el patrón y devuelve la primera aparición y solo al principio de la cadena. Si se encuentra una coincidencia en la primera línea, devuelve el objeto de coincidencia. Pero, si se encuentra una coincidencia en alguna otra línea, devulve un valor nulo.
+</details>
+
+Utilicemos ahora otro método que nos permita obtener todas las ocurrencias del substring "amet"
+
+```python
+>>> re.findall(patron, texto)
 ```
