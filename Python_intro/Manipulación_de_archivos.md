@@ -49,8 +49,28 @@ El path o ruta a un archivo, será entonces, el recorrido de directorios o carpe
 
 
 ```bash
-windows  "C:\home\Ana\UCEMA\Fundamentos\mi_arch.txt"
-Linux  "/home/Ana/UCEMA/Fundamentos/mi_arch.txt"
+windows  "C:\home\Facultad\Fundamentos\Manipulación_de_archivos.md"
+Linux  "/home/Facultad/Fundamentos/Manipulación_de_archivos.md"
 ```
 
-Las rutas tambien pueden ser escritas de un modo más compacto o acortado. Se suelen escribir de forma relativa a un determinado directorio.
+Las rutas tambien pueden ser escritas de un modo más compacto o acortado. Se suelen escribir de forma relativa a un determinado directorio. Veamos un ejemplo:
+
+
+```
+└── home/  ← carpeta de referencia
+    │
+    ├── Facultad/ ← Direcotiorio de trabajo
+    |   └── Estadística 
+    │   └── Fundamentos/  
+    │       └── Manipulación_de_archivos.md
+    └── Fotos  ← Otro directorio
+```
+
+Imaginemos que esta es la estructura de archivos de nuestra computadora, donde existen dos carpetas en el home: _Fotos_ y _Facultad_. Dentro de la carpeta _Facultad_, podemos encontrar a su vez dos directorios: _Fundamentos_ y _Estadistica_. Nuestra carpeta de trabajo actual es la de Fundamentos, donde tenemos nuestro archivo de interes _Manipulación_de_archivos.md_. 
+
+Desde el directorio _Facultad_ podemos escribir la ruta relativa a nuestro archivo del siguiente modo:
+
+```bash
+windows  "C:\home\Facultad\Fundamentos\Manipulación_de_archivos.md"
+Linux  "Fundamentos/Manipulación_de_archivos.md"
+```
