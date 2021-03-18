@@ -5,9 +5,10 @@ En este recorrido aprenderemos los conceptos básicos de expresiones regulares e
 # Guias de Trabajo
 * [1. Lo esencial es invisible a los ojos](#1-Escape-characters)
 * [2. ¿Qué son las expresiones regulares?](#2-ER)
-* [3. Metacaracteres y expresiones Simples](#3-Metacaracteres)
+* [3. Metacaracteres](#3-Metacaracteres)
 * [4. Expresiones regulares en Python ](#4-RE) 
 * [5. Coincidencias o Matches](#5-matches)
+* [6. Reemplazos o sustituciones masivas](#6-sub)
 
 [1. Lo esencial es invisible a los ojos](#1-Escape-characters)
 
@@ -126,14 +127,17 @@ Desafío IV: /d+
 ```
 </details>
 
-*Rangos*
+**Rangos**
 
-Un rango es una clase de caracteres abreviada que se crea escribiendo el primer caracter del rango, un guión y el último caracter del rango. Sirve para listar un conjunto de caracteres de interés. Por ejemplo:
+Un rango es una clase de caracteres abreviada que se crea escribiendo el primer caracter del rango, un guión y el último caracter del rango. Sirve para listar un conjunto de caracteres de interés, de este modo se encontrará uno cualquiera de los caracteres de la lista. Por ejemplo:
 
     - El rango [a-d] equivale al [abcd]
     - El rango [1-10] equivale al substring [12345678910]
+    - El rango [Dd] equivale a buscar una D mayúscula y una d minúscula
 
 Así como podemos listar los caracteres posibles en cierta posición de la cadena, también podemos listar caracteres que no deben aparecer utilizando el `^`. Así, por ejemplo rango [^a-d] coincide con cualquier caracter que no sea `abcd`.
+
+[4. Expresiones regulares en Python ](#4-RE) 
 
 
 Para trabajar con expresiones regulares en Python, es necesaria la librería [RE](https://docs.python.org/3/library/re.html), que puede ser instalada usando el instalador de Python (PIP):
@@ -150,11 +154,13 @@ Si la librería está instalada no nos aparecerá ningún error.
 
 
 [5. Coincidencias o Matches](#5-matches)
+
+
 Comenzaremos por aprender sobre las expresiones regulares más simples posibles. Dado que las expresiones regulares se utilizan para operar en strings, vamos a empezas con la tarea más común: los caracteres coincidentes. 
 
 Si un String se corresponde con el criterio que define una expresión regular, se dice que el String hace match con la expresión, y equivalentemente, se dice que la expresión acepta al String.
 
-Podemos encontrar patrones en un texto con el método _search_:
+Podemos encontrar patrones en un texto con el función _search_:
 
 ```python
 >>> import re
@@ -168,16 +174,53 @@ Podemos encontrar patrones en un texto con el método _search_:
 > 🧗‍♀️Desafio V: imprimí el fragmento del texto entre la posición 22 y 26 ¿Qué resultado obtenés? ¿Qué quiere decir el mensaje _span_?
 >
 >Para pensar 🤔: ¿Qué resultado obtenemos con _search_? ¿Por qué no obtuvimos más valores de _span_?
-
+>
+>
 
 <details>
   <sumary> Comentarios </sumary>
 
-  El método **match()** de re busca el patrón y devuelve la primera aparición y solo al principio de la cadena. Si se encuentra una coincidencia en la primera línea, devuelve el objeto de coincidencia. Pero, si se encuentra una coincidencia en alguna otra línea, devulve un valor nulo.
+  El función **match()** de re busca el patrón y devuelve la primera aparición y solo al principio de la cadena. Si se encuentra una coincidencia en la primera línea, devuelve el objeto de coincidencia. Pero, si se encuentra una coincidencia en alguna otra línea, devulve un valor nulo.
 </details>
+
+Vamos a ejecutar la última linea con una modificación:
+
+```python
+>>> import re
+>>> texto = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet et amet."
+>>> patron = "amet"
+>>> re.search(patron, texto).group()
+```
+
+>
+>Para pensar 🤔: ¿Qué resultado obtenemos? ¿Para qué sirve la función group()?
+>
+>
+
 
 Utilicemos ahora otro método que nos permita obtener todas las ocurrencias del substring "amet"
 
 ```python
 >>> re.findall(patron, texto)
 ```
+
+>
+>Para pensar 🤔: ¿Qué resultado obtenemos? 
+>
+> 🧗‍♀️Desafio VI: Expresá el patron de búsqueda utilizando lo visto anteriormente sobre metacaracteres y rangos.
+>
+
+[6. Reemplazos o sustituciones masivas](#6-sub)
+
+Ejecutemos ahora la siguiente línea:
+
+
+```python
+>>> re.sub(patron, "###", texto)
+```
+
+>
+>Para pensar 🤔: ¿Qué resultado obtenemos? ¿Para qué sirve la función _sub_?
+>
+
+La función _sub_ permite reemplazar todos las ocurrencias del patrón por otro patrón en un String.
