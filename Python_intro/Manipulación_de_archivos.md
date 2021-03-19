@@ -147,3 +147,35 @@ Para que quede más claro veamos un ejemplo concreto. Ejucutá las siguientes l�
 bio = open("bio.txt", "r")
 bio.read()
 ```
+
+Ahora probemos las siguientes líneas de código:
+
+```python
+bio = open("bio.txt", "r")
+bio.readlines()
+```
+
+>
+> Para pensar 🤔:¿Qué diferencias notás? ¿Para qué sirve cada método? ¿Que tipo de dato obtenemos en cada caso? Usá la función type() para explorarlo:
+>
+
+<details>
+  <summary>Ayuda</summary>
+type(bio.readlines())
+</details>
+
+
+En resumen, podemos utilizar los siguientes modos de lectura de archivos:
+
+ * `.read()` Lee del archivo según el número de bytes de tamaño. Si no se pasa ningún, entonces lee todo el archivo.
+ 
+ * `.readline()` Lee como máximo el número de caracteres de tamaño de la línea. Esto continúa hasta el final de la línea y luego regresa. 
+ 
+ * `.readlines()` Esto lee las líneas restantes del objeto de archivo y las devuelve como una lista. 
+
+
+>
+>Para pensar 🤔: ¿Creés que habrá una forma más práctica de leer archivos estructurados o tabulados?
+>
+> ¡Te dejo con la intriga hasta nuestro capítulo de análisis de datos! Por ahora, hasta aquí llegamos 👋 
+>
