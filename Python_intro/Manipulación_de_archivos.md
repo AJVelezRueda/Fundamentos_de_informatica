@@ -123,7 +123,22 @@ Ahora si quisieramos acceder a las _Fotos_, podemos hacer:
 
 Ya a esta altura se estarán preguntando qué tipo de procesamientos o manipulaciones podemos hacer de un archivo. Bueno, la respuesta más obvia dado el título de esta sección es "leerlos y escribir" ¡Si, exactamente eso es lo que aprenderemos ahora mismo! 
 
-Los archivos, sin embargo, pueden ser leídos de múltiples formas. Como vimos anteriormente, los *archivos de texto* están formados por una secuencia de lineas, sepradas por un caracter especial de fin de línea. De esto se desprende que existen por lo menos dos maneras de leer un archivo:
+La escritura de los archivos en Python se hace de forma sencilla con el método `write()`, que toma como parámetro un string con el contenido que desamos almacenar en el archivo:
+
+
+```python
+with open(path_al_archivo, modo) as miarch:
+    miarch.write("Este es el contenido del archivo")
+```
+
+>
+> 🧗‍♀️ Desafío I: Abrí el archivo `prueba.txt` y escribí una mini biografía de presentación.
+> Para pensar 🤔:¿Cómo darías formato al texto que estas creando?
+>
+
+Hemos visto que resulta relativamente sencillo escribir archivos con Python, sin embargo, la lectura de los archivos puede realizarse de múltiples formas. Como vimos anteriormente, los *archivos de texto* están formados por una secuencia de lineas, sepradas por un caracter especial de fin de línea. Por ello resulta lógico pensar  que existan más de una manera de leer un archivo:
 
 - Línea a linea
 - Archivo completo
+
+Para que quede más claro veamos un ejemplo concreto:
