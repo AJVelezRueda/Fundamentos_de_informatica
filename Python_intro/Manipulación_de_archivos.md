@@ -76,7 +76,7 @@ with open(path_al_archivo, modo) as miarch:
 ```
 Este modo de apertura nos asegura el cierre del archivo al salir del bloque `with`, aún cuando aparezcan errores. Es por eso que esta es la forma más recomendada para la apertura de archivos.
 
-> 🧗‍♀️ Desafío I: Creá un archivo de prueba (`prueba.txt`) en la carpeta destinada a los prácticos de la materia.
+> 🧗‍♀️ Desafío I: Creá un archivo de prueba (`bio.txt`) en la carpeta destinada a los prácticos de la materia.
 
 
 * [4. Rutas absolutas y relativas](#4-paths)
@@ -132,7 +132,7 @@ with open(path_al_archivo, modo) as miarch:
 ```
 
 >
-> 🧗‍♀️ Desafío I: Abrí el archivo `prueba.txt` y escribí una mini biografía de presentación.
+> 🧗‍♀️ Desafío I: Abrí el archivo `bio.txt` y escribí una mini biografía de presentación.
 > Para pensar 🤔:¿Cómo darías formato al texto que estas creando?
 >
 
@@ -141,4 +141,9 @@ Hemos visto que resulta relativamente sencillo escribir archivos con Python, sin
 - Línea a linea
 - Archivo completo
 
-Para que quede más claro veamos un ejemplo concreto:
+Para que quede más claro veamos un ejemplo concreto. Ejucutá las siguientes líneas (recordá adaptar el path a tu archivo de prueba).
+
+```python
+bio = open("bio.txt", "r")
+bio.read()
+```
