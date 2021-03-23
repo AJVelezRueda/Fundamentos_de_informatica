@@ -28,22 +28,13 @@ Escribir un programa para calcular la nota final de un estudiante, teniendo en c
 ##### **Ejercicio en grupo I - Compra de una casa**
 Uno de los sueños comunes entre las personas sin duda es poder tener una casa propia, sin embargo (en general) no es algo muy sencillo, ya que hay que ahorrar bastante solo para el depósito de la casa. En este ejercicio hay que determinar cuánto tiempo tomaría ahorrar la cantidad suficiente de dinero para pagar el depósito. Para esto vamos a tomar algunas suposiciones:
 
-    1. Llamemos al valor de la casa **costo_total**.
-    2. El porcentaje de este costo que se corresponde con el depósito
-    será **porcentaje_deposito**. Para este caso el porcentaje va a
-    ser de 25%.
-    3. La cantidad actual de ahorros, **cantidad_ahorrada**, empezará
-    en 0.
-    4. Consideremos que se realiza una inversión del dinero ahorrado
-    por la cual se obtiene cierta ganancia, **g**, por año (es decir,
-    por mes se obtendrían **cantidad_ahorrada*g/12**). Supongamos que
-    por esta inversión se gana 4% (**g = 0.04**).
-    5. El sueldo anual será **sueldo_anual**.
-    6. La cantidad que se ahorra por mes será **porcentaje_ahorrado**,
-    el cual debe ser expresada como un valor decimal del sueldo mensual
-    (si es 10%, este porcentaje será 0.1)
-    7. Por último, al sueldo mensual lo llamaremos **sueldo_mensual**
-    (**sueldo_anual/12**)
+>    1. Llamemos al valor de la casa **costo_total**.
+>    2. El porcentaje de este costo que se corresponde con el depósito será **porcentaje_deposito**. Para este caso el porcentaje va a ser de 25%.
+>    3. La cantidad actual de ahorros, **cantidad_ahorrada**, empezará en 0.
+>    4. Consideremos que se realiza una inversión del dinero ahorrado por la cual se obtiene cierta ganancia, **g**, por año (es decir, por mes se obtendrían **cantidad_ahorrada** multiplicada por **g/12**). Supongamos que por esta inversión se gana 4% (**g = 0.04**).
+>    5. El sueldo anual será **sueldo_anual**.
+>    6. La cantidad que se ahorra por mes será **porcentaje_ahorrado**, el cual debe ser expresada como un valor decimal del sueldo mensual (si es 10%, este porcentaje será 0.1)
+>    7. Por último, al sueldo mensual lo llamaremos **sueldo_mensual** (**sueldo_anual/12**)
 
 El programa debe calcular cuantos meses tomaría ahorrar el dinero necesario para pagar el depósito. Este programa debe preguntarle al usuario cual es su sueldo anual, que porcentaje del sueldo quiere ahorrar por mes y cual es el costo de la casa en cuestión.
 
