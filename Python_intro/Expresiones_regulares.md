@@ -58,7 +58,7 @@ Existen lo que se conoce como `metacaracteres delimitadores`, que nos permitirá
 
 > Para pensar 🤔: Dado el siguiente texto:
 ```python
-texto = 'Linea uno\npalabra en la linea dos\n'
+texto = 'Esta es la linea uno\npalabra en la linea dos\n'
 ```
 >¿Cómo crees que darán las siguientes búsquedas? 
 >
