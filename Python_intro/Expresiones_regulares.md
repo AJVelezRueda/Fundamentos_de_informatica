@@ -180,7 +180,7 @@ Podemos encontrar patrones en un texto con el función _search_:
 <details>
   <sumary> Comentarios </sumary>
 
-  El función **match()** de re busca el patrón y devuelve la primera aparición y solo al principio de la cadena. Si se encuentra una coincidencia en la primera línea, devuelve el objeto de coincidencia. Pero, si se encuentra una coincidencia en alguna otra línea, devulve un valor nulo.
+  El función **search()** de re busca el patrón y devuelve la primera aparición y solo al principio de la cadena. Si se encuentra una coincidencia en la primera línea, devuelve el objeto de coincidencia. Pero, si se encuentra una coincidencia en alguna otra línea, devulve un valor nulo.
 </details>
 
 Vamos a ejecutar la última linea con una modificación:
