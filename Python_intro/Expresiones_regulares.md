@@ -56,6 +56,20 @@ Existen lo que se conoce como `metacaracteres delimitadores`, que nos permitirá
 | \Z | Fin de texto |
 | . | Coincide con cualquier caracter en una línea dada | 
 
+> Para pensar 🤔: Dado el siguiente texto:
+```python
+texto = 'Linea uno\npalabra en la linea dos\n'
+```
+>¿Cómo crees que darán las siguientes búsquedas? 
+>
+>expresion regular a: `'^palabra'`
+>
+>expresion regular b: `'\Apalabra'`
+>
+>expresion regular c: `'palabra$'`
+>
+>expresion regular d: `'palabra\Z'`
+>
 
 Ya vimos que en programación suele ser útil repetir la ejecución de porciones de código. Las expresiones regulares nos permiten no solo delimitar la porción de texto donde deseamos buscar, sino que también permite repitir cierta cantidad de veces una busqueda dada. Para ello se utilizan los `metacaracteres cuantificadores`:
 
