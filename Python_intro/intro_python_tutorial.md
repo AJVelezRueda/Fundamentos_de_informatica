@@ -323,7 +323,7 @@ Podemos agregar (append) elementos a nuestra lista o quitarlos (remove) del sigu
 
 ```python
 >>> lista.append('25')
->>> lista.remove('2')
+>>> lista.remove('25')
 ```
 
 > Para pensar 🤔: Probá la sentencia `lista.index('25')` ¿Qué resultado obtenes? ¿Para qué sirve _index()_
@@ -460,7 +460,7 @@ Hay gente que es reiterativa hay circunstancias que son reiterativas y hay tarea
 Pero antes de desglosar los bucles, vamos a hacer otro recreo culinario. Seguro a esta altura del curso te haya dado un poco de hambre, ¡al fin y al cabo solo tomamos mate y una sola medialuna! Vamos hacer un pedido de empanadas 🥟 y para simplificarnos las cosas cuando hagamos el pedido, dividiremos entre veganas y no veggie.
 
 ```python
- pedido = { "Ana" : "no veggie", "Paul": "veganas", "Luz": "veganas"}
+ pedido = { "Ana" : "no veggie", "Paul": "veganas", "Luz": "vegetarianas"}
 ```
 
 En lugar de contar a mano, ahora que sabemos programar, podremos hacer una función (_empanadas_por_gusto_) que nos calcule la cantidad de empanadas de cada gusto, para poder hacer el pedido. Para ello deberíamos recorrer la lista de comensales del diccionario pedidos y verificar de que gusto quieren y sumarla 1 a la lista de cada gusto. Vamos por partes, comencemos por acceder a los gustos que cada persona quiere. 
