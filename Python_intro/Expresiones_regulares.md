@@ -234,6 +234,59 @@ Utilicemos ahora otro método que nos permita obtener todas las ocurrencias del 
 > 🧗‍♀️Desafio VI: Expresá el patron de búsqueda utilizando lo visto anteriormente sobre metacaracteres y rangos.
 >
 
+Como vimos hasta acá el método ```group()``` sirve para mostrar el resultado de una búsqueda, pero veamos:
+
+```python
+>>> import re
+>>> texto = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet et amet."
+>>> patron = "amet"
+>>> re.search(patron, texto).group()
+'amet'
+>>> re.search(patron, texto).group(0)
+'amet'
+```
+
+El método ```group()``` (o ```group(0)```) nos devuelve la coincidencia. Sin embargo si lo que se quiere no es encontrar un patrón en particular, sino obtener lo que está dentro de cierto patrón (por ejemplo lo que hay entre ciertas palabras) hay que modificar el patrón. 
+Vamos a ver el siguiente ejemplo:
+
+```Python
+>>> import re
+>>> texto = "Lorem ipsum dolor sit amet, consectetur ipsum elit. Amet sit amet."
+>>> patron = "ipsum(.*)sit"
+>>> re.search(patron, texto).group()
+'ipsum dolor sit amet, consectetur ipsum elit. Amet sit'
+>>> re.search(patron, texto).group(0)
+'ipsum dolor sit amet, consectetur ipsum elit. Amet sit'
+>>> re.search(patron, texto).group(1)
+' dolor sit amet, consectetur ipsum elit. Amet '
+```
+
+Acá se utilizaron algunos metacaracteres, como lo son el punto (**.**) para indicar que puede ser cualquier carácter, y el asterísco (__*__) para indicar que puede haber 0 o más de estos caracteres. De esta manera obtenemos como resultado lo que se encuentre entre las palabras "ipsum" y "sit", sin embargo observen dos cosas. Primero, el string que nos devuelve tiene dentro un substring que debería haber sido encontrado en la búsqueda: "ipsum dolor sit", pero que sin embargo no aparece. Segundo, nuevamente al hacer ```group()``` o ```group(0)``` obtenemos la coincidencia, pero si nos queremos quedar con el substring que está contenido entre estas palabras debemos utilizar ```group(1)```.
+Ahora bien, como vimos, usar el patrón de búsqueda de esta manera prioriza los matches externos, es decir, busca el primer delimitador ("ipsum" en nuestro caso) y luego abarca todo hasta la última aparición del segundo delimitador ("sit"). Existe una forma de priorizar los matches internos y es con el metacarácter ```?```:
+
+```Python
+>>> import re
+>>> texto = "Lorem ipsum dolor sit amet, consectetur ipsum elit. Amet sit amet."
+>>> patron = "ipsum(.*?)sit"
+>>> re.search(patron, texto).group()
+'ipsum dolor sit'
+>>> re.search(patron, texto).group(0)
+'ipsum dolor sit'
+>>> re.search(patron, texto).group(1)
+' dolor  '
+```
+
+Cuando se quieren obtener todas las apariciones del patrón se utiliza el método ```findall``` el cual actúa para cada coincidencia como si devolviera el ```group(1)```, es decir devuelve en una lista la parte que se encuentra dentro de los delimitadores.
+
+```Python
+>>> import re
+>>> texto = "Lorem ipsum dolor sit amet, consectetur ipsum elit. Amet sit amet."
+>>> patron = "ipsum(.*?)sit"
+>>> re.findall(patron, texto)
+[' dolor ', ' elit. Amet ']
+```
+
+
 [6. Reemplazos o sustituciones masivas](#6-sub)
 
 Ejecutemos ahora la siguiente línea:
