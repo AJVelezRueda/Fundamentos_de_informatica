@@ -5,7 +5,8 @@
 * [2. Apertura de archivos](#2-open)
 * [3. Cierre de archivos](#3-cierre)
 * [4. Rutas absolutas y relativas](#4-paths)
-* [5. Lectura y escritura de archivos](#5-read)
+* [5. Automatización en la construcción de rutas](#5-os)
+* [6. Lectura y escritura de archivos](#6-read)
 
 
 [1. Archivos](#1-archs)
@@ -44,12 +45,6 @@ Podés encontrar en la siguiente tabla algunos de los modos de lectura más frec
 |  w	| Abre un archivo solo para escritura. Sobreescribe el archivo si este ya existe. Si el archivo no existe, crea un nuevo archivo para escritura|	
 
 
->
-> 🧗‍♀️Desafio I: Descargá el archivo [`manipulacion_archivos.txt`](https://github.com/AJVelezRueda/UCEMA_Fundamentos_de_informatica/blob/master/Python_intro/manipulacion_archivos.txt) y creá un programa que lea su contenido y lo imprima en pantalla el resultado de la búsqueda de la expresión `-(.*)-`
->
->Para pensar 🤔: ¿Qué significa dicha expresión regular? Imprimí todo el contenido del archivo y descubrí qué hace este personaje incógnito
->
-
 Ahora que sabemos cómo abrir un archivo, el paso siguiente es aprender a cerrarlos. 
 
 [3. Cierre de archivos](#3-cierre)
@@ -81,8 +76,6 @@ with open(path_al_archivo, modo) as miarch:
     #Aquí van las líneas de procesamiento del archivo
 ```
 Este modo de apertura nos asegura el cierre del archivo al salir del bloque `with`, aún cuando aparezcan errores. Es por eso que esta es la forma más recomendada para la apertura de archivos.
-
-> 🧗‍♀️ Desafío II: Creá un archivo de prueba (`bio.txt`) en la carpeta destinada a los prácticos de la materia.
 
 
 * [4. Rutas absolutas y relativas](#4-paths)
@@ -116,18 +109,44 @@ Imaginemos que esta es la estructura de archivos de nuestra computadora, donde e
 Desde el directorio _Facultad_ podemos escribir la ruta relativa a nuestro archivo del siguiente modo:
 
 ```bash
-"ls ./Fundamentos/Manipulación_de_archivos.md"
-"ls /Fundamentos/Manipulación_de_archivos.md"
+ls ./Fundamentos/Manipulación_de_archivos.md
+ls /Fundamentos/Manipulación_de_archivos.md
 ```
 Ahora si quisieramos acceder a las _Fotos_, podemos hacer:
 
 ```bash
-"ls ../Fotos"
+ls ../Fotos
 ```
 
 Como seguramente pudiste deducir un punto (.) se utiliza para referenciar al "directorio actual" y los dos puntos seguidos (..) se utilizan para subir en la jerarquía
 
-* [5. Lectura y escritura de archivos](#5-read)
+
+>
+> 🧗‍♀️ Desafío I: Creá un archivo de prueba (`bio.txt`) en la carpeta destinada a los prácticos de la materia.
+>
+
+[5. Automatización en la construcción de rutas](#5-os)
+
+Cada programa que se ejecuta en su computadora tiene un directorio de trabajo actual, o `cwd`. Se asume que cualquier nombre de archivo o ruta que no comience con la carpeta raíz se encuentra en el directorio de trabajo actual. Se puede obtener el directorio de trabajo actual como un _string_, utilizando la biblioteca _**`os`**_. 
+
+
+Esta biblioteca del sistema operativo de Python proporciona funciones para interactuar con el sistema operativo. Esta incluye métodos que como ```os.getcwd()``` o ```os.chdir()```, que nos permitirá conocer el directorio de trabajo o cambiar de directorio de forma automática:
+```Python
+>>> import os
+>>> os.getcwd()
+'/home/Ana'
+>>> os.chdir('/home/Ana/Documents')
+>>> os.getcwd()
+'/home/Ana/Documents'
+```
+Aquí, el directorio de trabajo actual es '/home/Ana' y cambiamos al directorio '/home/Ana/Documents'. Python mostrará un [error](https://github.com/AJVelezRueda/UCEMA_Fundamentos_de_informatica/blob/master/Python_intro/Manejo_excepciones.md) si intenta cambiar a un directorio que no existe.
+
+>
+> 🧗‍♀️ Desafío II: Investigá sobre los métodos ```os.mkdir()``` y ```os.listdir()```
+>
+
+
+[6. Lectura y escritura de archivos](#6-read)
 
 Ya a esta altura se estarán preguntando qué tipo de procesamientos o manipulaciones podemos hacer de un archivo. Bueno, la respuesta más obvia dado el título de esta sección es "leerlos y escribir" ¡Si, exactamente eso es lo que aprenderemos ahora mismo! 
 
@@ -138,7 +157,6 @@ La escritura de los archivos en Python se hace de forma sencilla con el método 
 with open(path_al_archivo, modo) as miarch:
     miarch.write("Este es el contenido del archivo")
 ```
-
 >
 > 🧗‍♀️ Desafío III: Abrí el archivo `bio.txt` y escribí una mini biografía de presentación.
 > Para pensar 🤔:¿Cómo darías formato al texto que estas creando?
@@ -181,7 +199,10 @@ En resumen, podemos utilizar los siguientes modos de lectura de archivos:
  
  * `.readlines()` Esto lee las líneas restantes del objeto de archivo y las devuelve como una lista. 
 
-
+>
+> 🧗‍♀️Desafio IV: Descargá el archivo [`manipulacion_archivos.txt`](https://github.com/AJVelezRueda/UCEMA_Fundamentos_de_informatica/blob/master/Python_intro/manipulacion_archivos.txt) y creá un programa que lea su contenido y lo imprima en pantalla el resultado de la búsqueda de la expresión `-(.*)-`
+>
+>Para pensar 🤔: ¿Qué significa dicha expresión regular? Imprimí todo el contenido del archivo y descubrí qué hace este personaje incógnito
 >
 >Para pensar 🤔: ¿Creés que habrá una forma más práctica de leer archivos estructurados o tabulados?
 >
