@@ -44,6 +44,12 @@ Podés encontrar en la siguiente tabla algunos de los modos de lectura más frec
 |  w	| Abre un archivo solo para escritura. Sobreescribe el archivo si este ya existe. Si el archivo no existe, crea un nuevo archivo para escritura|	
 
 
+>
+> 🧗‍♀️Desafio I: Descargá el archivo [`manipulacion_archivos.txt`](https://github.com/AJVelezRueda/UCEMA_Fundamentos_de_informatica/blob/master/Python_intro/manipulacion_archivos.txt) y creá un programa que lea su contenido y lo imprima en pantalla el resultado de la búsqueda de la expresión `-(.*)-`
+>
+>Para pensar 🤔: ¿Qué significa dicha expresión regular? Imprimí todo el contenido del archivo y descubrí qué hace este personaje incógnito
+>
+
 Ahora que sabemos cómo abrir un archivo, el paso siguiente es aprender a cerrarlos. 
 
 [3. Cierre de archivos](#3-cierre)
@@ -76,7 +82,7 @@ with open(path_al_archivo, modo) as miarch:
 ```
 Este modo de apertura nos asegura el cierre del archivo al salir del bloque `with`, aún cuando aparezcan errores. Es por eso que esta es la forma más recomendada para la apertura de archivos.
 
-> 🧗‍♀️ Desafío I: Creá un archivo de prueba (`bio.txt`) en la carpeta destinada a los prácticos de la materia.
+> 🧗‍♀️ Desafío II: Creá un archivo de prueba (`bio.txt`) en la carpeta destinada a los prácticos de la materia.
 
 
 * [4. Rutas absolutas y relativas](#4-paths)
@@ -132,7 +138,7 @@ with open(path_al_archivo, modo) as miarch:
 ```
 
 >
-> 🧗‍♀️ Desafío I: Abrí el archivo `bio.txt` y escribí una mini biografía de presentación.
+> 🧗‍♀️ Desafío III: Abrí el archivo `bio.txt` y escribí una mini biografía de presentación.
 > Para pensar 🤔:¿Cómo darías formato al texto que estas creando?
 >
 
