@@ -125,6 +125,8 @@ Ahora si quisieramos acceder a las _Fotos_, podemos hacer:
 "ls ../Fotos"
 ```
 
+Como seguramente pudiste deducir un punto (.) se utiliza para referenciar al "directorio actual" y los dos puntos seguidos (..) se utilizan para subir en la jerarquía
+
 * [5. Lectura y escritura de archivos](#5-read)
 
 Ya a esta altura se estarán preguntando qué tipo de procesamientos o manipulaciones podemos hacer de un archivo. Bueno, la respuesta más obvia dado el título de esta sección es "leerlos y escribir" ¡Si, exactamente eso es lo que aprenderemos ahora mismo! 
