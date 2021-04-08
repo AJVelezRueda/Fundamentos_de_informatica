@@ -109,13 +109,13 @@ Imaginemos que esta es la estructura de archivos de nuestra computadora, donde e
 Desde el directorio _Facultad_ podemos escribir la ruta relativa a nuestro archivo del siguiente modo:
 
 ```bash
-ls ./Fundamentos/Manipulación_de_archivos.md
-ls /Fundamentos/Manipulación_de_archivos.md
+./Fundamentos/Manipulación_de_archivos.md
+/Fundamentos/Manipulación_de_archivos.md
 ```
 Ahora si quisieramos acceder a las _Fotos_, podemos hacer:
 
 ```bash
-ls ../Fotos
+cd ../Fotos
 ```
 
 Como seguramente pudiste deducir un punto (.) se utiliza para referenciar al "directorio actual" y los dos puntos seguidos (..) se utilizan para subir en la jerarquía
