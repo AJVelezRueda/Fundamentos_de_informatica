@@ -35,3 +35,20 @@ Como verán esto no genera carpetas o archivos en la computadora, por lo que pue
 Por cuestiones de comodidad muchas veces es recomendable trabajar con rutas relativas ya que de esta manera solo son movemos dentro de las carpetas correspondientes y no hay peligro de poder acceder a otra carpeta y modificar cosas que no deberíamos, siendo, tal vez, el mayor "inconveniente" saber en qué carpeta estamos parados, para saber para dónde hay que moverse.
 
 De esta manera, realizando estos pasos, el mismo código va a funcionar independientemente del sistema operativo dónde se ejecute.
+
+[os.listdir y glob](glob)
+
+Algo que resulta muy útil es poder acceder a los archivos que hayan en una determinada carpeta sin conocer sus nombres en particular, o acceder a un grupo de estos archivos que tengan algo en común (que todos tengan la misma extensión por ejemplo), más aún si son archivos que el programa genera en su ejecución, de manera de que a priori no los tenemos. Para esto podemos usar dos herramientas, el método ```listdir``` de la biblioteca ```os``` y el método ```glob``` de la biblioteca ```glob```. Con el primero obtenemos una lista de todos los archivos que se encuentran en una carpeta, mientras que con el segundo, además de esto, tenemos la posibilidad de listar archivos específicos. Es decir:
+
+```python
+>>> import os
+>>> import glob
+>>> os.listdir()
+['Ej1.py', 'Ej3.py', 'archivo2.txt', 'Ej2.py', 'Ej4.py', 'documento.txt', 'Ej5.py'...]
+>>> glob.glob("*")
+['Ej1.py', 'Ej3.py', 'archivo2.txt', 'Ej2.py', 'Ej4.py', 'documento.txt', 'Ej5.py'...]
+>>> glob.glob("*.py")
+['Ej1.py', 'Ej3.py', 'Ej2.py', 'Ej4.py', 'Ej5.py'...]
+```
+
+Como ven, podemos obtener una lista, la cual podríamos recorrer tanto para todos los archivos de una carpeta como para los archivos específicos.
