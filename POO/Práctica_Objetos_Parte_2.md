@@ -32,8 +32,8 @@ class Perro:
     def estaDebil(self):
         return self._caricias < 2
 
-	def pasear(self, km):
-		self.alimento -= km / 4
+    def pasear(self, km):
+	self.alimento -= km / 4
 
 class Gato:
     def __init__(self):
