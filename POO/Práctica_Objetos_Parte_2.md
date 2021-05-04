@@ -23,8 +23,8 @@ class Perro:
     def comer(self, gramos):
         self.alimento += gramos
 
-	def alimento(self):
-		print(self.alimento)
+    def alimento(self):
+	print(self.alimento)
 
     def acariciar(self):
         self.caricias += 1
@@ -46,8 +46,8 @@ class Gato:
     def comer(self, gramos):
         self.alimento += gramos * 1.5
 
-	def caricias(self):
-		print(self.caricias)
+    def caricias(self):
+	print(self.caricias)
 
     def acariciar(self):
         self.caricias += 1
