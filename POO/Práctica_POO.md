@@ -75,7 +75,7 @@ Implementá una clase que represente una calculadora sencilla, que permita sumar
 Si se evalúa la siguiente secuencia:
 
 ```python
-calculadora = Calculadora
+calculadora = Calculadora()
 calculadora.cargar(0)
 calculadora.sumar(4)
 calculadora.multiplicar(5)
