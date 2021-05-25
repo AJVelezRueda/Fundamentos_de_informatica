@@ -25,11 +25,15 @@ Si bien no es estrictamente necesario saber a fondo la sintaxis de Python para c
 
 # Guias de Trabajo
   * [1. Un osito cariñosito](#1-pandas)
-  * [2. Tratamiento de Datos con Python](#)
+  * [2. Métodos de Series y DataFrames](#2-metodos)
+  * [3. Tratamiento de Datos con Python](#)
 
 [1. Un osito cariñosito](#1-pandas) 
+
 En este recorrido vamos a adentrarnos en el mundo de los datos, y para ello utilizaremos Pandas, una biblioteca de Python que nos permite trabajar con archivos de formato definido: CSV, un excel, etc. Además, Pandas proporciona estructuras de datos rápidas, flexibles y expresivas diseñadas para que trabajar con datos "relacionales" o "etiquetados" sea fácil e intuitivo. En criollo: Pandas es como en excel, pero super duper!
 
+> Para pensar 🤔: Si hasta aquí no te has preguntado qué es una bliblioteca, ¡es momento de hacerse esa pregunta! ¿Para qué creés que nos puede resultar útil esta biblioteca? ¿Cuál es la ventaja de usar Pandas? ¿Por qué no solo usar Python `"de a pie"`?
+>
 
 Pandas soporta múltipes tipos de datos:
 
@@ -38,12 +42,27 @@ Pandas soporta múltipes tipos de datos:
 - Datos matriciales arbitrarios (homogéneamente tipados o heterogéneos) con etiquetas de fila y columna
 - Cualquier otra forma de conjuntos de datos observacionales/estadísticos. 
 
-Los datos en realidad no necesitan ser etiquetados para ser colocados en una estructura de datos de pandas. Pandas maneja dos estructuras de datos:
+Los datos en realidad no necesitan ser etiquetados para ser colocados en una estructura de datos de pandas. Estas estructuras se construyen a partir de arrays(listas), pero agregando nuevas funcionalidades. Pandas maneja dos estructuras de datos: Series y DataFrames.
 
-- Series (1-dimensional)
-- DataFrames (2-dimensional)
+**Series (1-dimensional)**
+Las series pueden contener cualquier tipo de datos (enteros, cadenas, números de punto flotante, etc.). Y se pueden crear del siguiente modo:
 
-Un DataFrame es una estructura tabular bidimensional de datos tabulares, potencialmente heterogéneos, con ejes etiquetados (filas y columnas). Las operaciones aritméticas se alinean en las etiquetas de fila y columna. Se puede considerar como un contenedor similar a un dict para objetos Serie. La estructura de datos de los pandas primarios. Los DataFrames de pandas proporcionan las mismos tipos de usos y utilidades que los data.frame de R.
+```python
+import pandas as pd
+una_serie = pd.Series(['Peru', 'Argentina', 'Bolivia', 'Uruguay', 'Brasil', 'Chile'], dtype='string')
+
+print(una_serie)
+```
+
+**DataFrames (2-dimensional)**
+
+Un DataFrame es una estructura tabular bidimensional de datos tabulares, potencialmente heterogéneos, con ejes etiquetados (filas y columnas). Las operaciones aritméticas se alinean en las etiquetas de fila y columna. Se puede considerar como un contenedor similar a un dict para objetos Serie. Podemos crear un DataFrame del sigueinte modo:
+
+```python
+paises_latam = pd.DataFrame(data ={"Pais": ['Peru', 'Argentina', 'Bolivia', 'Uruguay', 'Brasil', 'Chile'], "Lengua oficial primaria": ['Español', 'Español', 'Español', 'Español', 'Portugues', 'Español']}, index = [1,2,3,4,5,6])
+
+print(paises_latam)
+```
 
 Por lo tanto, la serie es la estructura de datos para una sola columna de un DataFrame, no solo conceptualmente, sino literalmente, es decir, los datos en un DataFrame se almacenan realmente en la memoria como una colección de Series.
 
@@ -51,3 +70,14 @@ Por lo tanto, la serie es la estructura de datos para una sola columna de un Dat
 >
 > 🧗‍♀️ Desafío I:   
 >
+
+
+[2. Métodos de Series y DataFrames](#2-metodos)
+
+    - s.size : Devuelve el número de elementos de la serie
+
+    - s.index : Devuelve una lista con los nombres de las filas
+
+    - s.dtype : Devuelve el tipo de datos de los elementos de la serie
+
+
