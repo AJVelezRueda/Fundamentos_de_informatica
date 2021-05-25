@@ -1,7 +1,7 @@
 
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
-# UCEMA_Fundamentos_de_informatica
+# Fundamentos_de_informatica
 
 
 This work is licensed under a
