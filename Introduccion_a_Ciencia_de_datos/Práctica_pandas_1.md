@@ -2,10 +2,12 @@
 
 ##### **Ejercicio 1**
 Escribí un programa que sume, reste, multiplique y divida dos series de números de Pandas.
+
 Series de muestra: [3, 7, 12, 15, 21], [1, 4, 10, 14, 19]
 
 ##### **Ejercicio 2**
-Realizá un programa que compare (si son mayores, menores o iguales) los elementos de dos series de números de Pandas
+Realizá un programa que compare (si son mayores, menores o iguales) los elementos de dos series de números de Pandas.
+
 Series de muestra: [3, 7, 9, 14, 25], [1, 7, 10, 16, 19]
 
 ##### **Ejercicio 3**
