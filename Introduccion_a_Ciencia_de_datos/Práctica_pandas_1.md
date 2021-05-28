@@ -22,7 +22,7 @@ dict1 = {"a": [1,3,5,2], "b": [4,2,3,3]}
 el diccionario resultante debería ser:
 
 ```python
-dict2 = {"a": [1, 25], "b": [16, 81]}
+dict2 = {"a": [1, 25], "b": [16, 27]}
 ```
 
 Esto se obtiene al hacer 1 al cubo (el primer par de la lista "a"), y 5 al cuadrado, por un lado; y 4 al cuadrado y 3 al cubo por el otro. Se considera que la cantidad de elementos en las listas siempre es par, por lo que no habría que hacer ninguna comprobación al respecto. Se puede usar el `dict1` como diccionario de muestra, pero considerá que la lista puede ser más grande.
