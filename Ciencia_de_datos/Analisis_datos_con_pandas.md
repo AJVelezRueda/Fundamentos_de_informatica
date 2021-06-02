@@ -26,200 +26,228 @@ En este recorrido trabajaremos sobre los datos abiertos del sobre el personal de
 Si bien no es estrictamente necesario saber a fondo la sintaxis de Python para comenzar a utilizar Pandas, te recomendamos fuertemente realizar el [recorrido introductorio de Python](https://github.com/AJVelezRueda/UCEMA_Fundamentos_de_informatica/blob/master/Python_intro/intro_python_tutorial.md), que te brindará los conocimientos básicos de programación en general y de Python particular que te permitiran abordar este contenido sin problemas.
 
 # Guias de Trabajo
-  * [1. Un osito cariñosito](#1-pandas)
-  * [2. Trabajando con DataFrames](#2-dfs)
-  * [3. Métodos de los DataFrames](#3-metodos)
-  * [4. Tratamiento de Datos con Python](#4-datos)
+ * [1. Carga e inspección de datos](#1-carga)
+ * [2. Tratamiento de datos faltantes](#2-faltantes)
+ * [3. Tratamiento de tipos de datos de las columnas](#3-tipos_datos)
 
-[1. Un osito cariñosito](#1-pandas) 
 
-En este recorrido vamos a adentrarnos en el mundo de los datos, y para ello utilizaremos Pandas, una biblioteca de Python que nos permite trabajar con archivos de formato definido: CSV, un excel, etc. Además, Pandas proporciona estructuras de datos rápidas, flexibles y expresivas diseñadas para que trabajar con datos "relacionales" o "etiquetados" sea fácil e intuitivo. En criollo: Pandas es como en excel, pero super duper!
+[1. Tratamiento de Datos con Python](#1-carga)
 
-> Para pensar 🤔: Si hasta aquí no te has preguntado qué es una bliblioteca, ¡es momento de hacerse esa pregunta! ¿Para qué creés que nos puede resultar útil esta biblioteca? ¿Cuál es la ventaja de usar Pandas? ¿Por qué no solo usar Python `"de a pie"`?
->
+El primer paso para poder analizar los datos y sacar conclusiones de ese análisis es realizar una
+limpieza de los mismos... ¡claro que no vamos a pasarle el plumero para sacarle el polvo! Limpieza de datos se refiere por ejemplo a verificar si faltan datos o si a alguna de las columnas debe hacerseles una corrección de notación o de tipo de dato, etc.
 
-Pandas soporta múltipes tipos de datos:
-
-- Datos tabulares con columnas de tipo heterogéneo, como en una tabla SQL o en una hoja de cálculo de Excel
-- Datos ordenados y desordenados (no necesariamente frecuencia fija).
-- Datos matriciales arbitrarios (homogéneamente tipados o heterogéneos) con etiquetas de fila y columna
-- Cualquier otra forma de conjuntos de datos observacionales/estadísticos. 
-
-Los datos en realidad no necesitan ser etiquetados para ser colocados en una estructura de datos de pandas. Estas estructuras se construyen a partir de arrays(listas), pero agregando nuevas funcionalidades. Pandas maneja dos estructuras de datos: Series y DataFrames.
-
-**Series (1-dimensional)**
-Las series pueden contener cualquier tipo de datos (enteros, cadenas, números de punto flotante, etc.). Y se pueden crear del siguiente modo:
+Para ello vamos a recurrir a alguno de los métodos que vimos en la [guía introductoria](https://github.com/flbulgarelli/recursos-python/blob/master/2_Ciencia_de_datos_pandas/Introducci%C3%B3n_pandas.md). Para comenzar descargaremos localmente la [tabla](https://datasets.datos.mincyt.gob.ar/dataset/personal-de-ciencia-y-tecnologia/archivo/11dca5bb-9a5f-4da5-b040-28957126be18) de personas que conforman el Ministerio de Ciencia y Tecnología de Argentina, en formato csv. Podemos cargar (leer) la el contenido del archivo en un DataFrame de Pandas de nombre `personas`
 
 ```python
 import pandas as pd
-una_serie = pd.Series(['Peru', 'Argentina', 'Bolivia', 'Uruguay', 'Brasil', 'Chile'], dtype='string')
-
-print(una_serie)
-```
-
-**DataFrames (2-dimensional)**
-
-Un DataFrame es una estructura tabular bidimensional de datos tabulares, potencialmente heterogéneos, con ejes etiquetados (filas y columnas). Las operaciones aritméticas se alinean en las etiquetas de fila y columna. Se puede considerar como un contenedor similar a un dict para objetos Serie. Podemos crear un DataFrame del sigueinte modo:
-
-```python
-paises_latam = pd.DataFrame(data ={"Pais": ['Peru', 'Argentina', 'Bolivia', 'Uruguay', 'Brasil', 'Chile'], "Lengua oficial primaria": ['Español', 'Español', 'Español', 'Español', 'Portugues', 'Español']}, index = [1,2,3,4,5,6])
-
-print(paises_latam)
-```
-
-Por lo tanto, la serie es la estructura de datos para una sola columna de un DataFrame, no solo conceptualmente, sino literalmente, es decir, los datos en un DataFrame se almacenan realmente en la memoria como una colección de Series.
-
-También, se puede crear un DataFrame a partir de un diccionario, en este caso las claves se corresponderán con los nombres de las columnas y los valores con los datos de las filas para cada columna:
-
-```python
-#será DataFrame(data=diccionario, index=filas, columns=columnas, dtype=tipos)
-datos = {"Pais": ['Peru', 'Argentina', 'Bolivia', 'Uruguay', 'Brasil', 'Chile'], "Idioma oficial": ['Español', 'Español', 'Español', 'Español', 'Portugues', 'Español']}
-paises_latam = pd.DataFrame(datos)
-
-print(paises_latam)
-```
-🛑 Alerta: los valores asociados a las claves del diccionario deben ser listas del mismo tamaño
-
-`df` es el nombre génerico para designar DataFrame y es el nombre que utilizaremos de ahora en más para mayor simplicidad.
-
-
-Otra forma muy usual de generar DataFrames es mediante la lectura de **archivos estructurados**. Existen muchas formas de cargar/leer información desde archivos la información desde archivos pero en general la diferencia radica principalmente en los parámetros por defecto que toman para definir las columnas. Por ejemplo: 
-
-- El caracter de separación de columnas por defecto del método `read_cvs` es una coma (',') 
-- El caracter de separación de columnas por defecto del método `read_fwf` es una tab ('\t').
-
-```python
-import pandas as pd
-df = pd.read_csv(path_al_erchivo)
-```
-
->  🧗‍♀️ Desafío I: Estos métodos aceptan otros parámetros que merecen la pena ser explorados. Averiguá para qué sirven los parámetro sep, index_col, nrows y header
-
->  🧗‍♀️ Desafío II: Descargá a tu computadora la [tabla](https://datasets.datos.mincyt.gob.ar/dataset/personal-de-ciencia-y-tecnologia/archivo/11dca5bb-9a5f-4da5-b040-28957126be18) de personas que conforman el Ministerio de Ciencia y Tecnología de Argentina, en formato csv.
->
-> Cargá (lee) la tabla a un DataFrame de Pandas de nombre `personas` ¿Qué forma te lectura de archivos usarías? ¿Qué separación entre columnas posee el archivo? ¿Cómo te diste cuenta? 🤔
->
-
-Ya tenemos nuestra tabla cargada, podeés hacer una previsualización de los datos haciendo:
-
-```python
+personas =  pd.read_csv("personas_2011_cyt.csv", sep=";")
 personas.head()
 ```
-> Para pensar 🤔: ¿Cuántas filas se imprimen al hacer head? ¿Qué sucede si hacemos `personas.head(10)`? ¡Probalo!
 
-[2. Trabajando con DataFrames](#2-dfs)
+> Para pensar 🤔: Al imprimir el DataFrame se ven celdas con valores `NaN` ¿Qué son esos valores?¿Qué significa? ¿A qué columna corresponden estos valores? ¿Qué tipo de datos son los pertenecientas a cada una de las columnas (categóricos o numéricos)?
 
-Ahora que aprendiste a cargar datos en una `"tabla"` de Pandas, podés averiguar la información general de tu tabla haciendo: 
+Podemos obtener la información general del DataFrame haciendo:
+
 
 ```python
 personas.info()
 ```
 
-Si bien esta información nos ayuda a saber los nombres de las columnas de nuestra tabla, o el tipo de datos que contiene cada una de ellas, quizás una descripción más informativa podría ser:
+<details>
+  <summary>Resultado</summary>
+
+```python
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 68552 entries, 0 to 68551
+Data columns (total 21 columns):
+ #   Column                                Non-Null Count  Dtype  
+---  ------                                --------------  -----  
+ 0   persona_id                            68552 non-null  int64  
+ 1   anio                                  68552 non-null  int64  
+ 2   sexo_id                               68552 non-null  int64  
+ 3   edad                                  68552 non-null  int64  
+ 4   maximo_grado_academico_id             68552 non-null  int64  
+ 5   disciplina_maximo_grado_academico_id  68552 non-null  int64  
+ 6   disciplina_titulo_grado_id            68552 non-null  int64  
+ 7   disciplina_experticia_id              68552 non-null  int64  
+ 8   tipo_personal_id                      68552 non-null  int64  
+ 9   producciones_ult_anio                 68552 non-null  int64  
+ 10  producciones_ult_2_anios              68552 non-null  int64  
+ 11  producciones_ult_3_anios              68552 non-null  int64  
+ 12  producciones_ult_4_anios              68552 non-null  int64  
+ 13  institucion_trabajo_id                68552 non-null  int64  
+ 14  seniority_level                       68552 non-null  object 
+ 15  categoria_conicet_id                  48640 non-null  float64
+ 16  categoria_incentivos                  48640 non-null  float64
+ 17  max_dedicacion_horaria_docente_id     48640 non-null  float64
+ 18  institucion_cargo_docente_id          48640 non-null  float64
+ 19  clase_cargo_docente_id                48640 non-null  float64
+ 20  tipo_condicion_docente_id             48640 non-null  float64
+dtypes: float64(6), int64(14), object(1)
+memory usage: 11.0+ MB
+```
+</details>
+
+Como verás esta es una descripción genérica de nuestro DataFrame, de la cuál podemos obtener el nombre de cada columna (variable), el tipo de datos correspondiente a cada una de ellas, y cuántas filas por columna poseen información.
+
+Sin embargo, el análisis de los datos implica hacernos preguntas sobre la información que estos contienen e intentar encontrar respuestas, dentro de lo posible que sean generalizables. Aquí es donde entra en juego 🥁...¡Si: La estadística!
+
+Podemos hacer un primer análisis estadístico básico de nuestro conjunto de datos utilizando el método `describe()`:
 
 ```python
 personas.describe()
 ```
-> Para pensar 🤔: ¿Qué tipo de información nos brinda el método describe? ¿Tienen sentido estos cálculos para todas las columnas?
->
 
-Podemos acceder a los datos de cada columna haciendo df['nombre de la columna'], en nuestro caso por ejemplo:
+> Para pensar 🤔: ¿Qué datos nos devuelve el método `describe()`? ¿Qué significan estos valores?¿Son útiles para todas las columnas?
 
-``` python
-personas[' persona_id']
-```
+De la inspección general de los datos y su análisis estadístico básico podemos decir, por ejemplo, que el promedio de edades es de 38 años ¿Pero podemos decir que el promedio de maximo_grado_academico_id es 3? Bueno, es claro que el máximo grado académico habla de cual es el nivel más alto de estudios que logró cada persona (primario, secundario, universitario, etc) por lo que 3 no tiene ningún sentido en este caso. Pero aún reemplazando las palabras correspondientes a cada identificador, un promedio no tiene sentido alguno para esta variable. 
 
-> Para pensar 🤔: ¿Podés imprimir la columna de los `max_dedicacion_horaria_docente_id` de nuestra tabla? ¿Cómo calcularías el promedio de esta columna?
-
-Quizás nos resulte útil acceder, no a todos los datos de una columna, sino a un dato de una celda en particular. Para ello podemos utilizar _iloc_:
+Sin embargo, nos puede interesar saber cuál es el grado de formación que tiene el personal ¿Son mayormente universitarixs? ¿mayormente terminaron el secundario? Para ello podemos calcular la frecuencia de aparición de cada una de estas categorías/datos. Esto es contar cuántas veces del total de filas aparece cada una de ellas:
 
 ```python
-df.loc[fila, columna] 
+personas['maximo_grado_academico_id'].value_counts()
 ```
-esto devuelve el elemento que se encuentra en la fila con nombre fila y la columna de con nombre columna del DataFrame df. Probá el siguiente código:
+
+>🧗‍♀️ Desafío I: Tomando las [tablas de referencia del MinCyT](https://datasets.datos.mincyt.gob.ar/dataset/personal-de-ciencia-y-tecnologia/archivo/11dca5bb-9a5f-4da5-b040-28957126be18) y tomando lo aprendido en el [recorrido anterior](https://github.com/flbulgarelli/recursos-python/blob/master/2_Ciencia_de_datos_pandas/Introducci%C3%B3n_pandas.md), incorporá los datos correspondientes a todas las variables categóricas de la tabla
+
+[2. Tratamiento de datos faltantes](#2-faltantes)
+No hace falta suspicacia para prever que en esta sección hablaremos de los datos faltantes. Obtivimos anteriormente, con el método `info()`, cuántos valores no nulos posee cada columna. 
+
+Ahora nos vamos a enfocar en el vaso medio vacío, vamos a intentar cuantificar cuántas celdas hayen nuetsra tabla sin información. Probemos el siguiente código:
 
 ```python
-personas.loc[2, 'persona_id']
+personas.isnull().sum()
 ```
 
-> Para pensar 🤔: ¿Qué resultado obtuviste? ¿Por qué? ¿Cómo obtendrías la edad de esa persona?
-
-Podemos acceder los datos de una columna del DataFrame como una lista mediante el método _tolist()_:
-
-``` python
-df['columna'].tolist()
-```
-
->  🧗‍♀️ Desafío IV: Extrae la columna `seniority_level` y contá cuántas personas tenían expertice nivel B, C y D
-
-Seguramente tu resulación del _Desafío IV_ implicó hacer un _bucle for_ y un if, lo cual parece a priori un tanto engorroso. Para evitarnos tantas lineas de código, podemos hacer uso de los métodos _groupby()_ y _count()_, que nos permiten contar sobre una columna la frecuencia de un dato/evento en particular. Ejecutá las siguientes lineas a ver qué pasa:
+<details>
+  <summary>Resultado</summary>
 
 ```python
-personas["seniority_level"].count()
+persona_id                                  0
+anio                                        0
+sexo_id                                     0
+edad                                        0
+maximo_grado_academico_id                   0
+disciplina_maximo_grado_academico_id        0
+disciplina_titulo_grado_id                  0
+disciplina_experticia_id                    0
+tipo_personal_id                            0
+producciones_ult_anio                       0
+producciones_ult_2_anios                    0
+producciones_ult_3_anios                    0
+producciones_ult_4_anios                    0
+institucion_trabajo_id                      0
+seniority_level                             0
+categoria_conicet_id                    19912
+categoria_incentivos                    19912
+max_dedicacion_horaria_docente_id       19912
+institucion_cargo_docente_id            19912
+clase_cargo_docente_id                  19912
+tipo_condicion_docente_id               19912
+dtype: int64
+```
+</details>
 
-personas.groupby("seniority_level").count()
 
-personas.groupby("seniority_level")[["persona_id"]].count()
+
+Podemos hacer esta inspección de los datos de forma visual:
+
+```python
+import seaborn as sns
+
+sns.heatmap(personas.isnull(), cmap='viridis')
 ```
 
-> 🧗‍♀️ Desafío V: ¿Qué resultados obtuviste en cada caso? Explicá qué hace cada linea de código
-
-Podemos operar con las columnas con los mismo operadores relacionales y matemáticos que ya hemos visto:
-
-``` python
-personas['edad'] * 2
-personas['edad'] + 2
-personas['edad'] > 2  
-```          
-> Para pensar 🤔: ¿Qué resultado nos daría en cada caso? 
-
-Pero los operadores tambien nos sirven también para filtrar nuestro DataFrame:
-
-``` python
-personas[personas['edad'] < 35 ]
-```         
-
-> 🧗‍♀️ Desafío V: Contá cuántas personas de 30 años ingresaron al ministerio en 2011 ¿Cuántas formas de hacer este cálculo se te ocurren?
-
-Ahora vamos a ver cómo podemos incorporar más información a nuestro DataFrame. En la página del ministerio podés encontrar las tablas que pueblas la tabla general...veamos por ejemplo la tabla de [categoría de conicet](https://datasets.datos.mincyt.gob.ar/dataset/personal-de-ciencia-y-tecnologia/archivo/c72c9f88-d9ef-4349-bb20-5c9a1aca5d67)
-
-> 🧗‍♀️ Desafío VI: Descargala en formato csv y cargala en un nuevo DataFrame de nombre `categorias`
-> 🧗‍♀️ Desafío VII: Identificá si existen columnas en común con el DataFrame grande
-
-Supongamos que ahora queremos poder realizar análisis de nuestros datos filtrando por categoria de conicet, en este caso podemos combinar las dos tablas, de modo de saber qué valos de `categoria_conicet_id` se corresponde con cada categoria de conicet. Probemos haciendo:
-
-``` python
-personas_cat = pd.merge(personas, categorias, on='categoria_conicet_id')
-```
-
-> Para pensar 🤔: ¿Qué datos tiene df3? ¿Qué hace el método merge? 
-
-Probemos ahora el método _concat()_:
-``` python
-personas_cat = pd.conact([personas, categorias])
-```
-> Para pensar 🤔: ¿Qué datos tiene df3? ¿Qué hace el método _concat()_ y qué diferencia tiene con hacer _merge()_? 
-
-[3. Métodos de los DataFrames](#3-metodos)
-
-Veamos un resumen de los métodos que podés encontrar en Pandas para trabajar con DataFrames: 
-
-| Lectura/carga de datos | Limpieza de los datos | Estdistica de los datos |
-|-------------	|----------	|---	|
-| pd.read_csv() | pd.head() | pd.describe() |
-| pd.read_table() | pd.fillna() |df.sample()|
-| pd.read_excel() | pd.dropna() | pd.mean() |
-| pd.read_sql() | pd.sort_values() | pd.median() |
-| pd.read_json() | pd.groupby() | pd.std() |
-| pd.to_csv() |pd.apply() | pd.min() |
-| pd.DataFrame() | pd.append() | pd.max() |
-| pd.concat() | pd.rename()  | pd.count() |
-| pd.Series() | pd.set_index() | pd.corr() |
-| pd.DataFrame.from_dict() |  pd.tail() | pd.hist() |
+![Resultado](./heat_map_null.jpeg)
 
 
 >
->  🧗‍♀️ Desafío III: averiguá para qué sirve cada uno de los métodos y qué parámetros podés pasarseles. ¡Esta información nos será útil para más adelante!
+> Para pensar 🤔: ¿Cuáles son las columnas con valores nulos? ¿Coinciden con las que tenían valores `NaN`?¿Qué obtenemos cuándo hacemos `isnull()`?
+>
+>  🧗‍♀️ Desafío II: Calcular el porcentaje del total de datos, representan los datos nulos de cada columna (variable)
 >
 
-Ahora que conocemos algunas de los métodos que nos permiten trabajar con DataFrames, veamos como cómo [trabajar los datos](https://github.com/flbulgarelli/recursos-python/blob/master/2_Ciencia_de_datos_pandas/Analisis_de_datos_con_pandas.md) 🤓
+Los datos faltantes pueden alterar el análisis de datos ya que disminuyen el tamaño de las muestras y, por tanto, la potencia de los tests estadísticos. Por ello, resulta necesario hacer un tratamiento de los datos faltantes, previo al análisis de los datos. Existen distintos modos de trabajar con los datos faltantes, dependiendo mayormente de nuestro lote de datos y de la variable en cuestión. 
+
+Pero antes de tomar cualquier decisión, cabe preguntarse algunas cosas: ¿Qué información me aporta cada una de las columnas con datos faltantes? ¿Qué tipo de datos son los pertenecientas a cada una de las columnas (categóricos o numéricos)?¿Es relevante dicha variable para el análisis global de los datos? Será entonces, según estas respuestas a estas preguntas que decidiremos alguno de los modos de acción que detallaremos a continuación.
+
+Una de las soluciones posibles para el tratamiento de los datos faltantes es la eliminación de casos completos, es decir eliminar toda las filas que contienen un dato faltante:
+
+```python
+personas.dropna(inplace=True) 
+```
+
+O aquellas que tienen más de un dato faltante:
+
+```python
+personas.dropna(thresh=2, inplace=True)
+```
+
+>
+> Para pensar 🤔: ¿Qué desventajas crees que tiene esta forma de lidiar con los datos faltantes?¿Cuándo lo usarías?
+>
+
+<details>
+  <summary>Comentarios</summary>
+Esta forma de tratar los faltantes introduce sesgo y reduce el tamaño muestral. 
+</details>
+
+Otra solución posible para el tratamiento de datos faltantes sería la eliminación por columna:
+
+```python
+personas.drop(['maximo_grado_academico_id'], axis=1, inplace=True)
+```
+
+>
+> Para pensar 🤔: ¿Qué desventajas crees que tiene esta forma de lidiar con los datos faltantes?¿Cuándo lo usarías?
+>
+
+<details>
+  <summary>Comentarios</summary>
+Produce muestras heterogéneas que no tienem una representación clara de las variables
+</details>
+
+Una última alternativa posible para el manejo de faltantes es estimar los valores ausentes en base a los valores válidos a partir de otros casos de la muestra. Estas estimaciones se pueden hacer, por ejemplo reemplazando los valores faltantes por la media obtenida con los demás valores observados para dicha variable:
+
+
+```python
+df.fillna(df['columna_con_faltantes'].mean(), inplace=True)
+```
+
+>
+> Para pensar 🤔: ¿Qué desventajas crees que tiene esta forma de lidiar con los datos faltantes?¿Con qué criterio? ¿Siempre puede usarse la media? ¿Qué otros valores podrían usarse?
+>
+>  🧗‍♀️ Desafío III: Escribí el código que usarías para reemplazar los faltantes por la moda y por la mediana.
+>
+> Para pensar 🤔: ¿Cuál son la media, moda y mediana? ¿Y los cuantiles?
+>
+
+<details>
+  <summary>Comentarios</summary>
+Distorsiona la verdadera distribución de la variable
+Distorsiona la correlación entre variables dado que añade valores constantes
+</details>
+
+[3. Ajuste de tipos de datos de las columnas y duplicados](#2-tipos_datos)
+En algunos casos las bases de datos suelen tener algunas inconsistencias de tipos de datos, por ejemplo columnas que deberían ser numéricas y se cargan como (strings) o el formato de las fechas es inadecuado. Es por ello que resulta muy importante cerciorarse antes de operar con las columnas, es necesario realizar algunos ajustes en los tipos de datos.
+
+Podemos conocer el tipo de dato al que se corresponde una columna mediante el método `dtypes`:
+
+```python
+df['columna_de_interes'].dtypes
+```
+
+Y convertir una columna a tipo de dato numérico, haciendo:
+
+```python
+df['columna_de_interes'] = pd.to_numeric(df['columna_de_interes'], errors='coerce')
+```
+
+Así mismo es frecuente encontrar celdas duplicadas en los datos, que facilmente pueden ser removidos mediante:
+
+```python
+df.drop_duplicates(inplace=True)
+```
+
+>  🧗‍♀️ Desafío III: Revisá el DataFrame para detectar otras anomalías en los datos y averiguá como resolverlas.
+>
