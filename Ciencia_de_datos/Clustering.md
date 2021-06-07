@@ -41,6 +41,8 @@ import seaborn as sns
 
 iris = pd.read_csv(datapath + "iris/iris_hidden.txt", sep = '\t')
 ```
+>  🧗‍♀️ Desafío I: Averiguá qué variables (columnas) tiene la table
+
 
 [3.Calculo de distancias](#3-distancia)
 Como hemos dicho, los métodos de clustering permiten la identificación de grupos en los que se pueden agrupar las observaciones de un conjunto de datos. Esto se hace de forma tal que las observaciones o registros asignados a un mismo grupo, muestren una mayor similitud entre sí que con los miembros de otros grupos.
