@@ -1,4 +1,4 @@
-> Este material retoma material de [Bioinfo UNQ](https://github.com/AJVelezRueda/Bioinfo_UNQ/tree/master/Trabajos_Practicos/Estadistica_con_pandas) y [Python_for_friends](https://github.com/jennifergc/Python_for_friends/tree/Angie)
+> Este material retoma material de [Bioinfo UNQ](https://github.com/AJVelezRueda/Bioinfo_UNQ/tree/master/Trabajos_Practicos/Estadistica_con_pandas) y [Python_for_friends](https://github.com/jennifergc/Python_for_friends/tree/Angie) y [recursos-python](https://github.com/flbulgarelli/recursos-python)
 
 
 ### Introducción a la Ciencia de Datos con Python
