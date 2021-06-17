@@ -149,6 +149,7 @@ Estas operaciones pueden hacerse muy fácilmente con la clase `StandardScaler`, 
 
 ```python
 from sklearn.preprocessing import StandardScaler
+
 scaler = StandardScaler()
 iris_escaleado = scaler.fit_transform(iris)
 ```
@@ -175,6 +176,8 @@ Apliquemos ahora este método a nuestros datos:
 
 
 ```python
+from sklearn.cluster import KMeans, DBSCAN #Para usar kmeans
+
 k = 3  #definimos la cantidad de clusters
 kmeans = KMeans(n_clusters = k, init="random", n_init=10, max_iter=300, random_state=123457) #tomamos los centroides de forma aleatoria y definimos un máximo de 300 iteraciones
 kmeans.fit(iris_escaleado)  #aplicamos el método a nuestros datos
@@ -199,6 +202,7 @@ Para entender mejor los resultados obtenidos grafiquemos la distribución de pun
 
 
 ```python
+import seaborn as sns
 colores = ["red", "green", "blue"]
 g = sns.scatterplot(x = iris_escaleado[:,2], y = iris_escaleado[:, 3], hue = kmeans.labels_, palette = colores, alpha = 0.5)
 g = sns.scatterplot(x = kmeans.cluster_centers_[:,2], y = kmeans.cluster_centers_[:,3], zorder = 10, palette = colores, hue = [0, 1, 2], legend = False, marker=6, s=200)
@@ -215,14 +219,15 @@ g = sns.scatterplot(x = kmeans.cluster_centers_[:,2], y = kmeans.cluster_centers
 
 ```python
 print(kmeans.inertia_ )
-
 ```
 
 
 >
-> 🧗‍♀️ Desafío VI: Calculá la inercia para distintos valores de k y almacenalos en un DataFrame
+> 🧗‍♀️ Desafío VI: Calculá la inercia para distintos valores de k, desde 0 a 10, y almacenalos en un DataFrame
 >
 > 🧗‍♀️ Desafío VII: Realizá un gráfico de inercia vs k, usando el método pointplot de seaborn
+>
+> Para pensar 🤔: ¿Cuál es el mejor valor de k según este criterio?
 >
 
 
@@ -231,3 +236,57 @@ print(kmeans.inertia_ )
 sns.pointplot(data = df, x = "K", y = "SSE")
 </details>
 
+Otra propiedad que nos puede interesar de una agrupación, es que todos los puntos de un grupo estén bien juntos y a la vez bien separados del resto de los puntos en otros grupos. Esta idea se puede encontrar en el COEFICIENTE DE SILHOUETTE, y nos dice para cada punto, si está cerca de su cluster y lejos del resto (coeficiente cercano a 1) o si está lejos de su cluster y cerca del resto (coeficiente cercano a -1):
+
+```python
+from sklearn.metrics import silhouette_samples, silhouette_score #Para el coeficiente de silhouette
+#Calculamos el promedio del silhouette de todos
+silhouette_avg = silhouette_score(iris_escaleado, kmeans.labels_)
+#Calculamos el silhouette de cada punto
+sample_silhouette_values = silhouette_samples(iris_escaleado, kmeans.labels_)
+```
+
+Vamos a graficarlo, usá la siguiente función para generar el gráfico
+
+```python
+def graficarSilhouette (k, labels, sample_silhouette_values, silhouette_avg):
+  fig, ax1 = plt.subplots(1, 1)
+  y_lower = 10
+  for i in range(k):
+      ith_cluster_silhouette_values = \
+          sample_silhouette_values[labels == i]
+
+      ith_cluster_silhouette_values.sort()
+
+      size_cluster_i = ith_cluster_silhouette_values.shape[0]
+      y_upper = y_lower + size_cluster_i
+
+      color = cm.nipy_spectral(float(i) / k)
+      ax1.fill_betweenx(np.arange(y_lower, y_upper),
+                        0, ith_cluster_silhouette_values,
+                        facecolor=color, edgecolor=color, alpha=0.7)
+      ax1.text(-0.05, y_lower + 0.5 * size_cluster_i, str(i))
+      y_lower = y_upper + 10
+
+  ax1.set_title("Plot del silhouette de cada cluster")
+  ax1.set_xlabel("Coeficiente de silhouette")
+  ax1.set_ylabel("Etiqueta del cluster")
+  ax1.axvline(x=silhouette_avg, color="red", linestyle="--")
+  ax1.set_yticks([]) 
+```
+
+Ahora si podemos visualizar elgráfico haciendo:
+
+
+```python
+graficarSilhouette (k, kmeans.labels_, sample_silhouette_values, silhouette_avg)
+
+```
+
+>
+> 🧗‍♀️ Desafío IX: Calculá la silhouette para distintos valores de k, desde 2 a 10, y almacenalos en un DataFrame
+>
+> 🧗‍♀️ Desafío X: Realizá un gráfico de inercia vs k, usando el método pointplot de seaborn
+>
+> Para pensar 🤔: ¿Cuál es el mejor valor de k según este criterio?
+>
