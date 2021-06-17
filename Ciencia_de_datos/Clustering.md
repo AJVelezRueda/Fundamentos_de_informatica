@@ -251,6 +251,7 @@ Vamos a graficarlo, usá la siguiente función para generar el gráfico
 ```python
 import matplotlib.pyplot as plt 
 import matplotlib.cm as cm 
+import numpy as np
 def graficarSilhouette (k, labels, sample_silhouette_values, silhouette_avg):
   fig, ax1 = plt.subplots(1, 1)
   y_lower = 10
