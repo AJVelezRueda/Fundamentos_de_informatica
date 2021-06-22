@@ -27,7 +27,7 @@ import networkx as nx #Para grafos
 **Paso 1:** cargar los datos
 
 ```python3
-stock_data = pd.read_csv("dataset_clustering_teorico.csv", sep = '\t')
+stock_data = pd.read_csv("dataset_clustering_teorico.csv")
 stock_data.head()
 ```
 
@@ -39,7 +39,7 @@ stock_data.head()
 
 
 
-**Paso 3** Aplicá el méétodo k-means usando k=14
+**Paso 3** Aplicá el método k-means usando k=14
 
 
 
