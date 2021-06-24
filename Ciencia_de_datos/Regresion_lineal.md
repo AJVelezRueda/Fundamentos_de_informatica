@@ -50,10 +50,9 @@ Según el problema a resolver y las característica de nuestros datos selecciona
 
 [2. Regresión lineal](#2_regresion)
 
-En este recorrido nos enfocaremos en predecir o estudiar las relaciones entre las variables. En particular, en un tipo de relación: lineal. 
+En este recorrido nos enfocaremos en predecir o estudiar las relaciones entre las variables. En particular, en un tipo de relación: lineal. Este método estadístico se usa para describir una variable continua como una función de una o varias variables independientes. 
 
-La regresión lineal es un método estadístico que se usa para describir una variable continua como una función de una o varias variables independientes. Las técnicas de regresión lineal tratan de modelar la relación entre una variable continua y una o más variables independientes mediante el ajuste de una ecuación lineal.
-
+Las técnicas de regresión lineal tratan de modelar la relación entre una variable continua y una o más variables independientes mediante el ajuste de una ecuación lineal.
 
 Si bien, nuestra suposición basal es que muestros datos debrían caer sobre una recta que describe la relación entre nuestras variables, las observaciones no cumplen con esta idealidad. Cada valor se aparta de la "recta ideal" en un valor de error (ϵ). De ahí que la ecuación general correspondiente a un modelo de regresión lineal es:
 
