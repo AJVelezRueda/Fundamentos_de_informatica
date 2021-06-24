@@ -30,11 +30,11 @@ Si correr estas lineas no tira ningún error, etonces están felizmente instalad
 
 [1. De relaciones, etiquetas y otras yerbas](#1_intro)
 
-Hemos estado trabajando en [clustering o agrupamientos](https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/Ciencia_de_datos/Clustering.md), donde intentamos encontrar patrones de datos contínuos sin etiquetas. Como ya hemos visto estos métodos nos permite encontrar similitudes entre las observaciones, que nos permita agruparlas según esas características en común y que las diferencie de los otros grupos de observaciones. 
+Hemos estado trabajando en [clustering o agrupamientos](https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/Ciencia_de_datos/Clustering.md), donde intentamos encontrar patrones en datos contínuos sin etiquetas. Como ya hemos visto, estos métodos nos permiten encontrar similitudes entre las observaciones de modo que podamos agruparlas según características en común y diferenciarlas de los otros grupos de observaciones. 
 
-La clusterización es lo que denominamos aprendizaje **no supervisado**; donde solo disponemos de un conjunto de datos de entrada, no etiquetados, sobre los que debemos obtener información, sin conocer previamente cuál será la salida. Sin embargo existen técnicas que nos permiten trabajar con datos etiquetados, que presentaremos a contianuación.
+La clusterización es lo que denominamos un métdo de aprendizaje **no supervisado**; donde solo disponemos de un conjunto de datos no etiquetados de entrada, sobre los que debemos obtener información, sin conocer previamente cuál será la salida. 
 
-Los algoritmos de **aprendizaje supervisado**, se utilizan para hacer predicciones en el aprendizaje automático. Existen dos tipos de algoritmos de predicción: los algoritmos de regresión y los de clasificación, cuya principal diferencia radica en que los algoritmos de regresión se utilizan para hacer predecciones sobre valores continuos, mientras que los algoritmos de clasificación se utilizan para predecir/clasificar los valores discretos.
+Existen técnicas que nos permiten trabajar con datos etiquetados. Los algoritmos de **aprendizaje supervisado**, se utilizan para hacer predicciones en el aprendizaje automático. Existen dos tipos de algoritmos de predicción: los algoritmos de regresión y los de clasificación, cuya principal diferencia radica en que los algoritmos de regresión se utilizan para hacer predecciones sobre valores continuos, mientras que los algoritmos de clasificación se utilizan para predecir/clasificar los valores discretos.
 
 Podemos resumir algunas de las diferencias más importantes entre estos algoritmos del siguiente modo:
 
