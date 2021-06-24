@@ -34,7 +34,7 @@ Hemos estado trabajando en [clustering o agrupamientos](https://github.com/AJVel
 
 La clusterización es lo que denominamos un métdo de aprendizaje **no supervisado**; donde solo disponemos de un conjunto de datos no etiquetados de entrada, sobre los que debemos obtener información, sin conocer previamente cuál será la salida. 
 
-Existen técnicas que nos permiten trabajar con datos etiquetados. Los algoritmos de **aprendizaje supervisado**, se utilizan para hacer predicciones en el aprendizaje automático. Existen dos tipos de algoritmos de predicción: los algoritmos de regresión y los de clasificación, cuya principal diferencia radica en que los algoritmos de regresión se utilizan para hacer predecciones sobre valores continuos, mientras que los algoritmos de clasificación se utilizan para predecir/clasificar los valores discretos.
+Existen técnicas que nos permiten trabajar con datos etiquetados. Los algoritmos de **aprendizaje supervisado**, se utilizan para hacer predicciones. Existen dos tipos de algoritmos de predicción: los algoritmos de regresión y los de clasificación, cuya principal diferencia radica en que los algoritmos de regresión se utilizan para hacer predecciones sobre valores continuos, mientras que los algoritmos de clasificación se utilizan para predecir/clasificar los valores discretos.
 
 Podemos resumir algunas de las diferencias más importantes entre estos algoritmos del siguiente modo:
 
