@@ -110,7 +110,7 @@ datos = {'equipos': equipos, 'bateos': bateos, 'runs': runs}
 ```
 
 > 🧗‍♀️ Desafío I: dado el diccionario con los datos de partidos anteriores crea un DataFrame de nombre `datos_partidos_previos`
-
+>
 > 🧗‍♀️ Desafío II: graficá el número de bateos vs el numero de runs, para observar la relación entre ambas variables 
 > Para pensar 🤔: ¿Observas una tendencia en los datos?
 >
@@ -196,4 +196,14 @@ El RMSE tiene la misma unidad que la variable dependiente, lo que significa que 
 
 
 > Para pensar 🤔: A la luz de lo aprendido ¿Cuán bueno es el poder predictivo de nuestro modelo?
+>
+
+Podemos llevar esta observación a valores concretos, mediante la normalización del RMSE:
+
+RMSE_normalizado = RMSE / (valor máximo - valor mínimo)
+
+De este modo podremos obgener valores entre 0 y 1, donde los valores más cercanos a 0 representan modelos de mejor ajuste.
+
+> 🧗‍♀️ Desafío II: Calculá el valor normalizado el RMSE
+> Para pensar 🤔: ¿Se corresponden tus suposiciones con lo obtenido numéricamente?
 >
