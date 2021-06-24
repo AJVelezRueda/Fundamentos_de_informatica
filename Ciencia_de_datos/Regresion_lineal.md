@@ -205,5 +205,6 @@ RMSE_normalizado = RMSE / (valor máximo - valor mínimo)
 De este modo podremos obgener valores entre 0 y 1, donde los valores más cercanos a 0 representan modelos de mejor ajuste.
 
 > 🧗‍♀️ Desafío II: Calculá el valor normalizado el RMSE
+>
 > Para pensar 🤔: ¿Se corresponden tus suposiciones con lo obtenido numéricamente?
 >
