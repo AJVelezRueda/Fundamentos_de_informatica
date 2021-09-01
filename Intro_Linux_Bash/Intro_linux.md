@@ -14,7 +14,7 @@ Podemos decir en general que los comandos que:
 - siguen la siguiente estructura:
 
 ```bash
-$ comando [parámetros] [argumentos] [separador]
+$ comando [argumentos]
 ```
 
 - consisten en la palabra (comando) en sí y el argumento u opción
