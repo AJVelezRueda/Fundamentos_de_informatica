@@ -1,9 +1,11 @@
 # *Introducción al Command Line Interface*
+> 🚨 WARNING: este tutorial asume que tenés un sistema operativo tipo _UNIX_, de no tenerlo te sugerimos instalar [Ubuntu](https://ubuntu.com/download/desktop) 
 
 # Guias de Trabajo
 * [1. Interfaces de Línea de Comandos](#1-cli)
 * [2. Invocacion de comandos](#2-ivocaciones)
 * [3. Argumentos](#3-argumentos)
+* [4. Argparse](#3-argparse)
 
 
 
@@ -68,3 +70,45 @@ drwxr-xr-x   2 root root 20480 jul 25 18:19 <font color="#3465A4"><b>sbin</b></f
 drwxr-xr-x 272 root root 12288 jul 10 21:27 <font color="#3465A4"><b>share</b></font>
 drwxr-xr-x   6 root root  4096 ago 24 18:51 <font color="#3465A4"><b>src</b></font>
 </pre>
+
+Estas diferencias que hacemos entre argumentos y opciones no las entiende el sistema operativo, que tan solo le pasa a nuestros programas una lista de string. Por ello contamos con bibliotecas como _argparse_, que nos permiten manipular de forma sencilla los paramátros de nuestro programa.
+
+## [4. Argparse](#3-argparse)
+
+Vamos un ejemplo de programa sencillo (un script o programa de secuencia de comandos), que recibe un argumento (el nombre de el usuario) por linea de comandos e imprime un saludo personalizado:
+
+```python
+#!/bin/python3
+import sys
+
+nombre = sys.argv[1]
+print(f'Hola {nombre}')
+```
+
+Si querés probar este programa en tu computadora, copiá y pegá el código en un archivo saludador.py, guardalo y ejecutá el siguiente comando:
+
+
+```bash
+$ chmod u+x saludador.py
+```
+
+
+
+```python
+#!/bin/python3
+import argparse
+import sys
+
+
+parser = argparse.ArgumentParser(
+    description="Una descripción breve de nuestro script")
+
+parser.add_argument(
+    "name",
+    help="name input",
+    type=str)
+
+nombre = parser.parse_args(sys.argv[1:]).name     
+print(f'Hola {nombre}')
+
+```
