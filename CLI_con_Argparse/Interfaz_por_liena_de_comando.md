@@ -92,6 +92,13 @@ Si querés probar este programa en tu computadora, copiá y pegá el código en 
 $ chmod u+x saludador.py
 ```
 
+¿Pero qué hace este programa? Bueno, el camino más largo comienza con un paso 👣, así que vayamos en orden: ¿Qué significa la primer linea? 🤔
+
+```python
+#!/bin/python3
+```
+El par de caracteres `#!` se conoce como shebang o  hash-bang y típicamente abren el encabezado de los archivos ejecutables. Este encabezado define dónde se encuentra el intérprete del lenguaje en el que se escribió el script, en este caso _python3_
+
 
 
 ```python
