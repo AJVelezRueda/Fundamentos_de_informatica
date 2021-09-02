@@ -103,8 +103,9 @@ En la segunda linea importamos la biblioteca _[sys](https://docs.python.org/es/3
 
 - argv[0] se corresponde al nombre del script 
 
-- argv[1] se corresponde con los argumentos 
+- argv[1] se corresponde con los argumentos propiamente dichos
 
+> 🧗🏻‍♀️**Desafío**: 
 
 
 
