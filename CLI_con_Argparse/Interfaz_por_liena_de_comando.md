@@ -97,7 +97,14 @@ $ chmod u+x saludador.py
 ```python
 #!/bin/python3
 ```
-El par de caracteres `#!` se conoce como shebang o  hash-bang y típicamente abren el encabezado de los archivos ejecutables. Este encabezado define dónde se encuentra el intérprete del lenguaje en el que se escribió el script, en este caso _python3_
+El par de caracteres `#!` se conoce como shebang o  hash-bang y típicamente abren el encabezado de los archivos ejecutables. Este encabezado define dónde se encuentra el intérprete del lenguaje en el que se escribió el script, en este caso _python3_. 
+
+En la segunda linea importamos la biblioteca _[sys](https://docs.python.org/es/3/library/sys.html)_, que nos permite acceder a los comandos y argumentos ingresados desde el intérprete. En particular `.argv` es un método que devuelve una lista de los argumentos de la línea de comandos pasados a un script de Python:
+
+- argv[0] se corresponde al nombre del script 
+
+- argv[1] se corresponde con los argumentos 
+
 
 
 
