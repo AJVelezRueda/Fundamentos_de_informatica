@@ -2,6 +2,17 @@
 
 # Guias de Trabajo
 
+* [Linux](#linux)
+
+Como ustedes ya sabran, Linux es un sistema operativo de código abierto con licencia GNU GPL (General Public License), lo cual nos permite poder tomar el código, modificarlo y distribuirlo libremente. Gracias a esta característica se generaron muchas distribuciones, entre las cuales las más recomendadas para iniciar en el mundo Linux son Ubuntu o Linux Mint. En este curso recomendamos fuertemente utilizar alguna de estas dos distribuciones, ya que con otro sistema operativo no vamos a poder dar soporte.
+
+Una de las características principales de Linux es la organización jerárquica de las carpetas del sistema, la cual se puede pensar como un árbol, siendo la raíz la base del sistema y a partir de allí las carpetas se ramifican.
+![alt text](https://www.linuxadictos.com/wp-content/uploads/linux-arbol-directorios.jpg)
+
+La otra característica que distigue a Linux es la existencia de dos tipos de usuarios, que podríamos dividir en simplemente usuarios y administradores (o usuario root o superusuario). Estos usarios se generan automáticamente cuando configuramos nuestra cuenta y los podemos usar dependiendo de nuestra necesidad. Para la mayoría de las cosas solo vamos a necesitar permisos de usuario, pero para ciertas tareas vamos a necesitar los permisos de superusuario. Dicho esto, recomendamos fuertemente que solo para las tareas específicas se utilice el superusuario, para todo lo demás hay que usar el usuario común.  
+
+* [interfaz de línea de comandos(CLI)](#CLI")
+
 * [1. Caparazón](#1_shell)
 * [2. Comandos básicos](#2_comandos)
 
@@ -25,12 +36,12 @@ $ comando [parámetros] [argumentos] [separador]
 
 Existen argumentos se le pasan al comando que le permiten operar sobre un objeto/dato, etc., aunque pueden no existir.
 
-Después de escribir un comando, el resultado que se obtiene  es información de texto o una acción específica realizada por la computadora. Por ello, la clave es escribir el comando correcto, un punto que suele considerarse como una desventaja en este diseño de interfaz de usuario y por lo que se suelen utilizar formas más atractivas de interfaz como GUI (Graphical User Interaction).
+Después de escribir un comando, el resultado que se obtiene es información de texto o una acción específica realizada por la computadora. Por ello, la clave es escribir el comando correcto, un punto que suele considerarse como una desventaja en este diseño de interfaz de usuario y por lo que se suelen utilizar formas más atractivas de interfaz como GUI (Graphical User Interaction).
 
 
 ### [2. Comandos básicos](#2_comandos)
 
-Existen varios shells, la más común es sh (llamada "Bourne shell"). Después de ejecutarse, el shell visualiza un indicador de mandatos o prompt, que en el caso del Bourne shell suele ser un $ (signo de dólar), momento en que el shell está preparado para recibir un comando Si bien hay muchos comandos que puedes usar con CLI, todos se dividen en dos categorías:
+Existen varios shells, la más común es sh (llamada "Bourne shell"). Después de ejecutarse, el shell visualiza un indicador de mandatos o prompt, que en el caso del Bourne shell suele ser un $ (signo de dólar), momento en que el shell está preparado para recibir un comando. Si bien hay muchos comandos que puedes usar con CLI, todos se dividen en dos categorías:
 
 + Los comandos que manejan los procesos
 + Los comandos que manejan los archivos
