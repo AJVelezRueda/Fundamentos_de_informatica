@@ -11,10 +11,10 @@ Una de las características principales de Linux es la organización jerárquica
 
 La otra característica que distigue a Linux es la existencia de dos tipos de usuarios, que podríamos dividir en simplemente usuarios y administradores (o usuario root o superusuario). Estos usarios se generan automáticamente cuando configuramos nuestra cuenta y los podemos usar dependiendo de nuestra necesidad. Para la mayoría de las cosas solo vamos a necesitar permisos de usuario, pero para ciertas tareas vamos a necesitar los permisos de superusuario. Dicho esto, recomendamos fuertemente que solo para las tareas específicas se utilice el superusuario, para todo lo demás hay que usar el usuario común.  
 
-* [interfaz de línea de comandos(CLI)](#CLI")
+* [Interfaz de línea de comandos(CLI)](#CLI")
 
-* [1. Caparazón](#1_shell)
-* [2. Comandos básicos](#2_comandos)
+  * [1. Caparazón](#1_shell)
+  * [2. Comandos básicos](#2_comandos)
 
 
 ### [1. Caparazón](#1_shell)
