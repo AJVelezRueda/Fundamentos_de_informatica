@@ -19,13 +19,13 @@ La otra característica que distigue a Linux es la existencia de dos tipos de us
 
 ### [1. Caparazón](#1_shell)
 
-El shell es la capa más externa del sistema operativo, esta es la interfaz entre el usuario y el sistema operativo. Los shells incorporan un lenguaje de programación para controlar procesos y archivos, además de iniciar y controlar otros programas. El shell gestiona la interacción entre el usuario y el sistema operativo solicitándole la entrada, interpretando dicha entrada para el sistema operativo y gestionando cualquier resultado de salida procedente del sistema operativo. La shell es un archivo ejecutable que debe interpretar los comandos, transmitirlos al sistema y arrojar el resultado. 
+El shell es la capa más externa del sistema operativo, esta es la interfaz entre el usuario y el sistema operativo. Los shells incorporan un lenguaje de programación para controlar procesos y archivos, además de iniciar y controlar otros programas. El shell gestiona la interacción entre el usuario y el sistema operativo solicitándole la entrada, interpretando dicha entrada para el sistema operativo y gestionando cualquier resultado de salida procedente del sistema operativo. La shell es un programa que ejecutamos en la forma de un repl(read printable loop), este interpreta los comandos que ingresa el usuario y posteriormente transmitirlos al sistema y arrojar el resultado. 
 
 Podemos decir en general que los comandos que:
 - siguen la siguiente estructura:
 
 ```bash
-$ comando [parámetros] [argumentos] [separador]
+$ comando [argumentos]
 ```
 
 - consisten en la palabra (comando) en sí y el argumento u opción
@@ -41,7 +41,7 @@ Después de escribir un comando, el resultado que se obtiene es información de 
 
 ### [2. Comandos básicos](#2_comandos)
 
-Existen varios shells, la más común es sh (llamada "Bourne shell"). Después de ejecutarse, el shell visualiza un indicador de mandatos o prompt, que en el caso del Bourne shell suele ser un $ (signo de dólar), momento en que el shell está preparado para recibir un comando. Si bien hay muchos comandos que puedes usar con CLI, todos se dividen en dos categorías:
+Existen varios shells, la más común es sh (llamada "Bourne shell"). Después de ejecutarse, el shell visualiza un indicador de mandatos o prompt, que en el caso del Bourne shell suele ser un $ (signo de dólar), momento en que el shell está preparado para recibir un comando Si bien hay muchos comandos que podéss usar con CLI, en general se dividen en dos categorías:
 
 + Los comandos que manejan los procesos
 + Los comandos que manejan los archivos
