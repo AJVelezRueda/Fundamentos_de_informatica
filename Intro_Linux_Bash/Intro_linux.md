@@ -2,7 +2,7 @@
 
 # Guías de Trabajo
 
-* [Linux](#linux)
+## * [Linux](#linux)
 
 Como ustedes ya sabrán, Linux es un sistema operativo de código abierto con licencia GNU GPL (General Public License), la cual nos permite poder tomar el código, modificarlo y distribuirlo libremente. Gracias a esta característica se generaron muchas distribuciones, entre las cuales las más recomendadas para iniciar en el mundo de Linux son **Ubuntu** o **Linux Mint**. En este curso recomendamos fuertemente utilizar alguna de estas dos distribuciones, ya que con otro sistema operativo no vamos a poder darles soporte.
 
@@ -11,7 +11,7 @@ Una de las características principales de Linux es la organización jerárquica
 
 La otra característica que distigue a Linux es la existencia de dos tipos de usuarios, que podríamos dividir en simplemente usuarios y administradores (o usuario root o superusuario). Estos usarios se generan automáticamente cuando configuramos nuestra cuenta y los podemos usar dependiendo de nuestra necesidad. Para la mayoría de las cosas solo vamos a necesitar permisos de usuario, pero para ciertas tareas vamos a necesitar los permisos de superusuario. Dicho esto, recomendamos fuertemente que solo para las tareas específicas se utilice el superusuario, para todo lo demás hay que usar el usuario común.  
 
-* [Interfaz de línea de comandos(CLI)](#CLI")
+## * [Interfaz de línea de comandos(CLI)](#CLI")
 
 	* [1. Caparazón](#1_shell)
 	* [2. Comandos básicos](#2_comandos)
