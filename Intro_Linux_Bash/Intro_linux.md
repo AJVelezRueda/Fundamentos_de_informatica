@@ -67,7 +67,6 @@ Cambio de directorio
 $ cd directorio_al_que_quiero_ir
 ```
 
-
 **_`mv`_**: 
 
 Renombrar o mover un archivo los archivos y directorios en su sistema de archivos del sistema operativo. Es importante recordar que se debe escribir el nombre del archivo y la extensión. 
