@@ -48,6 +48,8 @@ Existen varios shells, la más común es bash (llamada "Bourne Again SHell"). De
 
 ###  **Comandos que manejan archivos**
 
+Algunos ejemplos de este tipo de comandos son:
+
 **_`ls`_**: 
 
 Este comando lista todos los archivos en una carpeta y acepta como parámetro. El comando predeterminado excluirá los archivos ocultos. Para mostrar todos los archivos, puedes agregar `-a`.
