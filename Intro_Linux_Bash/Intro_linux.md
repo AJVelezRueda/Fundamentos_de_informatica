@@ -19,14 +19,14 @@ La otra característica que distigue a Linux es la existencia de dos tipos de us
 
 ### [1. Caparazón](#1_shell)
 
-El shell es la capa más externa del sistema operativo, esta es la interfaz entre el usuario y el sistema operativo. Los shells incorporan un lenguaje de programación para controlar procesos y archivos, además de iniciar y controlar otros programas. El shell gestiona la interacción entre el usuario y el sistema operativo solicitándole la entrada, interpretando dicha entrada para el sistema operativo y gestionando cualquier resultado de salida procedente del sistema operativo. La shell es un programa que ejecutamos en la forma de un repl(read printable loop), este interpreta los comandos que ingresa el usuario y posteriormente transmitirlos al sistema y arrojar el resultado. 
+El shell es la capa más externa del sistema operativo, esta es la interfaz entre el usuario y el sistema operativo. Los shells incorporan un lenguaje de programación para controlar procesos y archivos, además de iniciar y controlar otros programas. El shell gestiona la interacción entre el usuario y el sistema operativo solicitándole la entrada, interpretando dicha entrada para el sistema operativo y gestionando cualquier resultado de salida procedente del sistema operativo. La shell es un programa que ejecutamos en la forma de un repl(read printable loop), este interpreta los comandos que ingresa el usuario y posteriormente los transmite al sistema y arroja el resultado. 
 
 Podemos decir en general que los comandos que:
 - siguen la siguiente estructura:
 
-```bash
-$ comando [opciones] [argumentos]
-```
+	```bash
+	$ comando [opciones] [argumentos]
+	```
 
 - consisten en la palabra (comando) en sí y opcionalmente las opciones y/o argumentos
 
