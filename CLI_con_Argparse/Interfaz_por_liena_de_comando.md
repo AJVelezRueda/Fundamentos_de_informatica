@@ -106,7 +106,7 @@ En la segunda linea importamos la biblioteca _[sys](https://docs.python.org/es/3
 - argv[1] se corresponde con los argumentos propiamente dichos
 
 >
-> 🧗🏻‍♀️**Desafío**: reescribí el script para que reciba como argumento también el apellido y, al igual que antes salude incorporando en el saludo también el apellido separado por un espacio del nombre
+> 🧗🏻‍♀️**Desafío I**: reescribí el script para que reciba como argumento también el apellido y, al igual que antes salude incorporando en el saludo también el apellido separado por un espacio del nombre
 ```python
 "Hola Ana Velez"
 ```
@@ -134,5 +134,11 @@ print(f"¡Hola {args.name}! ¡Bienvendix!")
 ./calculadora.py --help
 ```
 > 🤔 ¿Qué obtuviste? ¿De dónde sale esa documentación?
+>
 > 🧗🏻‍♀️**Desafío III**: ahora reescribí el script `saludador_mejorado.py` para que reciba también el apellido de la persona
 >
+
+
+🤔 ¿Qué diferencia tan grande, no? como has podido observar _`Argparse`_ hace la recepción de y el parseo de argumentos mucho más sencilla.
+
+> 🧗🏻‍♀️**Desafío IV**: investigá para que sirve el parámetro `required` del método `.add_argument()`
