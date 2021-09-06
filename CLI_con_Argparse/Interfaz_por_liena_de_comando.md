@@ -78,7 +78,7 @@ Estas diferencias que hacemos entre argumentos y opciones no las entiende el sis
 Vamos un ejemplo de programa sencillo (un script o programa de secuencia de comandos), que recibe un argumento (el nombre de el usuario) por linea de comandos e imprime un saludo personalizado:
 
 ```python
-#!/bin/python3
+#!/usr/bin/env python3
 import sys
 
 nombre = sys.argv[1]
@@ -95,7 +95,7 @@ $ chmod u+x saludador.py
 ¿Pero qué hace este programa? Bueno, el camino más largo comienza con un paso 👣, así que vayamos en orden: ¿Qué significa la primer linea? 🤔
 
 ```python
-#!/bin/python3
+#!/usr/bin/env python3
 ```
 El par de caracteres `#!` se conoce como shebang o  hash-bang y típicamente abren el encabezado de los archivos ejecutables. Este encabezado define dónde se encuentra el intérprete del lenguaje en el que se escribió el script, en este caso _python3_. 
 
@@ -105,25 +105,34 @@ En la segunda linea importamos la biblioteca _[sys](https://docs.python.org/es/3
 
 - argv[1] se corresponde con los argumentos propiamente dichos
 
-> 🧗🏻‍♀️**Desafío**: 
+>
+> 🧗🏻‍♀️**Desafío**: reescribí el script para que reciba como argumento también el apellido y, al igual que antes salude incorporando en el saludo también el apellido separado por un espacio del nombre
+```python
+"Hola Ana Velez"
+```
+>
 
-
+Cómo verás parsear a mano los argumentos ingresados por terminal cuando son muchos pude resultar engorroso, sin mencionar la dificultad extra de la documentación de nuestro programa. Afortunadamente, existe una biblioteca que nos permite hacer esto de manera muy sencilla. Probá el siguiente código:
 
 ```python
-#!/bin/python3
+#!/usr/bin/env python3
 import argparse
-import sys
 
+parser = argparse.ArgumentParser(description='Este es un saludador personalizado: ¡Toma tu nombre y apellido y te responde!')
+parser.add_argument('-n', '--name',
+                    type=str,
+                    help='user name')
 
-parser = argparse.ArgumentParser(
-    description="Una descripción breve de nuestro script")
+args = parser.parse_args()
 
-parser.add_argument(
-    "name",
-    help="name input",
-    type=str)
-
-nombre = parser.parse_args(sys.argv[1:]).name     
-print(f'Hola {nombre}')
-
+print(f"¡Hola {args.name}! ¡Bienvendix!")
 ```
+
+>
+> 🧗🏻‍♀️**Desafío II**: armá un script llamado `saludador_mejorado.py` y ejecutalo haciendo 
+```bash
+./calculadora.py --help
+```
+> 🤔 ¿Qué obtuviste? ¿De dónde sale esa documentación?
+> 🧗🏻‍♀️**Desafío III**: ahora reescribí el script `saludador_mejorado.py` para que reciba también el apellido de la persona
+>
