@@ -131,5 +131,5 @@ Es un montón lo que tenemos que hacer para arrancar un proyecto ¿No? En genera
 Pero, sí, entendemos que te resulte un poco desalentador y es por eso que te proponemos un atajo. Para simplificarnos la vida entonces podemos utilizar una herramienta que nos permite generar todos los archivos de configuración del proyecto en un solo paso...¡o casi! ¡Bienvenido [Pyscafold](https://pypi.org/project/PyScaffold/)!
 
 >
-> ✅ ¡Te dejamos un [tutorial](https://gist.github.com/flbulgarelli/634973631c7c0f668b5100f09226eb8c) para configurar y publicar tu paquete en `pypi`! ¿Te gustó? Dale ⭐️
+> ✅ ¡Te dejamos un [tutorial](https://gist.github.com/flbulgarelli/634973631c7c0f668b5100f09226eb8c) para configurar y publicar tu paquete en `pypi`! ¿Te gustó? ¡Dale ⭐️, compartilo, sé feliz 😋!
 >
