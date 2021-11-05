@@ -1,4 +1,5 @@
 ## Ambientes de Python
+> Este material fue desarrollado por [flbulgarelli](https://github.com/flbulgarelli) y [AJVelezRueda](https://github.com/AJVelezRueda)
 
 ## Guias de Trabajo
   * [1. Breve repaso de PIP](#1-pip)
@@ -22,7 +23,7 @@ Es posible especificar la versión exacta o mínima del paquete que nos queremos
 $ pip install nombre-paquete==1.1.2
 ```
 
-¿Dónde se instalan los paquetes cuando se los instala con pip? Básicamente existen dos alternativas: que se instalen en  usuario, o que se instalen en el sistema operativo (esto NO). ¿Y qué implica una y otra instalación? Instalar a niverl de usuario implica que todas las versiones deberían ser compatibles.
+¿Dónde se instalan los paquetes cuando se los instala con pip? Básicamente existen dos alternativas: que se instalen en  usuario, o que se instalen en el sistema operativo (esto NO). ¿Y qué implica una y otra instalación? Instalar a nivel de usuario implica que todas las versiones deberían ser compatibles.
 
 [2. Entornos virtuales](#2-venv)
 
@@ -78,7 +79,7 @@ pandas==1.1.1
 Este archivo puede ser generado a mano o lo podemos construir desde un entorno ya configurado, utilizando el comando `pip freeze > requirements.txt`. En cualquier caso, podremos instalar más tarde o en otra máquina todas las dependencias de nuestro proyecto en un solo paso, haciendo `pip install -r requirements.txt`(siempre con el entorno activado). 
 
 >
-> ¡Ahora te toca a vos! Levantá un entorno virtual de nombre `ejemplo_venv` e instalá los requerimientos desde el [requirements.txt](https://github.com/AJVelezRueda/ejemplo_venv_requirements) que creamos para este ejemplo
+> 🤖  ¡Ahora te toca a vos! Levantá un entorno virtual de nombre `ejemplo_venv` e instalá los requerimientos desde el [requirements.txt](https://github.com/AJVelezRueda/ejemplo_venv_requirements) que creamos para este ejemplo
 >
 
 
@@ -116,6 +117,12 @@ Python en particular cuenta con varias opciones, entre ellas `invoque`, `nox` y 
 ejemplo de tox
 ```
 
+>
+>✅ ¡Te dejamos [aquí](https://github.com/AJVelezRueda/ejemplo_setuptools_tox) un proyecto de ejemplo para inspeccionar, pensar y responder:
+>  ¿Cómo se espefica en el proyecto la versión de Python necesaria para su instalación? 🤔 
+>  
+> 
+
 
 [6. Un atajo por favor!](#6-pyscafold)
 
@@ -123,4 +130,6 @@ Es un montón lo que tenemos que hacer para arrancar un proyecto ¿No? En genera
 
 Pero, sí, entendemos que te resulte un poco desalentador y es por eso que te proponemos un atajo. Para simplificarnos la vida entonces podemos utilizar una herramienta que nos permite generar todos los archivos de configuración del proyecto en un solo paso...¡o casi! ¡Bienvenido [Pyscafold](https://pypi.org/project/PyScaffold/)!
 
-[Pyscafold](https://gist.github.com/flbulgarelli/634973631c7c0f668b5100f09226eb8c)
+>
+> ✅ ¡Te dejamos un [tutorial](https://gist.github.com/flbulgarelli/634973631c7c0f668b5100f09226eb8c) para configurar y publicar tu paquete en `pypi`! ¿Te gustó? Dale ⭐️
+>
