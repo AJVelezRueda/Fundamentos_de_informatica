@@ -89,10 +89,10 @@ Python tiene dos formatos de distribución de paquetes:
 - egg: que es el clásico y está en desuso
 - wheel: que hoy en día es el más frecuente
 
-Para resolver estas complejidades y formalizar la metadata de nuestro proyecto contamos con una herramienta que se llama `setuptools`. Setuptools nos permite declarar toda la información acerca de nuestros proyecto en un archivo `setup.sfg`, que se ve del siguiente modo:
+Para resolver estas complejidades y formalizar la metadata de nuestro proyecto contamos con una herramienta que se llama `setuptools`. Setuptools nos permite declarar toda la información acerca de nuestros proyecto en un archivo `setup.cfg`, que se ve del siguiente modo:
 
 ```python
-ejemplo setup.sfg
+ejemplo setup.cfg
 ```
 
 A modo de cierre, vale la pena mencionar que existe una alternativa llamada `pyproject`, pero aún la comunidad de Python no se pone de acuerdo en cuál usar... De hecho, en la mayoría de los casos terminamos usando las dos. 
@@ -100,10 +100,10 @@ A modo de cierre, vale la pena mencionar que existe una alternativa llamada `pyp
 [5. Ejecución de tareas](#5-tox)
 
 ¿Y qué pasa cuando las tareas de construcción y mantenimiento son más complejas que instalar dependencias? Por ejemplo, podríamos tener tareas para:
-- publicar el proyecto en pypi (usando `twine`)
+- publicar el proyecto en pypi (usando [`twine`](https://pypi.org/project/twine/))
 - configurar la base de datos de tu proyecto
 - compilar dependencias en otros lenguajes de programación
-- correr tests (usando `pytest`)
+- correr tests (usando [`pytest`](https://docs.pytest.org/en/6.2.x/))
 
 Y así lo que se te ocurra. En casi todas las tecnologías de programación necesitamos herramientas gestoras de tareas:
 - `rakefile` en Ruby
