@@ -93,7 +93,56 @@ Python tiene dos formatos de distribución de paquetes:
 Para resolver estas complejidades y formalizar la metadata de nuestro proyecto contamos con una herramienta que se llama `setuptools`. Setuptools nos permite declarar toda la información acerca de nuestros proyecto en un archivo `setup.cfg`, que se ve del siguiente modo:
 
 ```python
-ejemplo setup.cfg
+[metadata]
+name = ejemplo_setuptools_tox
+description = Add a short description here!
+author = Franco Leonardo Bulgarelli
+author_email = franco@mumuki.org
+license = MIT
+long_description = file: README.rst
+long_description_content_type = text/x-rst; charset=UTF-8
+url = https://github.com/pyscaffold/pyscaffold/
+project_urls =
+    Documentation = https://pyscaffold.org/
+
+platforms = any
+
+classifiers =
+    Development Status :: 4 - Beta
+    Programming Language :: Python
+
+
+[options]
+zip_safe = False
+packages = find_namespace:
+include_package_data = True
+package_dir =
+    =src
+
+python_requires = >=3.8
+
+install_requires =
+    importlib-metadata; python_version<"3.8"
+
+
+[options.packages.find]
+where = src
+exclude =
+    tests
+
+[options.extras_require]
+testing =
+    setuptools
+    pytest
+    pytest-cov
+
+[options.entry_points]
+# Add here console scripts like:
+# console_scripts =
+#     script_name = ejemplo_setuptools_tox.module:function
+# For example:
+console_scripts =
+    fib = ejemplo_setuptools_tox.fib:run
 ```
 
 A modo de cierre, vale la pena mencionar que existe una alternativa llamada `pyproject`, pero aún la comunidad de Python no se pone de acuerdo en cuál usar... De hecho, en la mayoría de los casos terminamos usando las dos. 
@@ -112,10 +161,6 @@ Y así lo que se te ocurra. En casi todas las tecnologías de programación nece
 - `npm` y `maven` en node y Java respectivamente (¡vuelven a parecer estos dos!)
 
 Python en particular cuenta con varias opciones, entre ellas `invoque`, `nox` y `tox`. Estos últimos dos además nos van a permitir correr tests facilmente, contra distintas versiones de Python.
-
-```python
-ejemplo de tox
-```
 
 >
 >✅ ¡Te dejamos [aquí](https://github.com/AJVelezRueda/ejemplo_setuptools_tox) un proyecto de ejemplo para inspeccionar, pensar y responder:
