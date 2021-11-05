@@ -68,6 +68,8 @@ $ python3
 
 Moraleja, siempre que desarrollemos en Python scripts que no sean sencillos y usemos dependencias, nos convendrá utilizar un entorno virtual.
 
+PD: podés desactivar tu entorno haciendo `deactivate` 🤪
+
 [3. Entornos reproducibles](#3-entornos-reproducibles)
 
 Cuando tenemos varias dependencias y las versiones de ellas son importantes (en general lo son), ejecutar una y otra vez `pip install` repetidas veces puede resultar engorroso. Es por eso que resulta conveniente listarlas todas en un solo archivo, para luego realizar la instalación en un solo paso. Este archivo se llama `requirements.txt` y se ve del siguiente modo:
