@@ -11,6 +11,8 @@
 
 
 [1. Breve repaso de PIP](#1-pip)
+
+
 [PIP](https://packaging.python.org/guides/tool-recommendations/) es la herramienta de Python que nos permite gestionar paquetes en Python. Proporciona las funciones básicas esenciales para encontrar, descargar e instalar paquetes de PyPI y otros índices de paquetes de Python por medio de su interfaz por linea de comando, haciendo:
 
 ```bash
@@ -85,6 +87,7 @@ Este archivo puede ser generado a mano o lo podemos construir desde un entorno y
 
 
 [4. Distribución de paquetes](#4-distribucion-paquetes)
+
 Tener un entorno reproducible a veces no es suficiente cuando deseamos que nuestro código sea utilizado por cualquier persona en el mundo ¿Por qué? porque la distribución de un paquete involucra más que solo listar las dependencias de nuestro proyecto.  Por ejemplo, debemos indicar su nombre, quién lo hizo, su versión actual. Si lo que distribuímos es un ejecutable, tendremos también que indicar cuál es su nombre. Además, esto le permitirá a la comunidad colaborar con nuestro proyecto de manera más sencilla. 
 
 Python tiene dos formatos de distribución de paquetes:
