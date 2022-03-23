@@ -200,9 +200,7 @@ En resumen, podemos utilizar los siguientes modos de lectura de archivos:
  * `.readlines()` Esto lee las líneas restantes del objeto de archivo y las devuelve como una lista. 
 
 >
-> 🧗‍♀️Desafio IV: Descargá el archivo [`manipulacion_archivos.txt`](https://github.com/AJVelezRueda/UCEMA_Fundamentos_de_informatica/blob/master/Python_intro/manipulacion_archivos.txt) y creá un programa que lea su contenido y lo imprima en pantalla el resultado de la búsqueda de la expresión `-(.*)-`
->
->Para pensar 🤔: ¿Qué significa dicha expresión regular? Imprimí todo el contenido del archivo y descubrí qué hace este personaje incógnito
+> 🧗‍♀️Desafio IV: Descargá el archivo [`manipulacion_archivos.txt`](https://github.com/AJVelezRueda/UCEMA_Fundamentos_de_informatica/blob/master/Python_intro/manipulacion_archivos.txt) y creá un programa que lea su contenido y lo imprima en pantalla el resultado.
 >
 >Para pensar 🤔: ¿Creés que habrá una forma más práctica de leer archivos estructurados o tabulados?
 >
