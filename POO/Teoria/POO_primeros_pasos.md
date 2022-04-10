@@ -3,7 +3,7 @@
 # Introducción a la programación con objetos
 > Estas guías están basadas en las guías de [Objetos y mensajes en Python 3](https://github.com/mumukiproject/mumuki-guia-python3-objetos-y-mensajes) de [Mumuki.org](https://mumuki.io/home/), el material teórico de [PdeP de UTN]() y el recorrido [recursos de Python](https://github.com/flbulgarelli/recursos-python)
 >
-> Cada contenido teórico puede ir desarrollandose segun el recorrido teórico que se propone en la guía de POO del repositorio de [recursos de Python](https://github.com/flbulgarelli/recursos-python/tree/master/4_programacion_con_objetos) 
+> Cada contenido teórico puede ir desarrollandose segun el recorrido teórico que se propone en la guía de POO del repositorio de [recursos de Python](https://github.com/flbulgarelli/recursos-python/tree/master/4_programacion_con_objetos) Autor: [Franco Leonardo Bulgarelli](https://github.com/flbulgarelli)
 
 # Guias de Temas
 * [1. Paradigmas de Programación](#1-paradigmas)
