@@ -189,7 +189,7 @@ class Golondrina:
 Como vemos, una clase es nuevo tipo de definición, que se suma a las funciones y procedimientos que ya conocíamos. Se escribe mediante la palabra reservada `class`, seguida de un nombre y `:`. Dentro de ella encontraremos los métodos, que son el código que especifica cómo se comportará un objeto cuando reciba un mensaje.
 
 
-> 📝**Nota**: sí, los métodos se definen usando la misma palabra clave `def` que usabamos para funciones y procedimientos. Sin embargo, no son lo mismo: como podemos ver los métodos siempre están "dentro" de una clase, y además tienen como primer parámetro `self`. Más sobre esto, en breve.
+> 📝**Nota**: sí, los métodos se definen usando la misma palabra clave `def` que usabamos para funciones y procedimientos. Sin embargo, no son lo mismo: como podemos ver los métodos siempre están "dentro" de una clase, y además tienen como primer parámetro `self`. El _self_ representa la instancia de la clase. Al usar la palabra clave "self" podemos acceder a los atributos y métodos de la clase en Python. Más sobre esto, en breve.
 
 > Desafío: Ahora te toca a vos!
 >
