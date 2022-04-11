@@ -11,6 +11,10 @@
 * [3. Objetos y mensajes](#3-obejtos-y-mensajes)
 * [4. Ambientes e interfaces](#4-interfaz)
 * [5. Calses y polimorfismo](#5-clases-polimorfismo)
+* [6. Interfaces compartidas](#6-interfaz-compartidas)
+* [7. Clases](#7-clases)
+* [8. Parecidos pero distintos: métodos vs funciones](#8-metodos)
+* [9. Herencia](#9-herencia)
 
 
 [1. Paradigmas de Programación](#1-paradigmas)
@@ -197,6 +201,127 @@ Como vemos, una clase es nuevo tipo de definición, que se suma a las funciones 
 > * Hacer `esta_feliz`: si tiene más de 500 puntos de eneria (sin importar cuál)
 > * Hace a `hipo`, entrenador de dragones: sabe aceptar a dragones y luego hacerlos entrenar, haciendoles dar 20 vueltas en circulos y luego comer su comida favorita hasta saciarse (3 peces)
 >
+
+[6. Interfaces compartidas](#6-interfaz-compartidas)
+
+Entonces, ¿`pepita` y `roberta` se comportan igual? ¡No! ¿Y tienen la misma interfaz? ¡Tampoco!
+Pero sí tienen una parte común; en otras palabras comparten (parcialmente) una interfaz:
+
+
+|              | 🌾 `comer_alpiste` | 🐟 `comer_peces` | 🔥 `escupir_fuego` | ✈️ `volar`| 🔄 `volar_en_circulos`|
+|:------------:|:----------------:|:-------------:|:-------------:|:------:|:------------------:|
+| `pepita`     |   ✅️             |               |               | ✅️     | ✅️                 |
+| `anastasia`  |   ✅️             |               |               | ✅️     | ✅️                 |
+| `roberta`    |                  |✅️             |✅️             | ✅️     | ✅️                 |
+
+
+[7. Clases](#7-clases)
+
+Momento, ¿y cómo están definidas `pepita`, `anastasia`  y `roberta`? ¿Dónde dice _qué_ saber hacer cada una y _cómo_?
+
+En el paradigma de objetos, los mismos se crean a partir de _moldes_ llamados **clases**, que sirven para dar vida a objetos que se comporten de igual forma. Por ejemplo nuestras golondrinas `pepita` y `anastasia` se crearán de la siguiente forma....
+
+```
+pepita = Golondrina(100)
+anastasia = Golondrina(200)
+```
+
+... partir de una clase llamada `Golondrina` que se verá así:
+
+
+```python
+class Golondrina:
+  def __init__(self, energia):
+    self.energia = energia
+
+  def comer_alpiste(self, gramos):
+    self.energia += 4 * gramos
+
+  def volar_en_circulos(self):
+    self.volar(0)
+
+  def volar(self, kms):
+    self.energia -= 10 + kms
+```
+
+
+> 💡 Formalización: al acto de crear un objeto a partir de una clase se lo denomina _instanciación_, y por tanto a los objetos también se los denomina _instancias_ (de una clase particular). Por ejemplo, `pepita`  es una instancia (de la clase `Golondrina`).
+>
+> Si bien el término _instancia_ quizás no nos diga mucho, en este contexto significa "ejemplo", dado que cada golondrina como pepita o anastasia son ejemplo concretos (es decir, casos particulares) de la idea más general de una `Golondrina`.
+
+Como vemos, una clase es nuevo tipo de definición, que se suma a las funciones y procedimientos que ya conocíamos. Se escribe mediante la palabra reservada `class`, seguida de un nombre y `:`. Dentro de ella encontraremos los métodos, que son el código que especifica cómo se comportará un objeto cuando reciba un mensaje.
+
+> 📝 Nota: sí, los métodos se definen usando la misma palabra clave `def` que usabamos para funciones y procedimientos. Sin embargo, no son lo mismo: como podemos ver los métodos siempre están "dentro" de una clase, y además tienen como primer parámetro `self`. Más sobre esto, en breve.
+
+[8. Parecidos pero distintos: métodos vs funciones](#8-metodos)
+
+Tomemos este método como ejemplo:
+
+```python
+class Golondrina:
+  def comer_alpiste(self, gramos):
+    self.energia = self.energia + 4 * gramos
+```
+
+👀 Ojo, porque los métodos y las funciones, si bien se ven parecidos, no son lo mismo.
+
+1. Las funciones se invocan como `funcion(argumentos)`, pero los métodos se evaluan a través el envio de mensajes como `objeto.mensaje(argumentos)`
+2. los métodos tienen siempre declaran como primer parámetro `self`, las funciones no
+3. los métodos siempre van dentro de un `class`, mientras que las funciones van por fuera
+
+Habrán notado que una diferencia importante entre una función y un método es el parámetro
+`self` (en inglés, _si mismo_) que reciben todos los métodos en su definición. Este parámetro representa al objeto receptor del mensaje, y Python lo pasará automáticamente siempre que enviemos uno.
+
+Por ejemplo cuando hagamos...
+
+```python
+>> pepita.comer_alipste(10)
+```
+... Python pasará automáticamente a `pepita` a través del parámetro `self`. Y si hacemos...
+
+```python
+>> anastasia.comer_alipste(10)
+```
+
+... `self` representará a `anastasia`. Esto nos permite que definamos métodos que accedan al estado del objeto que está recibiendo el mensaje (como en `comer_alpiste`) o que le enviemos más mensajes (como en `volar_en_circulos`, que envía a `self` el mensaje `volar`).
+
+> ### Un poco de práctica
+
+Ahora te toca a vos:
+
+1. Creá a la golondrina `maria` con 42 puntos de energía inicial
+2. Creá al dragón `chimuelo`, con 200 dientes y 1000 de energía inicial
+3. Definí el método `esta_debil`, que nos dice si nuestras "aves" tiene menos de 10 puntos de energia (golondrinas) o menos de 50 puntos de energía (dragones)
+4. Definí el método `esta_feliz`, que nos dice si nuestras "aves" tiene más de 500 puntos de eneria (sin importar de qué clase sean)
+5. Hace a `hipo`, entrenador de dragones: sabe aceptar a dragones, quienes son sus entrenados y hacerlos entrenar todos los dias, haciendoles dar 20 vueltas en circulos y luego comer su comida favorita hasta saciarse (3 peces)
+6. Hacé que hipo pueda entrenar a las golondrinas. ¿Qué comportamiento deberían entender las golondrinas ahora?
+7. Definí el m[etodo `entrenamiento_intensivo`, que hace dar vultas en circulos a sus entrenados hasta que estén débiles.
+
+
+[9. Herencia](#9-herencia)
+
+¿Ves algo repetido entre las golondrinas y los dragones? Sí, ¡el método `está_feliz`! Extraigamos la lógica común a una clase `AnimalAlado`.
+
+```python
+class AnimalAlado:
+  def esta_feliz(self):
+    return self.energia >= 500
+
+class Golondrina(AnimalAlado):
+
+  ... etc ...
+
+class Dragon(AnimalAlado):
+
+  ... etc ...
+```
+
+Diremos además que esta clase es una _clase abstracta_, porque no existe para tener instancias directas.
+
+> 💡 Formalización:
+> La herencia es un proceso mediante el cual se puede crear una clase hija que hereda de una clase madre sus métodos y atributos.
+
+
 
 # Bibliografía
 
