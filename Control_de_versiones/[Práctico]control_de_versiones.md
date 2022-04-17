@@ -24,5 +24,5 @@ Para resolver este TP vas a necesitar:
 > 
 > 3) Agregá localmente los archivos correspondientes a los prácticos anteriores ordenados en directorios con los nombres de cada unidad y empujalo al repositorio remoto
 >
->4) Compartinos el enlace a tu repositorio personal de la materia aquí
+>4) Compartinos el enlace a tu repositorio personal de la materia en el campus
 >
