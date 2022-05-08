@@ -1,21 +1,25 @@
 # *HTTP & REST*
 > En este recorrido se basa en el recorrido se basa en el material [http-tutorial](https://github.com/AJVelezRueda/http-tutorial/tree/master/tutorial/es) de los autores Franco Leonardo Bulgarelli y Ana Julia Velez Rueda
 >
-> ### REQUERIMIENTOS
->
-> En este abordaremos los contenidos relativos a HTTP y REST. Para ello vas a necesitar instalarte [requests] (https://pypi.org/project/requests/):
->
-```bash
-pip install requests
-```
->
->
-Primero puedes verificar si está o no instalado escribiendo en la consola de Python:
-```python
-import requests
-```
->
-> Una vez que hayas completado el recorrido de HTTP podés continuar con este recorrido 👇
+
+<details>
+  <summary>🚨 REQUERIMIENTOS</summary>
+
+  > En este abordaremos los contenidos relativos a HTTP y REST. Para ello vas a necesitar instalarte [requests] (https://pypi.org/project/requests/):
+  >
+  ```bash
+  pip install requests
+  ```
+  >
+  >
+  Primero puedes verificar si está o no instalado escribiendo en la consola de Python:
+  ```python
+  import requests
+  ```
+  >
+  > Una vez que hayas completado el recorrido de HTTP podés continuar con este recorrido 👇
+
+</details>
 
 
 ## Indice
@@ -33,12 +37,11 @@ import requests
   * [11. REST y sus URLs](#11-rest)
   * [12. Paréntesis: servidores y despliegue](#12-parentesis-servidores-y-despliegue)
 
-> 🏁 Antes de empezar, repasemos: ¿qué es una arquitectura cliente-servidor? ¿cómo funciona? ¿Cuál es el cliente por antomasia de la Web?
 >
-> 🤔 Para pensar: ¿qué tecnologías se usan en la Web? ¿En qué se desarrolla un cliente? ¿Y un servidor?
+> 🚨 [REQUERIMIENTOS] Antes de empezar, repasemos: ¿qué es una arquitectura cliente-servidor? ¿cómo funciona? ¿Cuál es el cliente por antomasia de la Web?
 >
->📚 Para indagar antes de empezar: ¿Cuál es la diferencia entre un sitio Web y una API web?
-
+> 🏁 Si no sabés como funciona te proponemos que realices el recorrido de [Introducción a Web](https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/WEB_%26_HTTP/Introduccion_a_web.md) antes de comenzar con este recorrido
+>
 
 ## [1. Primeros pedidos](#1-primeros-pedidos)
 
