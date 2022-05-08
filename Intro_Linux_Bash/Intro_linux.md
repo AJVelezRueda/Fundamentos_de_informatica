@@ -1,6 +1,7 @@
 # *Introducción a Linux y Bash*
 
-# Guías de Trabajo
+
+## Guías de Trabajo
 
 ## [Linux](#linux)
 

@@ -1,7 +1,18 @@
-> Este material se basa en [recursos-python](https://github.com/flbulgarelli/recursos-python)
+# Clustering
 
+🚨 Este material como todo el repositorio se encuentra bajo licencia 
 
-# Pasos previos
+[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
+
+[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
+
+[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
+[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
+[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+
+<details>
+  <summary>🚨 REQUERIMIENTOS</summary>
+
 Para este recorrido necesitarás las librerías [Pandas](https://pandas.pydata.org/), [Seaborn](https://seaborn.pydata.org/) y [Scikitlearn](https://scikit-learn.org/stable/index.html)
 
 Podes corroborar si las tienes instaladas corriendo las siguientes líneas en tu intérprete de Python:
@@ -20,8 +31,10 @@ Si correr estas lineas no tira ningún error, etonces están felizmente instalad
         pip install sklearn
 ```
 
+</details>
 
-# Guias de Trabajo
+
+## Guias de Trabajo
  * [1. Clustering ¿Qué es?](#1-Intro)
  * [2. Un ojo en el Iris](#1-Iris)
  * [3. Calculo de distancias](#3-distancia)
@@ -29,7 +42,7 @@ Si correr estas lineas no tira ningún error, etonces están felizmente instalad
  * [5. K-means](#5-kmeans)
  * [6. Evaluación del resultado obtenido](#6-inercia)
 
-[1. Clustering ¿Qué es?](#1-Intro)
+## [1. Clustering ¿Qué es?](#1-Intro)
 
 
 Hemos estado trabajando hasta aquí en la carga y limpieza da datos con Pandas. Es momento de comenzar a trabajar con los datos, analizarlos y poder encontrar patrones que nos permitan derivar información. El aprendizaje automático consiste en identificar de patrones o tendencias que de los datos de forma automática.
@@ -53,7 +66,7 @@ Existen una amplia cantidad de técnicas que nos permiten encontrar patrones en 
 
 
 
-[2. Un ojo en el Iris](#2-Iris)
+## [2. Un ojo en el Iris](#2-Iris)
 
 
 En este recorrido utilizaremos el [set de datos](https://github.com/flbulgarelli/recursos-python/blob/master/2_Ciencia_de_datos_pandas/iris_data.txt) [Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) que consiste en un conjunto de datos u observaciones realizadas por el biólogo Ronald Fisher, sobre las característica de distintas especies de plantas plantas. ¿Será posible clasificar las plantas utilizando alguno de estas observaciones que hizo Fisher?
@@ -100,7 +113,7 @@ g = sns.pairplot(iris)
 
 
 
-[3. Calculo de distancias](#3-distancia)
+## [3. Calculo de distancias](#3-distancia)
 
 Hemos observado las distribuciones de nuestros datos y la manera en que se correlacionan las variables, y de este modo comenzar a intuir posibles agrupamientos de los datos. Es decir, pudimos observar mediante gráficos exploratorios que algunos registros muestran una mayor similitud entre si.
 
@@ -126,7 +139,7 @@ Una de las formas más básicas para calcular la **distancia**  entre dos puntos
 >
 > 🧗‍♀️ Desafío V: Buscá otras formas de calcular la distancia entre las observaciones ¿Qué ventajas o desventajas encontras en cada forma de calcular las distancias?
 
-[4. Normalizado y escalado de los datos](#4-escalado)
+## [4. Normalizado y escalado de los datos](#4-escalado)
 
 Ya hemos identificado las problemáticas a la hora de clasificar los datos, pero para que las comparaciones que hagamos sean completamente válidas, resulta de suma importancia hacer un tratamiento extra de los datos. 
 
@@ -154,7 +167,7 @@ scaler = StandardScaler()
 iris_escaleado = scaler.fit_transform(iris)
 ```
 
-[5. K-means](#5-kmeans)
+## [5. K-means](#5-kmeans)
 
 Ahora que hemos normalizado y escalado nuestros datos podemos finalmente utilizar un método para agrupar nuestros datos. Vamos a utilizar el método K-means(MacQueen, 1967) que agrupa las observaciones en los mejores K grupos distintos, es decirlos k clusters con la menor varianza interna (intra-cluster variation) posible. Es decir que se reparten las observaciones en K clusters de forma que la suma de las varianzas internas de todos ellos sea lo menor posible. 
 
@@ -212,7 +225,7 @@ g = sns.scatterplot(x = kmeans.cluster_centers_[:,2], y = kmeans.cluster_centers
 >
 
 
-[6. Evaluación del resultado obtenido](#6-inercia)
+## [6. Evaluación del resultado obtenido](#6-inercia)
 
  Una forma de evaluar cuan bien funcionó nuestro agrupamiento podría ser calcular cuan compactos son los grupos obtenidos. Entendiendo que funcionó mejor si todos los elementos del grupo están lo más cerca posible de su centro. Podemos, entonces, sumar las distancias de cada punto a su respectivo centro y usar eso como medida. A este valor se lo denomina inercia y puede obtenerse haciendo:
 

@@ -1,4 +1,14 @@
 # Tutorial WEB
+
+🚨 Este material fue creado por Ana Julia Velez Rueda y como todo el repositorio se encuentra bajo licencia 
+[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
+
+[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
+
+[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
+[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
+[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+
 >
 > En este recorrido:
 > - se basa en el material [http-tutorial](https://github.com/AJVelezRueda/http-tutorial/tree/master/tutorial/es) de los autores Franco Leonardo Bulgarelli y Ana Julia Velez Rueda
@@ -6,7 +16,7 @@
 > - Retoma el material teórico [Introducción a la arquitectura Web](https://docs.google.com/document/d/1LBqAhXPzn-aeN5BIRZBmIrU5RKiYvySyWH-2Jkn-kJw/edit#heading=h.kx1xmbyu1do6) generado por Franco Leonardo Bulgarelli
 >
 
-# Introducción a WEB
+## Índice
 [Contenido del recorrido](#1-Web)
   * [1. Internet](#1-interntet)
   * [2. La Web](#2-web)
@@ -71,9 +81,7 @@ Este protocolo de comunicación empleado en la Web tiene ciertas característica
 
 - **Basado en códigos de respuesta**: incluso para los flujos de error; no hay memoria compartida, continuaciones, excepciones ni eventos
 
->
-> 📝 [NOTA] Sobre esto hablaremos en el recorrido de [HTTTP y REST](https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/WEB_%26_HTTP/HTTP_%26_REST.md)
->
+📝 [NOTA] Sobre esto hablaremos en el recorrido de [HTTTP y REST](https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/WEB_%26_HTTP/HTTP_%26_REST.md)
 
 ## [6. Presentacion](#6-presentacion)
 
@@ -94,4 +102,4 @@ Los navegadores modernos son capaces de entender algunos lenguajes sin necesidad
   - Implementar efectos visuales complejos; Realizar pedidos al servidor en segundo plano
   - Implementar navegabilidad del lado del cliente
 
-En este curso vamos a hackear lo standard y omitir el uso JS, echando mano de una biblioteca de Python, que nos ayuda a recrear nuestras aplicaciones web de forma sencilla.
+📝 [NOTA]  En este curso vamos a hackear lo standard y omitir el uso JS, echando mano de una biblioteca de Python, que nos ayuda a recrear nuestras aplicaciones web de forma sencilla.  De ello vamos a hablar más en el material sobre [maquetado web](https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/WEB_%26_HTTP/ipywidgets_y_maquetado.md)
