@@ -94,3 +94,4 @@ Los navegadores modernos son capaces de entender algunos lenguajes sin necesidad
   - Implementar efectos visuales complejos; Realizar pedidos al servidor en segundo plano
   - Implementar navegabilidad del lado del cliente
 
+En este curso vamos a hackear lo standard y omitir el uso JS, echando mano de una biblioteca de Python, que nos ayuda a recrear nuestras aplicaciones web de forma sencilla.
