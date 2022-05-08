@@ -15,9 +15,10 @@
 ### Índice
 
 * [1. HTML](#1-HTML)
+* [2. Anatomía de un documento HTML](#2-partes_html)
 
 
-# [1. HTML](#1-html)
+## [1. HTML](#1-html)
 
 Para presentar los datos provenientes del servidor del lado del cliente, se utiliza HTML, que no es un lenguaje de programación, sino más bien un sitema de eqtiqueas que está pensado para mostrar contenido. 
 
@@ -32,3 +33,27 @@ Se suelen abrir `<etiqueta>` y cerrar luego de escribir el contenido agregando a
 		contenido
 </html>
 ```
+
+Sin embargo, algunas etiquetas no tienen etiqueta de cierre con la barra invertida, son únicas:
+
+```html
+<img src="images/las_de_sistemas.png" alt=””>
+``` 
+
+Existen, además, atributos para las etiquetas que le agregan una funcionalidad extra a la etiqueta que lo contiene:
+
+```html
+<p style="font-size: 18px;"> Este es mi texto con estilo propio</p>
+```
+
+## [2. Anatomía de un documento HTML](#2-partes_html)
+
+Un documento HTML está formado por partes:
+
+ - Una línea que contiene información sobre la versión de HTML (no siempre),
+ 
+ - Una cabecera (delimitada por el elemento HEAD)
+
+ - Un cuerpo, con el contenido del documento (delimitado por el elemento BODY).
+
+Y todo el documento tiene que ir entre las etiquetas `<html></html>` e inicia con la etiqueta `<!DOCTYPE html>`
