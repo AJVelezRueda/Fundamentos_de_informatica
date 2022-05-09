@@ -11,6 +11,22 @@
 [cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
 
 
+<details>
+  <summary>🚨 REQUERIMIENTOS</summary>
+
+  > En este abordaremos los contenidos relativos programación Web. Para ello vas a necesitar instalarte [ipywidgets] (https://ipywidgets.readthedocs.io/en/latest/user_install.html):
+  >
+```bash
+pip install ipywidgets
+```
+  >
+  >
+  Primero puedes verificar si está o no instalado escribiendo en la consola de Python:
+  ```python
+  import ipywidgets
+  ```
+
+</details>
 
 ### Índice
 

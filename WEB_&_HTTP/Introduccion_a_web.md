@@ -20,7 +20,7 @@
 [Contenido del recorrido](#1-Web)
   * [1. Internet](#1-interntet)
   * [2. La Web](#2-web)
-  * [3. Introducción al concepto de CLoud Computing](#3-Cloud-computing)
+  * [3. Introducción al concepto de Cloud Computing](#3-Cloud-computing)
   * [4. Arquitectura Web](#4-arquitectura-web)
   * [5. Protocolos de comunicación](#5-protocolos)
   * [6. Presentacion](#6-presentacion)
@@ -40,7 +40,7 @@ La Web en particular, diminutivo de World Wide Web, es un conjunto de páginas i
 
 Estas páginas web están pensadas para consumir contenido hipertextual, es decir  contenido que contiene vínculos o enlaces a otros contenidos.
 
-## [3. Introducción al concepto de CLoud Computing](#2-Cloud-computing)
+## [3. Introducción al concepto de ClLoud Computing](#2-Cloud-computing)
 
 La computación en la nube o Cloud Computing es el consumo o prestación bajo demanda de recursos tecnologicos a través de Internet. 
 
