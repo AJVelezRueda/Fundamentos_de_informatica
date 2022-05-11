@@ -40,7 +40,7 @@ La Web en particular, diminutivo de World Wide Web, es un conjunto de páginas i
 
 Estas páginas web están pensadas para consumir contenido hipertextual, es decir  contenido que contiene vínculos o enlaces a otros contenidos.
 
-## [3. Introducción al concepto de ClLoud Computing](#2-Cloud-computing)
+## [3. Introducción al concepto de Cloud Computing](#2-Cloud-computing)
 
 La computación en la nube o Cloud Computing es el consumo o prestación bajo demanda de recursos tecnologicos a través de Internet. 
 
