@@ -14,17 +14,21 @@
 <details>
   <summary>🚨 REQUERIMIENTOS</summary>
 
-  > En este abordaremos los contenidos relativos programación Web. Para ello vas a necesitar instalarte [ipywidgets] (https://ipywidgets.readthedocs.io/en/latest/user_install.html):
-  >
+En este abordaremos los contenidos relativos programación Web. Para ello vas a necesitar instalarte [ipywidgets] (https://ipywidgets.readthedocs.io/en/latest/user_install.html), [Voilá](https://voila.readthedocs.io/en/stable/using.html) y [Jupyter](https://jupyter.org/install):
+
 ```bash
     pip install ipywidgets
+
+    pip install voila
+
+    pip install jupyter
 ```
-  >
-  >
-  Primero puedes verificar si está o no instalado escribiendo en la consola de Python:
-  ```python
-    import ipywidgets as widgets
-  ```
+
+Primero puedes verificar si está o no instalado escribiendo en la consola de Python:
+```python
+  import ipywidgets as widgets
+```
+
 
 </details>
 
@@ -184,3 +188,5 @@ De este modo, en caso de que no exista o no se pueda cargar la tipografía desea
 ## [7. Uniendo back y el front](#7-widgets)
 
 Ahora que sabemos crear contenido web con `HTML` y darle estilo con `CSS`, vamos a crear nuestra propia aplicación web, uniendo todo lo que aprendimos hasta [aquí](https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/WEB_%26_HTTP/HTTP_%26_REST.md). 
+
+Para poder crear nuestra aplicación en Python usaremos la biblioteca ipywidgets y la renderizamos (la visualizamos) voilá. Una vez instaladas las bibliotecas como se indica el [comienzo de este tutorial](#índice), crearemos un cuaderno de Jupyter (es decir un archivo de extensión 'ipynb').
