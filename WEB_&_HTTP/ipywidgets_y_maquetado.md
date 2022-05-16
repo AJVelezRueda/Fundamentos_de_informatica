@@ -127,7 +127,7 @@ Algunas de las etiquetas semánticas más usadas son:
 ```
 
 >
-> 🧗🏻‍♀️ Desafio IV:  Buscá qué otras etiquetas semánticas existen
+> 🧗🏻‍♀️ Desafio IV:  Buscá qué otras etiquetas semánticas y no semánticas existen
 >
 
 ¿Y cuáles son las ventajas de escribir de este modo nuestro código HTML? Bueno, para empezar hace el código más mantenible, es decir que se puede comprender más fácilmente sus estructuras y de este modo puede solucionarse más fácilmente cualquier problema. Por otro lado: 
@@ -158,11 +158,34 @@ Hay muchas formas de apuntar a elementos que queremos, y las clases HML son una 
 Y luego podremos estilar dicha etiqueta, haciendo referencia a la misma en el archivo css, escribiendo:
 
 ```css
-.nombre-clase {
+.clase-etiqueta {
  background-color: blue;
 }
 ```
 
+Como verás además del nombre `clase_etiqueta`, para determinar que se trata de un nombre de clase agregamos `.` delante. Pero momento, tambien podemos estilar en cascada lo que se encuentra dentro de otra etiqueta. Imaginemos que ahora agregamos una foto a nuestra página:
+
+```html
+<section class="clase-etiqueta"> 
+  <img alt='mi-imagen' src='mi_imagen.png'>
+</section>
+```
+
+Podríamos entonces estilar dando un ancho (width) y alto (height) a la imagen dentro de la sección de clase `clase_etiqueta` de la siguiente forma:
+
+```css
+.clase-etiqueta img{
+    width: 250px;
+    height: 150px;
+}
+```
+
+>
+> 🤔 PARA PENSAR: ¿Qué significa `px`?
+>
+
+
+En este caso especificamos la clase de la sección madre y el tipo de etiqueta interior que deseamos estilar separada por un espacio.
 
 ## [6. Ahora con estilo](#6-estilos)
 
@@ -181,7 +204,7 @@ De este modo, en caso de que no exista o no se pueda cargar la tipografía desea
 ```
 
 >
-> 🧗🏻‍♀️ Desafio V:  Buscá qué otros atributos existen y dale estilo al documento HTML creado en el Desafío II 
+> 🧗🏻‍♀️ Desafio III:  Buscá qué otros atributos existen y dale estilo al documento HTML creado en el Desafío II 
 >
 
 
@@ -209,7 +232,7 @@ Como estuvimos explicando anteriormente, la forma de presentar los datos proveni
 
 ```python
   import ipywidgets as widgets
-
+  from ipywidgets import HTML
 
   h1_main_section = widgets.HTML("""
     <h1 style='font-size:25px; color:black'>
@@ -236,6 +259,7 @@ Ahora que tenemos nuestra cajita podemos mostrarla en nuetsra interfaz:
 
 
 ```python
+from IPython.display import display
 display(main_section_vbox)
 ```
 
@@ -257,4 +281,4 @@ main_section_vbox = widgets.VBox([h1_main_section, main_text], layout=layouts_in
 ¡Y ahora sí Voilá! ¡Finalmente tenemos nuestra aplicación, con su interfaz!
 
 
-> 🏅 Desafío I: Investigá en la documentación de  `ipywidgets` qué otros elementos HTML podés mostrar y probalos
+> 🏅 Desafío IV: Investigá en la documentación de  `ipywidgets` qué otros elementos HTML podés mostrar y probalos
