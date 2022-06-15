@@ -69,7 +69,7 @@ Existen una amplia cantidad de técnicas que nos permiten encontrar patrones en 
 ## [2. Un ojo en el Iris](#2-Iris)
 
 
-En este recorrido utilizaremos el [set de datos](https://github.com/flbulgarelli/recursos-python/blob/master/2_Ciencia_de_datos_pandas/iris_data.txt) [Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) que consiste en un conjunto de datos u observaciones realizadas por el biólogo Ronald Fisher, sobre las característica de distintas especies de plantas plantas. ¿Será posible clasificar las plantas utilizando alguno de estas observaciones que hizo Fisher?
+En este recorrido utilizaremos el [set de datos](https://github.com/flbulgarelli/recursos-python/blob/master/3_ciencia_de_datos/4_clustering/iris_data.txt) [Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) que consiste en un conjunto de datos u observaciones realizadas por el biólogo Ronald Fisher, sobre las característica de distintas especies de plantas plantas. ¿Será posible clasificar las plantas utilizando alguno de estas observaciones que hizo Fisher?
 
 Vamos a explorar los datos:
 
