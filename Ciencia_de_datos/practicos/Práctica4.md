@@ -80,7 +80,7 @@ Se quiere saber X cosa, elegí las dos columnas que creas útiles para esto y re
     ax1.axvline(x=silhouette_avg, color="red", linestyle="--")
     ax1.set_yticks([])
 
-    graficarSilhouette (k, kmeans.labels_, sample_silhouette_values, silhouette_avg)
+  graficarSilhouette (k, kmeans.labels_, sample_silhouette_values, silhouette_avg)
   ```
 
 
