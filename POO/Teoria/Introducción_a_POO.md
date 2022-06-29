@@ -83,7 +83,7 @@ Como vemos, cada vez que hacemos que pepita coma y vuele, su energia cambia.
 
 
 > 💡 Formalización: 
->los objetos pueden tener **estado** (en el caso de pepita, su estado es la energía), el cual puede cambiar a lo largo del tiempo.
+>los objetos pueden tener **estado** (en el caso de pepita, su estado es la energía), el cual puede cambiar a lo largo del tiempo. El estado es el conjunto de atributos de un objeto.
 
 > 🎯 ¿Te animás a averiguar según qué formula?
 
@@ -283,20 +283,21 @@ Por ejemplo cuando hagamos...
 >> anastasia.comer_alipste(10)
 ```
 
-... `self` representará a `anastasia`. Esto nos permite que definamos métodos que accedan al estado del objeto que está recibiendo el mensaje (como en `comer_alpiste`) o que le enviemos más mensajes (como en `volar_en_circulos`, que envía a `self` el mensaje `volar`).
+Aquí `self` representará a `anastasia`. Esto nos permite que definamos métodos que accedan al estado del objeto que está recibiendo el mensaje (como en .`comer_alpiste`) o que le enviemos más mensajes (como en `volar_en_circulos`, que envía a `self` el mensaje `volar`).
+
 
 > ### Un poco de práctica
-
-Ahora te toca a vos:
-
-1. Creá a la golondrina `maria` con 42 puntos de energía inicial
-2. Creá al dragón `chimuelo`, con 200 dientes y 1000 de energía inicial
-3. Definí el método `esta_debil`, que nos dice si nuestras "aves" tiene menos de 10 puntos de energia (golondrinas) o menos de 50 puntos de energía (dragones)
-4. Definí el método `esta_feliz`, que nos dice si nuestras "aves" tiene más de 500 puntos de eneria (sin importar de qué clase sean)
-5. Hace a `hipo`, entrenador de dragones: sabe aceptar a dragones, quienes son sus entrenados y hacerlos entrenar todos los dias, haciendoles dar 20 vueltas en circulos y luego comer su comida favorita hasta saciarse (3 peces)
-6. Hacé que hipo pueda entrenar a las golondrinas. ¿Qué comportamiento deberían entender las golondrinas ahora?
-7. Definí el m[etodo `entrenamiento_intensivo`, que hace dar vultas en circulos a sus entrenados hasta que estén débiles.
-
+>
+> 🧗🏻‍♀️ Desafio I: Ahora te toca a vos:
+>
+>1. Creá a la golondrina `maria` con 42 puntos de energía inicial
+>2. Creá al dragón `chimuelo`, con 200 dientes y 1000 de energía inicial
+>3. Definí el método `esta_debil`, que nos dice si nuestras "aves" tiene menos de 10 puntos de energía (golondrinas) o menos de 50 puntos de energía (dragones)
+>4. Definí el método `esta_feliz`, que nos dice si nuestras "aves" tiene más de 500 puntos de energía (sin importar de qué clase sean)
+>5. Hace a `hipo`, entrenador de dragones: sabe aceptar a dragones, quienes son sus entrenados y hacerlos entrenar todos los dias, haciendoles dar 20 vueltas en circulos y luego comer su comida favorita hasta saciarse (3 peces)
+>6. Hacé que hipo pueda entrenar a las golondrinas. ¿Qué comportamiento deberían entender las golondrinas ahora?
+>7. Definí el método `entrenamiento_intensivo`, que hace dar vueltas en circulos a sus entrenados hasta que estén débiles.
+>
 
 [9. Herencia](#9-herencia)
 
@@ -321,8 +322,15 @@ Diremos además que esta clase es una _clase abstracta_, porque no existe para t
 > 💡 Formalización:
 > La herencia es un proceso mediante el cual se puede crear una clase hija que hereda de una clase madre sus métodos y atributos.
 
-
+>
+> 🧗🏻‍♀️ Desafio II: 
+> 1. Ahora hacé las modificaciones en las clases Golondrina y Dragones para que un Entrenador pueda entrenar tanto a aves como dragones. 
+> 2. Creá una clase de AvesNoVoladoras, que come_alpiste y como su nombre indica no puede volar_en_circulos pero si correr_en_circulos disminuyendo su energía en 25.
+> 3. ¿Las AvesNoVoladoras son polimórficas con las aves Golondrinas desde el punto de vista del Entrenedor?¿Cómo podemos solucionar este inconveniente?
+>
 
 # Bibliografía
 
 ["Objeto, mensaje, métodos". Fernando Dodino. Material de Cátedra de Paradigmas de Programación - UTN FRBA, Argentina.](https://docs.google.com/document/d/1RBfNmKZFKZ90XvfQsN7zhtuUPV2Mvj7t-iyZiL2bClQ/edit)
+
+[Object Design: Roles, Responsibilities, and Collaborations, Rebecca Wirfs-Brock and Alan McKean, Addison-Wesley 2003, ISBN 0201379430.](https://www.informit.com/promotions/object-design-142314?utm_source=referral&utm_medium=wrifsbrock&utm_campaign=objectdesign&utm_term=pdf)

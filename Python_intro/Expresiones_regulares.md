@@ -10,7 +10,7 @@ En este recorrido aprenderemos los conceptos básicos de expresiones regulares e
 * [5. Coincidencias o Matches](#5-matches)
 * [6. Reemplazos o sustituciones masivas](#6-sub)
 
-[1. Lo esencial es invisible a los ojos](#1-Escape-characters)
+## [1. Lo esencial es invisible a los ojos](#1-Escape-characters)
 
 Cuando trabajamos con archivos de texto, suele pasar desapercibida la presencia de caracteres que dan formato legible al texto y que no se representan por así decirlo "graficamente explicitos". Un ejemplo de ello es el espacio entre las palabras que tipeamos para constuir una oración. Este tipo de caracteres, comunmente conocidos como caracteres especiales, se encuentran respresentados por _secuencias de escape_. 
 
@@ -30,7 +30,7 @@ Vamos a ver algunas de las secuencias de escape más frecuentes:
 
 
 
-[2. ¿Qué son las expresiones regulares?](#2-ER)
+## [2. ¿Qué son las expresiones regulares?](#2-ER)
 
 Las expresiones regulares son cadenas de caracteres basadas en reglas sintácticas, que permiten describir secuencias de caracteres. Es decir es un criterio para buscar, capturar o reemplazar texto utilizando patrones. Estas son una herramienta poderosa a la hora de hacer búsquedas sofisticadas en Strings de forma simple.
 
@@ -41,7 +41,7 @@ Las expresiones regulares se pueden concatenar para formar nuevas expresiones re
 > Para pensar 🤔: ¿Qué usos crees que podemos darle a las expresiones regulares? Proponé una aplicación concreta para tu carrera/disciplina.
 >
 
-[3. Metacaracteres](#3-Metacaracteres)
+## [3. Metacaracteres](#3-Metacaracteres)
 
 Los `metacaracteres` son caracteres especiales que, dependiendo del contexto, tienen un significado especial para las expresiones regulares. 
 
@@ -151,7 +151,7 @@ Un rango es una clase de caracteres abreviada que se crea escribiendo el primer 
 
 Así como podemos listar los caracteres posibles en cierta posición de la cadena, también podemos listar caracteres que no deben aparecer utilizando el `^`. Así, por ejemplo rango [^a-d] coincide con cualquier caracter que no sea `abcd`.
 
-[4. Expresiones regulares en Python ](#4-RE) 
+## [4. Expresiones regulares en Python ](#4-RE) 
 
 
 Para trabajar con expresiones regulares en Python, es necesaria la librería [RE](https://docs.python.org/3/library/re.html), que puede ser instalada usando el instalador de Python (PIP):
@@ -167,7 +167,7 @@ import re
 Si la librería está instalada no nos aparecerá ningún error. 
 
 
-[5. Coincidencias o Matches](#5-matches)
+## [5. Coincidencias o Matches](#5-matches)
 
 
 Comenzaremos por aprender sobre las expresiones regulares más simples posibles. Dado que las expresiones regulares se utilizan para operar en strings, vamos a empezas con la tarea más común: los caracteres coincidentes. 
@@ -287,7 +287,7 @@ Cuando se quieren obtener todas las apariciones del patrón se utiliza el métod
 ```
 
 
-[6. Reemplazos o sustituciones masivas](#6-sub)
+## [6. Reemplazos o sustituciones masivas](#6-sub)
 
 Ejecutemos ahora la siguiente línea:
 

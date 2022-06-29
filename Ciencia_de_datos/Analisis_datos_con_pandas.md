@@ -1,6 +1,21 @@
+# Introducción a la Ciencia de Datos con Python
+
+🚨 Este material fue creado por Ana Julia Velez Rueda y como todo el repositorio se encuentra bajo licencia 
+[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
+
+[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
+
+[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
+[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
+[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+
+
 > Este material retoma material de [Recursos Python](https://github.com/flbulgarelli/recursos-python/blob/master/2_Ciencia_de_datos_pandas/Analisis_de_datos_con_pandas.md)
 
-### Introducción a la Ciencia de Datos con Python
+
+<details>
+  <summary>🚨 REQUERIMIENTOS</summary>
+
 
 Para este recorrido necesitarás las librerías [Pandas](https://pandas.pydata.org/), [Seaborn](https://seaborn.pydata.org/) y [Scipy](https://www.scipy.org/)
 
@@ -25,7 +40,9 @@ En este recorrido trabajaremos sobre los datos abiertos del sobre el personal de
 
 Si bien no es estrictamente necesario saber a fondo la sintaxis de Python para comenzar a utilizar Pandas, te recomendamos fuertemente realizar el [recorrido introductorio de Python](https://github.com/AJVelezRueda/UCEMA_Fundamentos_de_informatica/blob/master/Python_intro/intro_python_tutorial.md), que te brindará los conocimientos básicos de programación en general y de Python particular que te permitiran abordar este contenido sin problemas.
 
-# Guias de Trabajo
+</details>
+
+## Guias de Trabajo
  * [1. Carga e inspección de datos](#1-carga)
  * [2. Tratamiento de datos faltantes](#2-faltantes)
  * [3. Tratamiento de tipos de datos de las columnas](#3-tipos_datos)

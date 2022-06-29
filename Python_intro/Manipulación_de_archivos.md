@@ -1,5 +1,15 @@
 # *Lectura & Escritura de archivos con Python*
 
+🚨 Este material fue creado por Ana Julia Velez Rueda y Guillermo I. Benítez; y como todo el repositorio se encuentra bajo licencia 
+[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
+
+[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
+
+[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
+[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
+[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+
+
 # Guias de Trabajo
 * [1. Archivos](#1-archs)
 * [2. Apertura de archivos](#2-open)

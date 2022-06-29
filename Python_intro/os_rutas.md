@@ -1,3 +1,15 @@
+# Rutas, absolutas y relativas
+
+🚨 Este material fue creado por Guillermo I. Benítez y como todo el repositorio se encuentra bajo licencia 
+[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
+
+[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
+
+[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
+[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
+[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+
+
 [Rutas, absolutas y relativas](os)
 
 Como ya hemos visto, para acceder a los archivos necesitamos saber cuál es la ruta (o path) dónde se encuentran. En este punto surge el inconveniente de los distintos sistemas operativos, ya que hay una diferencia en cómo se arman estas rutas. Para solucionar esto se puede utilizar las bibliotecas **os** y **pathlib** las cuales ya vienen incorporadas en python (built-in modules), de manera de poder armar las rutas necesarias y poder usarlas independientemente del sistema operativo. Veamos como funcionan.

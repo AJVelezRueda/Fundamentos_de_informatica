@@ -1,5 +1,15 @@
 # *Introducción a Python*
 
+🚨 Este material fue creado por Ana Julia Velez Rueda y como todo el repositorio se encuentra bajo licencia 
+[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
+
+[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
+
+[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
+[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
+[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+
+
 En este recorrido aprenderemos los conceptos básicos de programación y la sintáxis de [Python](https://www.python.org.ar/). Para ello vas a necesitar instalarte [Python](http://ufq.unq.edu.ar/sbg/archivos/guias_talleres/Guia_Instalacion_Python_2020.pdf) y algún [editor de código](https://code.visualstudio.com/) (IDE) que te sea útil para programar. 
 
 ¡Para este recorrido tomaremos como base las presentes guías del Proyecto de Extensión [La Bioinformática Va a La Escuela](http://ufq.unq.edu.ar/sbg/education.html) del cual soy creadora! 🤗
@@ -28,7 +38,7 @@ En este recorrido aprenderemos los conceptos básicos de programación y la sint
   * [20. Salir de la caja](#20-scripts)
 
 
-[1. Pensamiento computacional](#1-PC) 🧠
+## [1. Pensamiento computacional](#1-PC) 🧠
 
 Si nunca programaste tal vez la programación pueda parecerte algo muy abstracto o lejano, hasta puede que te de miedo intentar aprender a programar, pero lo cierto es que las habilidades que utilizamos para programar son por demás cotidianas. ¿No me crees? ¡Vamos a hacer una prueba!
 
@@ -73,13 +83,13 @@ Moraleja, programar es como hacer mate...Bueno, no taaanto ¡pero casi! 😝
 > 🧗‍♀️ Desafío I: ¿Qué pasos nos faltaron? ¿Podes pensar otras posibles situaciones que no estemos contemplando (como por ejemplo que no haya yerba en el yerbero)?  Agregá a la guía para preparar mate(script) los pasos, problemas posibles y las soluciones que se te ocurran en sentencias u ordenes sencillas (ejemplo; verificar si hay yerba en el yerbero. Si no hay agregar, si hay llenar el mate)  
 
 
-[2. Anatomia de la Computadora](#1-computadora) 
+## [2. Anatomia de la Computadora](#1-computadora) 
 
 Una computadora :computer: está formada por el _hardware_ (que son todas las partes o elementos físicos que la componen :keyboard::desktop::mouse_three_button:) y el _software_ (que son todas las instrucciones para el funcionamiento del Hardware). El _sistema operativo_ es el principal software de la computadora, pues proporciona una interfaz con el usuario y permite al resto de los programas una interacción correcta con el Hardware.
 
 > Para pensar 🤔: ¿Y cómo te parece que funciona tu teléfono celular 📱? 
 
-[3. Hablando como Pythonistas](#3-pythonistas)🐍
+## [3. Hablando como Pythonistas](#3-pythonistas)🐍
 
 _¿Y cómo hacemos para decirle a la computadora qué hacer?_
 
@@ -96,7 +106,7 @@ Esto significa que, como programadores de Python 🐍 (o cualquier otro lenguaje
 Python 🐍 es un lenguaje de programación con una forma de escritura (sintaxis) sencilla. Es lo que se conoce como lenguaje de scripting, que puede ser ejecutado por partes y no necesita ser compilado en un paso aparte (¿Compilado? 🤔 ¡Averiguá de qué se trata!). 
 Python tiene muchas características, ventajas y usos que vamos a pasar por alto ahora, pero que iremos viendo a lo largo del curso.
 
-[4. La caja negra](#4-terminal)
+## [4. La caja negra](#4-terminal)
 
 Ya vimos que para programar necesitamos tener un lenguaje en común con la computadora (lenguaje de programación). Dijimos también que en este curso usaremos como lenguaje _Python_, pero ¿Dónde debemos cargar nuestros mensajes (código)? ¡Hablar al aire parece no ser la solución!
 
@@ -111,7 +121,7 @@ Seguramente si abriste la terminal, habrás notado que hay un “chirimbolito”
 > 🧗‍♀️ Desafío II: Abrí la terminal de _Python_ que tengas instalada en tu computadora y luego abrí _Visual Code_ y luego presioná las teclas `Ctrl + J`. Se abrirá una terminal en el editor de código. ¿Cómo es el _prompt_ en cada caso? ¿Qué lenguaje "entiende" la terminal de _Visual Code_?
 
 
-[5. ¡Hola Python!](#5-print) 👋🏾 🐍
+## [5. ¡Hola Python!](#5-print) 👋🏾 🐍
 
 Una forma no muy original de a aprender escribir un primer programa en Python es simplemente abrir la consola, escribir lo siguiente y darle Enter:
 
@@ -125,7 +135,7 @@ Felicitaciones, ¡ese fue tu primer programa en Python!
 
 
 
-[6. Una calculadora super-archi-genial](#6-operadores)
+## [6. Una calculadora super-archi-genial](#6-operadores)
 
 Con Python podemos hacer todo tipo de cálculos matemáticos. Aunque suene medio embole, aprender a hacer estos cálculos nos va a ayudar después a trabajar sobre otros tipos de datos. 
 Vamos a probar algunos cálculos. Para ello tenés que abrir la terminal de tu máquina y escribir _Python_, una vez que des enter y aparezca el _prompt_ podras comunicarte Pytonicamente con la computadora.
@@ -157,7 +167,7 @@ Estos chirimbolos se conocen como operadores matemáticos y nos sirven para oper
 
 </details>
 
-[7. Apto Doris](#7-variables) 🐠
+## [7. Apto Doris](#7-variables) 🐠
 
 Como habrán notado hasta aquí que venimos introduciendo órdenes línea a linea para que la computadora ejecute, lo que desde el púnto de vista práctico no resulta la mejor opción. Desde ya que sería ideal dejar la máquina haciendo cosas y poder irnos a por café. Por suerte existe una herramienta que va a simplificar nuestra tarea de ahora en adelante: las variables. Las variables nos permiten nombrar y reutilizar valores. 
 
@@ -167,7 +177,7 @@ Es decir, le damos un nombre a un conjunto de “cosas” o a una "cosa" y una v
 >>> variable = valor de la variable
 ```
 
-[8. Nada es mejor, nada es igual…](#8-operadores-relacionales) 🎶🎵
+## [8. Nada es mejor, nada es igual…](#8-operadores-relacionales) 🎶🎵
 
 Existen también formas de comparar dos variables, lo que se conoce como operadores relacionales.
 Podemos saber si dos variables son iguales (==), o si son distintas (!=), o si una es mayor que la otra (>). Por ejemplo:
@@ -194,7 +204,7 @@ Los operadores relacionales que se pueden usar en Python son:
 
 </details>
 
-[9. Una palabra no dice nada y al mismo tiempo dice todo](#9-strings) 🎶🎵
+## [9. Una palabra no dice nada y al mismo tiempo dice todo](#9-strings) 🎶🎵
 
 Estuvimos operando hasta aquí con números (_Int_) y recientemente aprendimos que existe otro tipo de datos lógicos (_boooleanos_), pero aún nos quedan muchos tipos de datos que podemos manipular en Python.
 
@@ -218,7 +228,7 @@ saber entonces si son o no son distintas:
 
 > Para pensar 🤔:¿Qué resultado nos da? ¿Por qué?
 
-[10.En fetas de texto](#10-slicing)
+## [10.En fetas de texto](#10-slicing)
 
 En Python podemos saber qué caracteres o subpartes conforman una cadena o string. Python le asigna
 a cada caracter de una cadena un número de posición. 
@@ -253,7 +263,7 @@ qué carácter, separado por dos puntos:
 > Para pensar 🤔:¿Qué resultado nos dá el código anterior? ¿Por qué? ¿Qué pasa si removemos el último número (hacemos `saludo[0:]`)? 
 
 
-[11. Chamuyo: del lunfardo el arte de manipular palabras/cadenas](#11-metodos-strings)
+## [11. Chamuyo: del lunfardo el arte de manipular palabras/cadenas](#11-metodos-strings)
 
 Existen muchas maneras útiles para manipular cadenas en Python.
 
@@ -286,7 +296,7 @@ Existen muchas maneras útiles para manipular cadenas en Python.
 >
 >📚 Para investigar: ¿Qué es la inmutabilidad en Python?
 
-[12. El todo y la nada](#12-in)
+## [12. El todo y la nada](#12-in)
 
 
 Cuando trabajamos con strings también puede resultarnos útil saber si uno contiene a otro, para ello utilizamos el operador `in`:
@@ -295,7 +305,7 @@ Cuando trabajamos con strings también puede resultarnos útil saber si uno cont
 >>> "mar" in "marinero"
 ```
 
-[13. Síndrome de Diógenes](#13-listas)
+## [13. Síndrome de Diógenes](#13-listas)
 
 Python nos permite pensar en grande y acumular datos en lo que se conoce como un tipo de datos  `lista`. Esta nos permiten manipular un gran número de datos en forma sencilla. Y sus elementos pueden ser cadenas, números, ¡incluso otras listas! 
 
@@ -317,7 +327,7 @@ escribir:
 > Para pensar 🤔: ¿Cómo podrías conocer la longitud de la lista?
 
 
-[14. Piano piano se va lontano](#14-listas-metodos)
+## [14. Piano piano se va lontano](#14-listas-metodos)
 
 Podemos agregar (append) elementos a nuestra lista o quitarlos (remove) del siguiente modo:
 
@@ -328,7 +338,7 @@ Podemos agregar (append) elementos a nuestra lista o quitarlos (remove) del sigu
 
 > Para pensar 🤔: Probá la sentencia `lista.index('25')` ¿Qué resultado obtenes? ¿Para qué sirve _index()_
 
-[15. Matryoshka de datos ](#15-diccionarios)
+## [15. Matryoshka de datos ](#15-diccionarios)
 
 Los diccionarios, al igual que las listas, nos permiten almacenar datos. Los diccionario son mutables, es decir que podemos agregar o quitar elementos de él y los valores almacenados en él  pueden ser modificados.
 
@@ -364,7 +374,7 @@ Podeemos acceder, entonces al valor de una llave en particular por medio de su l
 > Para pensar 🤔: ¿Cómo harías para obtener todos los valores de un diccionario?
 
 
-[16. Comentario aparte ](#16-comentarios)
+## [16. Comentario aparte ](#16-comentarios)
 
 En Python tenemos la posibilidad de incluir texto que, aunque esté escrito en el programa, no deba
 ejecutarse. Esto se logra empezando la línea con el símbolo # (el hash o numeral). Estas líneas se
@@ -376,7 +386,7 @@ llaman “comentarios” y se utilizan para incluir en el programa algunas aclar
 >>> nombre
 ```
 
-[17. ¡Atender, atender! Comienza la función](#17-funciones) 🤡
+## [17. ¡Atender, atender! Comienza la función](#17-funciones) 🤡
 
 ¿Vos también flashaste obra de teatro? 🧐 Bueno, en realidad hablamos de otro tipo de funciones… Nos referimos a esos bloques de código a los que les ponemos un nombre (¿Cuca? 🐁), que ejecuta las operaciones deseadas y devuelve un valor o realiza una tarea.
 
@@ -423,7 +433,7 @@ Ahoraa que sabemos cómo definir funciones y podemos reciclar código y automati
 
 
 
-[18. Quedándote o yéndote](#18-if) 🎶🎵
+## [18. Quedándote o yéndote](#18-if) 🎶🎵
 
 Como en todo, a la hora de escribir un programa debemos tomar decisiones y las decisiones que
 tomamos siempre dependen de los condicionantes que se presentan. 
@@ -453,7 +463,7 @@ Es muy importante dejar esta tabulación o sangría (un espacio en blanco, inser
 >
 
 
-[19. Vueltas y mas vueltas](#19-for)
+## [19. Vueltas y mas vueltas](#19-for)
 
 Hay gente que es reiterativa hay circunstancias que son reiterativas y hay tareas que son reiterativas. Por suerte existen lo que se conocen como bucles-for.
 
@@ -499,7 +509,7 @@ Ahora solo nos faltaría sumar +1 a la lista _veggies_ si el valor es `"veganas"
 >
 >
 
-[20. Salir de la caja](#20-scripts)
+## [20. Salir de la caja](#20-scripts)
 
 Un script es una secuencia de comandos, o en criollo un programa muy simple. Eso que fuimos ejecutando linea a linea, perfectamente podría escribirse en un archivo para ejecutarse una sola vez, más comodamente.
 
