@@ -14,7 +14,7 @@ import numpy as np
 from scipy import stats
 ```
 
-Cargá la [siguiente tabla](link) e inspeccionala.
+Cargá la [siguiente tabla](https://raw.githubusercontent.com/AJVelezRueda/Fundamentos_de_informatica/master/Ciencia_de_datos/practicos/recursos/practico4.csv) e inspeccionala.
 Caracterizala estadísticamente.
 Limpíá la tabla de las posibles anomalías que pueda contener.
 Escalá las columnas que sean necesarias obteniendo un nuevo dataframe con todos los datos numéricos pertinentes.
