@@ -1,5 +1,5 @@
 # **Práctica de introducción a Python - Parte 1**
-_Antes de iniciar con los ejercicios asegúrense de tener instalado correctamente Python y un IDE (preferentemente Visual Studio Code). Además, en los sistemas que tengan Linux y Mac tienen que tener instalado Bash._
+_Antes de iniciar con los ejercicios asegúrense de tener instalado correctamente Python y un IDE (preferentemente Visual Studio Code). Además, en los sistemas que tengan no Linux y Mac tienen que tener instalado Bash._
 
 ##### **Ejercicio 1**
  Escribir un programa que imprima la longitud de un string el cual se lee por teclado.
