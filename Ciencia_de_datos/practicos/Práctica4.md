@@ -16,7 +16,7 @@ from scipy import stats
 
 Cargá la [siguiente tabla](https://raw.githubusercontent.com/AJVelezRueda/Fundamentos_de_informatica/master/Ciencia_de_datos/practicos/recursos/practico4.csv) e inspeccionala.
 Caracterizala estadísticamente.
-Limpíá la tabla de las posibles anomalías que pueda contener.
+Limpiá la tabla de las posibles anomalías que pueda contener.
 Escalá las columnas que sean necesarias obteniendo un nuevo dataframe con todos los datos numéricos pertinentes.
 Una empresa quiere publicitar su producto por medio de los anuncios en las redes sociales, más precisamente quiere atraer a adultos jóvenes. Para esto, esta empresa tiene en su poder información de dudosa moralidad por la cuál puede saber, desde una IP dada, cuántas horas estuvo activa esta IP y cuales fueron las redes que usó. La idea original, para poder obtener una mayor ganancia, es largar de forma diferenciada los anuncios, de manera que las personas que entran poco a internet, pero cuyo tiempo se gasta en redes sociales, van a recibir mayor cantidad de anuncios. Se quiere saber entonces, si en base a los datos disponibles se pueden generar al menos dos grupos diferenciados para este fin. Elegí las dos columnas que creas útiles para esto y realizá un proceso de clustering para obtener los grupos correspondientes.
 ¿Cuántos grupos se formaron?
