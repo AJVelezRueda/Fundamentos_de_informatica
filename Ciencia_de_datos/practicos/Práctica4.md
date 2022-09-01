@@ -80,7 +80,7 @@ Una empresa quiere publicitar su producto por medio de los anuncios en las redes
     ax1.axvline(x=silhouette_avg, color="red", linestyle="--")
     ax1.set_yticks([])
 
-    graficarSilhouette (k, kmeans.labels_, sample_silhouette_values, silhouette_avg)
+  graficarSilhouette (k, kmeans.labels_, sample_silhouette_values, silhouette_avg)
   ```
 
 

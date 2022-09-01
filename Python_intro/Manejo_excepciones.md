@@ -38,7 +38,7 @@ SyntaxError: invalid syntax
 Si observamos el error este tiene en su mensaje información que nos permitirá encontar el origen del problema.
 
 >
-> 🧗‍♀️Desafio I: Descargá y ejecutá el [`script1_manejo_errores.py`](https://github.com/AJVelezRueda/UCEMA_Fundamentos_de_informatica/blob/master/Python_intro/script1_manejo_errores.py)
+> 🧗‍♀️Desafio I: Descargá y ejecutá el [`script1_manejo_errores.py`](https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/Python_intro/Recursos_anexos/script1_manejo_errores.py)
 >
 > Para pensar 🤔: ¿Qué tipo de error se obtiene al ejecutar el programa? ¿En dónde se encuentra el error? ¿Cómo te das cuenta? 
 >

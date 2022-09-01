@@ -28,4 +28,4 @@ Escribí un programa que abra dos documentos y guarde el contenido de ambos en u
 Realizá un programa que lea un archivo y obtenga la frecuencia de cada palabra que hay en el archivo. Recordá que la frecuencia es la relación entre número de veces que aparece la palabra en cuestión con respecto a la cantidad total de palabras.
 
 ##### **Ejercicio 10**
-Escribí un programa que añada a un archivo dado todos los archivos de texto (.txt) que hayan en una determinada carpeta.
+Escribí un programa que lea todos los archivos .txt de una carpeta dada (**Carpeta1**) y los añada a un archivo dentro de la carpeta _Resultado_, que a su vez se tiene que encontrar dentro de **Carpeta1**.
