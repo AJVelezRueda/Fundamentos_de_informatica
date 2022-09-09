@@ -33,3 +33,7 @@ Como ya saben la computadora no lee a los strings o cadenas de caracteres tal cu
 >>> re.sub(patron, "lapsus", texto)
 re.sub(patron, "lapsus", texto)
 ```
+
+
+
+Agregado 9/9
