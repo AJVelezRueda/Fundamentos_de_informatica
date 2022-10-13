@@ -574,10 +574,13 @@ Como vemos, haciendo POST sobre la ruta de `/prendas` creamos una prenda, sin es
 agregándolo en el cuerpo.
 
 > 🏅 Desafío XIII: Creá una venta.
-
+>
 > 🏅 Desafío XIV: Intentá hacer POST sobre una venta concreta, como por ejemplo `https://macowins-server.herokuapp.com/prendas/1`. ¿Qué sucede?
 
 ## [10. Recursos](#10-recursos)
+Existe un concepto fundamental en cualquier API RESTful: `recurso`. Un recurso es un objeto con un tipo, datos asociados, relaciones con otros recursos y un conjunto de métodos que operan sobre él. Es similar a una instancia de objeto en un lenguaje de [programación orientado a objetos](https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/POO/Teoria/Introducci%C3%B3n_a_POO.md). 
+
+Se definen un número acotado de métodos estándar para un recurso, correspondientes a los métodos estándar HTTP.
 
 > 🤔 Para pensar: A los métodos HTTP también se les dice verbos. ¿Por qué?
 
@@ -601,7 +604,7 @@ Estas convenciones nos hablan de una semántica para cada uno de los verbos, y e
 * `DELETE`: eliminar un contenido
 
 > 🤔 Para pensar: ¿por qué es importante respetar estas convenciones?
-
+>
 > 🤔 Para pensar: `POST` es uno de los métodos con efecto más antiguos de HTTP, y por eso es común que a veces se lo use
 > para resolver operaciones que no encajan en otras semánticas. ¿Se te ocurre algún otro ejemplo fuera de HTTP en que pase algo así?
 

@@ -1,4 +1,4 @@
-# *control de versiones*
+# *Control de Versiones*
 En este recorrido repasaremos los conceptos básicos de de control de versiones utilizando [Git](https://git-scm.com/downloads) y [GitHub](https://github.com/). 
 
 # Guias de Temas
