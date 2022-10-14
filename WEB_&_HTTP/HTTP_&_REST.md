@@ -663,7 +663,7 @@ En el mundo Python existen múltiples frameworks y herramientas que podemos util
 
 Con base en Python, también podés encontrar algunas herramientas de visualización que resuelven tanto la comunicación HTTP, como las visualizaciones de los recursos del lado del cliente. Un ejemplo sencillo en su uso de este tipo de herramientas es [ipywidgets](https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/WEB_%26_HTTP/ipywidgets.md).
 
-📝 [NOTA] Ahora que conoces sobre que conoces sobre Aplicaciones y sobre el protocolo con el que acceder a sus recursos, vamos a crear nuestra primer aplicación Web usando Python. ¡Estas ahí tutorial de [Flask](https://github.com/AJVelezRueda/Macowins_En_Flask) y vamos a encontrarte!!
+📝 [NOTA] Ahora que conoces sobre que conoces sobre Aplicaciones y sobre el protocolo con el que acceder a sus recursos, vamos a crear nuestra primer aplicación Web usando Python. ¡Estas ahí **tutorial de [Flask](https://github.com/AJVelezRueda/Macowins_En_Flask)** y vamos a encontrarte!!
 
 
 >
