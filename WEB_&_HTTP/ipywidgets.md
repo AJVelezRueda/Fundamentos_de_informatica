@@ -33,7 +33,7 @@ Primero puedes verificar si está o no instalado escribiendo en la consola de Py
 
 ## Take it easy y Voilá: una forma sencilla de unir el back y el front
 
-Ahora que sabemos crear contenido web con `HTML` y darle estilo con `CSS`, vamos a crear nuestra propia aplicación web, uniendo todo lo que aprendimos hasta [aquí](https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/WEB_%26_HTTP/HTTP_%26_REST.md). 
+Ahora que [sabemos](https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/WEB_%26_HTTP/maquetado.md) crear contenido web con `HTML` y darle estilo con `CSS`, vamos a crear nuestra propia aplicación web, uniendo todo lo que aprendimos hasta [aquí](https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/WEB_%26_HTTP/HTTP_%26_REST.md). 
 
 Para poder crear y renderizar (visualizar) nuestra aplicación utilizaremos voilá y crearemos la interfaz gráfica utilizando la biblioteca ipywidgets. Para ello debemos primero instalar las bibliotecas como se indica el [comienzo de este tutorial](#índice), luego:
 

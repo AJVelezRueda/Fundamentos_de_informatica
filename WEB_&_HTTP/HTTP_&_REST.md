@@ -578,9 +578,9 @@ agregándolo en el cuerpo.
 > 🏅 Desafío XIV: Intentá hacer POST sobre una venta concreta, como por ejemplo `https://macowins-server.herokuapp.com/prendas/1`. ¿Qué sucede?
 
 ## [10. Recursos](#10-recursos)
-Existe un concepto fundamental en cualquier API RESTful: `recurso`. Un recurso es un objeto con un tipo, datos asociados, relaciones con otros recursos y un conjunto de métodos que operan sobre él. Es similar a una instancia de objeto en un lenguaje de [programación orientado a objetos](https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/POO/Teoria/Introducci%C3%B3n_a_POO.md). 
+Existe un concepto fundamental en cualquier API REST: _recurso_. Un _recurso_ es un objeto con datos asociados, relaciones con otros _recursos_ y un conjunto de métodos que operan sobre él. Es similar a una instancia de objeto en un lenguaje de [programación orientado a objetos](https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/POO/Teoria/Introducci%C3%B3n_a_POO.md). 
 
-Se definen un número acotado de métodos estándar para un recurso, correspondientes a los métodos estándar HTTP.
+Se definen un número acotado de métodos estándar para un _recurso_, correspondientes a los métodos estándar HTTP.
 
 > 🤔 Para pensar: A los métodos HTTP también se les dice verbos. ¿Por qué?
 
@@ -661,9 +661,13 @@ En el mundo Python existen múltiples frameworks y herramientas que podemos util
 
 - Los pesados, que traen las baterías incluída, y resuelven una gran gama de problemas asociados al desarrollo de las aplicaciones Web que no se limitan a la interacción HTTP. 
 
+Con base en Python, también podés encontrar algunas herramientas de visualización que resuelven tanto la comunicación HTTP, como las visualizaciones de los recursos del lado del cliente. Un ejemplo sencillo en su uso de este tipo de herramientas es [ipywidgets](https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/WEB_%26_HTTP/ipywidgets.md).
 
-Con base en Python, también podés encontrar algunas herramientas de visualización que resuelven tanto la comunicación HTTP, como las visualizaciones de los recursos del lado del cliente. Un ejemplo sencillo en su uso de este tipo de herramientas es [ipywidgets]()
+📝 [NOTA] Ahora que conoces sobre que conoces sobre Aplicaciones y sobre el protocolo con el que acceder a sus recursos, vamos a crear nuestra primer aplicación Web usando Python. ¡Estas ahí tutorial de [Flask](https://github.com/AJVelezRueda/Macowins_En_Flask) y vamos a encontrarte!!
 
+
+>
 > 🏅 Desafío XVII: ¿En dónde está desplegado `MacoWins`? ¿Podés averiguarlo las cabeceras HTTP y/o la URL?
-
+>
 > 💬 Para discutir: qué es Heroku y cómo se despliega allí
+>
