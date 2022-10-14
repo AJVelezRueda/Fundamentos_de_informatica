@@ -667,7 +667,7 @@ Con base en Python, también podés encontrar algunas herramientas de visualizac
 
 
 >
-> 🏅 Desafío XVII: ¿En dónde está desplegado `MacoWins`? ¿Podés averiguarlo las cabeceras HTTP y/o la URL?
+> 🏅 Desafío XVII: ¿En dónde está desplegado `QMP`? ¿Podés averiguarlo las cabeceras HTTP y/o la URL?
 >
 > 💬 Para discutir: qué es Heroku y cómo se despliega allí
 >
