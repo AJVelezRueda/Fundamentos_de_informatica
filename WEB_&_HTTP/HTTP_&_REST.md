@@ -652,7 +652,18 @@ Existen algunas reglas básicas para escribir las rutas REST:
 
 > 🤔 Para pensar: ¿Dónde está desplegada nuestra API? ¿En la máquina de uno de los docentes? ¿En tu máquina? ¿Qué problemas tendría ésto?
 
-> 🏅 Desafío XVII: ¿En dónde está desplegado QMP? ¿Podés averiguarlo las cabeceras HTTP y/o la URL?
+
+Las tecnologías del lado del servidor son aquellas que, en el contexto de una arquitectura Web, se ejecutan en el servidor. Estas no requieren del diálogo con el navegador. 
+
+En el mundo Python existen múltiples frameworks y herramientas que podemos utilizar para desarrollar un servidor.  En general podemos considerar dos grandes grupos de frameworks para le desarrollo Web en general, y en Python en particular: 
+
+- Frameworks livianos: sólo resuelven algunas cuestiones mínimas del ciclo de vida un pedido HTTP, tales como la lectura de los parámetros, la gestión de sesión y la escritura de una respuesta. Por ejemplo como [Flask](https://flask.palletsprojects.com/en/2.2.x/) sobre el que vamos aprender más [Aquí](https://github.com/AJVelezRueda/Macowins_En_Flask).
+
+- Los pesados, que traen las baterías incluída, y resuelven una gran gama de problemas asociados al desarrollo de las aplicaciones Web que no se limitan a la interacción HTTP. 
+
+
+Con base en Python, también podés encontrar algunas herramientas de visualización que resuelven tanto la comunicación HTTP, como las visualizaciones de los recursos del lado del cliente. Un ejemplo sencillo en su uso de este tipo de herramientas es [ipywidgets]()
+
+> 🏅 Desafío XVII: ¿En dónde está desplegado `MacoWins`? ¿Podés averiguarlo las cabeceras HTTP y/o la URL?
 
 > 💬 Para discutir: qué es Heroku y cómo se despliega allí
-

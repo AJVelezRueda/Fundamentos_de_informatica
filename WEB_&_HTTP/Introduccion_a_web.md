@@ -102,4 +102,4 @@ Los navegadores modernos son capaces de entender algunos lenguajes sin necesidad
   - Implementar efectos visuales complejos; Realizar pedidos al servidor en segundo plano
   - Implementar navegabilidad del lado del cliente
 
-📝 [NOTA]  En este curso vamos a hackear lo standard y omitir el uso JS, echando mano de una biblioteca de Python, que nos ayuda a recrear nuestras aplicaciones web de forma sencilla.  De ello vamos a hablar más en el material sobre [maquetado web](https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/WEB_%26_HTTP/ipywidgets_y_maquetado.md)
+📝 [NOTA]  En este curso vamos a hackear lo standard y omitir el uso JS, echando mano de herramientas específicas de Python, que nos ayuda a recrear nuestras aplicaciones web de forma sencilla.  De ello vamos a hablar más en el material sobre [HTTP & REST](https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/WEB_%26_HTTP/HTTP_%26_REST.md)
