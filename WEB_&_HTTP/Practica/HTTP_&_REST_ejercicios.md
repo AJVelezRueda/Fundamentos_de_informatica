@@ -46,8 +46,6 @@ Ejemplos:
 **🧗‍♀️ Desafío I**: Estamos construyendo una aplicación Web para un biblioteca, en la cuál podrá:
 - consultar y cargar o borrar información sobre libros
 - consultar y cargar o borrar revistas y audio libros disponibles
-- Escribí las posibles rutas indicando sus métodos HTTP correspondientes. 
-
 
 a) Escribí las posibles rutas indicando sus métodos HTTP correspondientes.
 
