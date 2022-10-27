@@ -65,8 +65,11 @@ b) Maquetá el home de de la aplicación utilizando todo lo aprendido de HTML y 
 **🧗‍♀️ Desafío II**: Estamos construyendo una aplicación para un e-comerce de venta de productos cosméticos naturales. La aplicación debe permitir:
 
  1- Buscar todos los productos
+ 
  2- Buscar los productos por número
+ 
  3- Editar la información de los productos
+ 
  4- Eliminar la información de los productos
 
 a) Escribí las posibles rutas indicando sus métodos HTTP correspondientes.
