@@ -10,7 +10,7 @@
 
 ## **Hora de probar**
 
-Creá un nuevo DataFrame a partir del DataFrame **Personas**, el cual solo tenga las columnas "persona_id", "anio" y "categoria_conicet_id" (guardalo en una variable llamada **pers**)
+Descargá esta [tabla](https://datasets.datos.mincyt.gob.ar/dataset/personal-de-ciencia-y-tecnologia/archivo/c72c9f88-d9ef-4349-bb20-5c9a1aca5d67) y leela en formato DataFrame con el nombre `conicet`. Creá un nuevo DataFrame a partir del DataFrame `personas`, el cual solo tenga las columnas "persona_id", "anio" y "categoria_conicet_id" (guardalo en una variable llamada **pers**)
 
 ### **how**
 
