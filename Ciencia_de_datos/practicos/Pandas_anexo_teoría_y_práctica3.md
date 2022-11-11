@@ -79,6 +79,8 @@ anio  mes
 
 Como su nombre lo indica, ordena los valores de un data frame. Este orden se puede hacer tanto por columnas como por filas, ascendente o descendente, y eligiendo dónde deben ir los NaN.
 
+**by**: nos sirve para elegir en base a qué queremos ordenar la tabla.
+
 **axis**: por defecto es 0. Con esto elegimos si se ordenan las columnas o las filas.
 
 **ascending**: por defecto es True, por lo que se ordena de menor a mayor. Si es False se invierte el orden.
