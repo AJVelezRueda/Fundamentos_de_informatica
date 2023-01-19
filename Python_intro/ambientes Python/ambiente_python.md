@@ -18,6 +18,7 @@
   * [4. Distribución de paquetes](#4-distribucion-paquetes)
   * [5. Ejecución de tareas](#5-tox)
   * [6. Un atajo por favor!](#6-pyscafold)
+  * [7. Se va la última!](#7-conda)
 
 
 [1. Breve repaso de PIP](#1-pip)
@@ -192,3 +193,35 @@ Pero, sí, entendemos que te resulte un poco desalentador y es por eso que te pr
 >
 > ✅ ¡Te dejamos un [tutorial](https://gist.github.com/flbulgarelli/634973631c7c0f668b5100f09226eb8c) para configurar y publicar tu paquete en `pypi`! ¿Te gustó? ¡Dale ⭐️, compartilo, sé feliz 😋!
 >
+
+[7. Se va la última!](#7-conda)
+
+Antes de despedirnos, vale la pena comentar la existencia de [`Conda`](https://www.anaconda.com/). Anaconda es una distribución libre y abierta​ de los lenguajes Python, R y Julia muy utilizada en ciencia de datos. `Anaconda` tiene su propio gestor de paquetes: `conda`... esto realmente no pareciera una gran ventaja respecto de la distribuciones convencionales y el gestor de paquetes `pip`, ¿no? 
+
+Pues `Anaconda` se guarda un as bajo manga y nos propone sus propios entornos `conda`. Un entorno `conda` es un directorio que contiene una colección específica de paquetes conda que ha instalado para un proyecto dado. ¿Y qué ventajas me representa respecto de `venv`? Bueno, en los entornos `conda` podemos no solo usar versiones específicas de cada paquete, si no que tambien podemos usar una versión específica distinta de `Python`, inclusive una versión distinta a la que tenemos instalada en nuestro compu! 😱 De esta forma podemos generar entornos con versiones específicas de Python sin generar incompatibilidades 🤩
+
+
+¡Vamos a construir un entorno de juguete para ver cómo funciona! Primero tendremos que instalar [`Anaconda`](https://docs.anaconda.com/anaconda/install/index.html):
+
+```bash
+pip install conda
+```
+
+¡Ahora sí! Vamos a crear nuestro mundo pythonista 🌎 en el que cualquier versión de `Python` es posible:
+
+```bash
+# Creamos un entorno con el nombre mi_mundo_pythonista y la versión de Python 3.8
+$ conda create --name mi_mundo_pythonista python=3.8
+# Para activar el environment
+$ conda activate mi_mundo_pythonista
+# Para desactivar el environment
+$ conda deactivate
+```
+
+Y para compartirlo con el resto o hacerlo reproducible, podemos generar un archivo similar al que generábamos con `venv` pero con un formato levemente distinto (`.yml`). Para ello vamos escribir en la terminal, con el entorno prendido, el siguiente comando:
+
+```bash
+$ conda env export > environment.yml
+```
+
+Esto generará un archivo que tendrá todos los paquetes y sus versiones específicas, requeridos para replicar nuestro entorno ¿No es genial?
