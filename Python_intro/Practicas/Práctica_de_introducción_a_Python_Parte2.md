@@ -26,6 +26,9 @@ Modificá la función anterior para que además imprima los caracteres que no ap
 Definir una función que dada una palabra, nos diga si el palíndromo o no.
 
 ##### **Ejercicio 9**
+Definir una función llamada `productoria` que toma como parámetro una lista de números y los multiplica a todos.
+
+##### **Ejercicio 10**
 
 Creá un programa para gestionar datos de los socios de un club, el cual permita:
 
