@@ -1,6 +1,6 @@
 # Rutas, absolutas y relativas
 
-🚨 Este material fue creado por Guillermo I. Benítez y como todo el repositorio se encuentra bajo licencia 
+🚨 Este material fue creado por Guillermo Benítez y como todo el repositorio se encuentra bajo licencia 
 [Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
 
 [![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
