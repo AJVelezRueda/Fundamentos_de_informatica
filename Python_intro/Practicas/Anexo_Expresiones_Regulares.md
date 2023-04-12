@@ -31,9 +31,5 @@ Como ya saben la computadora no lee a los strings o cadenas de caracteres tal cu
 >>> texto = "Lorem ipsum dolor sit amet, consectetur ipsum elit. Amet sit amet."
 >>> patron = r"\bipsum\b"
 >>> re.sub(patron, "lapsus", texto)
-re.sub(patron, "lapsus", texto)
+"Lorem lapsus dolor sit amet, consectetur lapsus elit. Amet sit amet."
 ```
-
-
-
-Agregado 9/9
