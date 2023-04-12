@@ -14,7 +14,7 @@ Creá un programa que verifique las siguientes condiciones:
 
 * si un string dado tiene una _h_ seguida de una o más _e_.
 
-* si un string dado tiene una _h_ seguida de una o más _e_.
+* si un string dado tiene una _h_ seguida de cero o una _e_.
 
 * si un string dado tiene una _h_ seguida de dos o tres _e_.
 
