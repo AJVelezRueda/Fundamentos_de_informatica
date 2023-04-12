@@ -2,7 +2,7 @@
 
 A causa de que las expresiones regulares a menudo utilizan caracteres de escape (como por ejemplo la barra invertida \), es necesario indicar que las mismas no se interpreten como tales sino como parte de la expresión regular propiamente dicha. La forma más simple de hacerlo es comenzar la cadena con una letra r para indicar que la misma debe tomarse literalmente. En Python, esto se denomina un raw string.
 
->El ejemplo más simple de una raw string es r'\n'. Como resultado, Python «verá» dos caracteres: '\' y 'n'. Por otra parte, si escribiéramos '\n' (sin la r al principio), Python lo interpretaría como un solo caracter (el salto de línea).
+>El ejemplo más simple de una raw string es r'\n'. Como resultado, Python «verá» dos caracteres: '\\' y 'n'. Por otra parte, si escribiéramos '\n' (sin la r al principio), Python lo interpretaría como un solo caracter (el salto de línea).
 
 [Evaluación resultado de una busqueda]()
 
