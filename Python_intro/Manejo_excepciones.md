@@ -99,7 +99,7 @@ except:
 Vamos a trabajar con un ejemplo:
 
 >
-> 🧗‍♀️Desafio II: Creá una función denominada _mitades_ que tenga como argumento un número e imprima el resultado de la división de ese número por 2
+> 🧗‍♀️Desafio II: Creá una función denominada _eneavo_ que tenga como argumento un número e imprima el resultado de la división de 1 por ese número
 >
 >Para pensar 🤔: ¿Qué crees que ocurrirá cuando ingresas un 9 como parámetro? ¿Y con un 0?
 >
