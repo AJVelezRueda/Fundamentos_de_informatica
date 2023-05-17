@@ -113,7 +113,7 @@ En algunos casos, puede ser necesario crear excepciones personalizadas o forzar 
 
 
 ```Python
-def check_int_type():
+def check_int_type(x):
   if type(x)  != int:
     raise TypeError("Only integers are allowed") 
 ```
