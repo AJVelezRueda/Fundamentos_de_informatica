@@ -52,6 +52,6 @@ a) ¿Cuál es el dominio al que estamos consultando?
 
 b) ¿Qué status_code devuelve el pedido a dicha URL? ¿Y qué Content-Type?
 
-c) Modificar el contenido cuyo userId es 1 y su id es 2 con un nuevo título e indicando que está completo (completed).
+c) Agregar un contenido cuyo userId es 11 y su id es 2 con un nuevo título e indicando que está completo (completed).
 
 d) En la arquitectura cliente-servidor ¿Qué características tiene el cliente?
